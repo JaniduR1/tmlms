@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.createModuleBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.createCourseBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // createModuleBtn
+            // button2
             // 
-            this.createModuleBtn.Location = new System.Drawing.Point(11, 92);
-            this.createModuleBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.createModuleBtn.Name = "createModuleBtn";
-            this.createModuleBtn.Size = new System.Drawing.Size(135, 49);
-            this.createModuleBtn.TabIndex = 3;
-            this.createModuleBtn.Text = "Create Module";
-            this.createModuleBtn.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(48, 174);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 49);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Create Module";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // createCourseBtn
             // 
-            this.createCourseBtn.Location = new System.Drawing.Point(11, 12);
+            this.createCourseBtn.Location = new System.Drawing.Point(48, 68);
             this.createCourseBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createCourseBtn.Name = "createCourseBtn";
-            this.createCourseBtn.Size = new System.Drawing.Size(135, 53);
+            this.createCourseBtn.Size = new System.Drawing.Size(114, 49);
             this.createCourseBtn.TabIndex = 4;
             this.createCourseBtn.Text = "Create Course";
             this.createCourseBtn.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 532);
             this.Controls.Add(this.createCourseBtn);
-            this.Controls.Add(this.createModuleBtn);
+            this.Controls.Add(this.button2);
             this.Name = "MainScreen";
             this.Text = "MainScreen";
             this.ResumeLayout(false);
@@ -67,7 +67,8 @@
         }
 
         #endregion
+
+        private Button button2;
         public Button createCourseBtn;
-        public Button createModuleBtn;
     }
 }

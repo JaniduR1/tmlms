@@ -25,9 +25,7 @@ namespace TmLms
 
         private void createCourseBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CreateCourse createCourse = new CreateCourse();
-            createCourse.Show();
+
         }
 
     }
