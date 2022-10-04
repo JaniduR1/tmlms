@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace TmLms
 {
+    //public static Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+    //public static MainScreen mainScreen = Application.OpenForms.OfType<MainScreen>().FirstOrDefault();
     public sealed class TMEngine
     {
         public Dictionary<int,TM.Course> CourseDictionary { get; set; }
@@ -32,5 +34,7 @@ namespace TmLms
                 return instance;
             }
         }
+
+
     }
 }

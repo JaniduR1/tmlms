@@ -36,9 +36,10 @@
             // 
             this.comboBoxUserType.FormattingEnabled = true;
             this.comboBoxUserType.Items.AddRange(new object[] {
-            "Admin",
-            "Advance User",
-            "Simple User"});
+            "Administrator",
+            "Instructor",
+            "Student",
+            "Person"});
             this.comboBoxUserType.Location = new System.Drawing.Point(219, 83);
             this.comboBoxUserType.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBoxUserType.Name = "comboBoxUserType";
@@ -70,7 +71,7 @@
         }
 
         #endregion
-        private Button logInBtn;
         public ComboBox comboBoxUserType;
+        public Button logInBtn;
     }
 }
