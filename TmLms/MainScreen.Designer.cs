@@ -41,6 +41,7 @@
             this.createModuleBtn.TabIndex = 3;
             this.createModuleBtn.Text = "Create Module";
             this.createModuleBtn.UseVisualStyleBackColor = true;
+            this.createModuleBtn.Click += new System.EventHandler(this.createModuleBtn_Click);
             // 
             // createCourseBtn
             // 
