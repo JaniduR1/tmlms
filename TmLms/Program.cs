@@ -2,7 +2,7 @@ namespace TmLms
 {
     internal static class Program
     {
-        static TMEngine tmEngine;
+        static public TMEngine tmEngine;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

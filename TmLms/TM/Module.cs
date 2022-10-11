@@ -8,7 +8,6 @@ namespace TmLms.TM
 {
     public class Module
     {
-        CreateModule createModule = new CreateModule();
         public enum CreditEnum
         {
             TWENTY = 20,
@@ -27,13 +26,6 @@ namespace TmLms.TM
         /// Module Code should be unique
         /// </summary>
         public string Code { get; set; }
-        //{
-        //    get { return createModule.moduleCodeTxtBox.ToString(); }
-        //    set 
-        //    {
-        //    } 
-        //}
-        
         /// <summary>
         /// Module Name
         /// </summary>
@@ -92,5 +84,7 @@ namespace TmLms.TM
 
             return ((Module)obj).Code == this.Code;
         }
+
     }
+
 }

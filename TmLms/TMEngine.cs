@@ -12,11 +12,7 @@ namespace TmLms
     {
         public Dictionary<int,TM.Course> CourseDictionary { get; set; }
 
-        public Dictionary<int, TM.Module> ModuleDictionary { get; set; }
-        //{
-        //    get {return }
-        //    set {; }
-        //}
+        public Dictionary<string, TM.Module> ModuleDictionary { get; set; }
 
 
         private static readonly TMEngine instance = new TMEngine();
@@ -28,7 +24,7 @@ namespace TmLms
         private TMEngine()
         {
             CourseDictionary = new Dictionary<int, TM.Course>();
-            ModuleDictionary = new Dictionary<int, TM.Module>();
+            ModuleDictionary = new Dictionary<string, TM.Module>();
         }
 
         public static TMEngine Instance
