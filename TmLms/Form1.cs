@@ -7,9 +7,15 @@ namespace TmLms
             InitializeComponent();
         }
 
+
+        public string LoginBtnTxt
+        {
+            get { return comboBoxUserType.Text; }
+            set { LoginBtnTxt = value; }
+        }
         private void logInBtn_Click(object sender, EventArgs e)
         {
-            if (comboBoxUserType.SelectedItem == "Administrator" || comboBoxUserType.SelectedItem == "Instructor")
+            if (LoginBtnTxt == "Administrator" || LoginBtnTxt == "Instructor")
             {
                 this.Hide();
                 var mainScreen = new MainScreen();
@@ -20,16 +26,7 @@ namespace TmLms
 
             }
 
-            //else if (comboBoxUserType.SelectedItem == "Advance User")
-            //{
-            //    this.Hide();
-            //    MainScreen mainScreen = new MainScreen();
-            //    mainScreen.Show();
-            //    mainScreen.createCourseBtn.Visible = true;
-            //    mainScreen.createModuleBtn.Visible = true;
-            //}
-
-            else if (comboBoxUserType.SelectedItem == "Student")
+            else if (LoginBtnTxt == "Student")
             {
                 this.Hide();
                 var mainScreen = new MainScreen();

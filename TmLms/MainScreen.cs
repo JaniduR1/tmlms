@@ -23,6 +23,18 @@ namespace TmLms
 
         }
 
+        public bool CreateCourseBtn
+        {
+            get { return true; }
+            set { CreateCourseBtn = value; }
+        }
+
+        public bool CreateModuleBtn
+        {
+            get { return true; }
+            set { CreateModuleBtn = value; }
+        }
+
         private void createCourseBtn_Click(object sender, EventArgs e)
         {
             this.Hide();

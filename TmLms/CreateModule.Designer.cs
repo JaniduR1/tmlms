@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.moduleDescriptionLbl = new System.Windows.Forms.Label();
             this.moduleDescriptionTxtBox = new System.Windows.Forms.RichTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.moduleAdminName = new System.Windows.Forms.TextBox();
+            this.moduleAdministratorName = new System.Windows.Forms.Label();
             this.creditsDropDown = new System.Windows.Forms.ComboBox();
             this.submitBtn = new System.Windows.Forms.Button();
             this.moduleNameTxtBox = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(65, 343);
+            this.label1.Location = new System.Drawing.Point(65, 354);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 8;
@@ -85,28 +85,28 @@
             // 
             this.moduleDescriptionTxtBox.Location = new System.Drawing.Point(284, 192);
             this.moduleDescriptionTxtBox.Name = "moduleDescriptionTxtBox";
-            this.moduleDescriptionTxtBox.Size = new System.Drawing.Size(238, 138);
+            this.moduleDescriptionTxtBox.Size = new System.Drawing.Size(285, 138);
             this.moduleDescriptionTxtBox.TabIndex = 10;
             this.moduleDescriptionTxtBox.Text = "";
             // 
-            // textBox2
+            // moduleAdminName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(284, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(238, 30);
-            this.textBox2.TabIndex = 12;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.moduleAdminName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moduleAdminName.Location = new System.Drawing.Point(284, 133);
+            this.moduleAdminName.Name = "moduleAdminName";
+            this.moduleAdminName.Size = new System.Drawing.Size(285, 30);
+            this.moduleAdminName.TabIndex = 12;
+            this.moduleAdminName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // label3
+            // moduleAdministratorName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(65, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 25);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Module Code";
+            this.moduleAdministratorName.AutoSize = true;
+            this.moduleAdministratorName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moduleAdministratorName.Location = new System.Drawing.Point(65, 134);
+            this.moduleAdministratorName.Name = "moduleAdministratorName";
+            this.moduleAdministratorName.Size = new System.Drawing.Size(173, 25);
+            this.moduleAdministratorName.TabIndex = 11;
+            this.moduleAdministratorName.Text = "Administrator Name";
             // 
             // creditsDropDown
             // 
@@ -116,9 +116,9 @@
             "TWENTY (20)",
             "FORTY (40)",
             "SIXTY (60)"});
-            this.creditsDropDown.Location = new System.Drawing.Point(284, 344);
+            this.creditsDropDown.Location = new System.Drawing.Point(284, 355);
             this.creditsDropDown.Name = "creditsDropDown";
-            this.creditsDropDown.Size = new System.Drawing.Size(238, 31);
+            this.creditsDropDown.Size = new System.Drawing.Size(285, 31);
             this.creditsDropDown.TabIndex = 15;
             this.creditsDropDown.SelectedIndexChanged += new System.EventHandler(this.creditsDropDown_SelectedIndexChanged);
             // 
@@ -136,14 +136,14 @@
             // 
             this.moduleNameTxtBox.Location = new System.Drawing.Point(284, 43);
             this.moduleNameTxtBox.Name = "moduleNameTxtBox";
-            this.moduleNameTxtBox.Size = new System.Drawing.Size(238, 27);
+            this.moduleNameTxtBox.Size = new System.Drawing.Size(285, 27);
             this.moduleNameTxtBox.TabIndex = 18;
             // 
             // moduleCodeTxtBox
             // 
-            this.moduleCodeTxtBox.Location = new System.Drawing.Point(284, 85);
+            this.moduleCodeTxtBox.Location = new System.Drawing.Point(284, 84);
             this.moduleCodeTxtBox.Name = "moduleCodeTxtBox";
-            this.moduleCodeTxtBox.Size = new System.Drawing.Size(238, 27);
+            this.moduleCodeTxtBox.Size = new System.Drawing.Size(285, 27);
             this.moduleCodeTxtBox.TabIndex = 19;
             // 
             // CreateModule
@@ -155,8 +155,8 @@
             this.Controls.Add(this.moduleNameTxtBox);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.creditsDropDown);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.moduleAdminName);
+            this.Controls.Add(this.moduleAdministratorName);
             this.Controls.Add(this.moduleDescriptionTxtBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.moduleDescriptionLbl);
@@ -175,8 +175,8 @@
         private Label label1;
         private Label moduleDescriptionLbl;
         private RichTextBox moduleDescriptionTxtBox;
-        private TextBox textBox2;
-        private Label label3;
+        private TextBox moduleAdminName;
+        private Label moduleAdministratorName;
         private ComboBox creditsDropDown;
         private Button submitBtn;
         private TextBox moduleNameTxtBox;

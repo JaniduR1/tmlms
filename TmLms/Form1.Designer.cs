@@ -71,7 +71,7 @@
         }
 
         #endregion
-        public ComboBox comboBoxUserType;
-        public Button logInBtn;
+        private ComboBox comboBoxUserType;
+        private Button logInBtn;
     }
 }

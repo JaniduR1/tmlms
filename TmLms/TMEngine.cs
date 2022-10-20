@@ -36,5 +36,18 @@ namespace TmLms
         }
 
 
+        //public class Validation
+        //{
+        //    public Validation()
+        //    {
+        //        Form1 form1 = new Form1();
+        //        if(form1.LoginBtnTxt == "Admin")
+        //        {
+        //            return;
+        //        }
+        //    }
+
+        //}
+
     }
 }
