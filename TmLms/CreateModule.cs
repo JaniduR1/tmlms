@@ -26,10 +26,7 @@ namespace TmLms
         // Getting module Name to input into a dictionary //
         public string GetModuleName
         {
-            get
-            {
-                return moduleNameTxtBox.Text;
-            }
+            get { return moduleNameTxtBox.Text; }
             set { moduleNameTxtBox.Text = value; }
 
         }
@@ -39,7 +36,12 @@ namespace TmLms
         {
             get { return moduleCodeTxtBox.Text; }
             set { moduleCodeTxtBox.Text = value; }
-        
+        }
+
+        public string GetAdminName
+        {
+            get { return moduleAdminName.Text; }
+            set { moduleAdminName.Text = value; }
         }
 
         public string ModuleCreditsNum
@@ -56,27 +58,13 @@ namespace TmLms
 
 
 
+
         public CreateModule()
         {
             InitializeComponent();
         }
         private void creditsDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //switch (creditsDropDown.SelectedIndex)
-            //{
-            //    case 0:
-            //        currentPerson = alex;
-            //        break;
-
-            //    case 1:
-            //        currentPerson = sebastian;
-            //        break;
-
-            //    case 2:
-            //        currentPerson = gordon;
-            //        break;
-
-            TmLms.TM.Module moduleDescription = new TM.Module(GetModuleCode, ModuleDescription);
 
         }
 
@@ -90,15 +78,22 @@ namespace TmLms
             if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
             {
                 MessageBox.Show(moduleCodeExists, messageboxTitle);
+                moduleCodeTxtBox.Clear(); 
                 return;
             }
-
-            TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetModuleName);// ("Module Code", "Module Name");
+            //TmLms.TM.Module adminName = new TM.Module(GetModuleCode, AdminName);
+            TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName);// ("Module Code", "Admin Name");
             TmLms.Program.tmEngine.ModuleDictionary.Add(newModule.Code, newModule);
+
 
             GetModuleName = "";
             GetModuleCode = "";
 
+        }
+
+        private void backHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

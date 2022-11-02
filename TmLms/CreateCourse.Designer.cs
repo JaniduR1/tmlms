@@ -28,24 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.instructorMember = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // instructorMember
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.instructorMember.AutoSize = true;
+            this.instructorMember.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.instructorMember.Location = new System.Drawing.Point(41, 38);
+            this.instructorMember.Name = "instructorMember";
+            this.instructorMember.Size = new System.Drawing.Size(161, 28);
+            this.instructorMember.TabIndex = 0;
+            this.instructorMember.Text = "Course Instructor";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 77);
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(225, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 27);
+            this.textBox1.Size = new System.Drawing.Size(229, 34);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -53,9 +55,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(944, 518);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.instructorMember);
             this.Name = "CreateCourse";
             this.Text = "CreateCourse";
             this.ResumeLayout(false);
@@ -65,7 +67,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label instructorMember;
         private TextBox textBox1;
     }
 }

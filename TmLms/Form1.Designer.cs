@@ -38,8 +38,7 @@
             this.comboBoxUserType.Items.AddRange(new object[] {
             "Administrator",
             "Instructor",
-            "Student",
-            "Person"});
+            "Student"});
             this.comboBoxUserType.Location = new System.Drawing.Point(219, 83);
             this.comboBoxUserType.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBoxUserType.Name = "comboBoxUserType";

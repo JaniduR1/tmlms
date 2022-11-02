@@ -10,6 +10,42 @@ namespace TmLms
     //public static MainScreen mainScreen = Application.OpenForms.OfType<MainScreen>().FirstOrDefault();
     public sealed class TMEngine
     {
+        //Validation Complete
+        #region
+        public static void LoginValidation()
+        {
+            Form form1 = Application.OpenForms["Form1"];
+            string user = ((Form1)form1).LoginBtnTxt;
+
+            if(user == "Administrator")
+            {
+                form1.Hide();
+                var mainScreen = new MainScreen();
+                mainScreen.Closed += (s, args) => form1.Close();
+                mainScreen.Show();
+                mainScreen.createCourseBtn.Enabled = true;
+                mainScreen.createModuleBtn.Enabled = true;
+            }
+            else if(user == "Instructor")
+            {
+                form1.Hide();
+                var mainScreen = new MainScreen();
+                mainScreen.Closed += (s, args) => form1.Close();
+                mainScreen.Show();
+                mainScreen.createCourseBtn.Enabled = false;
+                mainScreen.createModuleBtn.Enabled = true;
+            }
+            else if (user == "Student")
+            {
+                form1.Hide();
+                var mainScreen = new MainScreen();
+                mainScreen.Closed += (s, args) => form1.Close();
+                mainScreen.Show();
+                mainScreen.createCourseBtn.Enabled = false;
+                mainScreen.createModuleBtn.Enabled = false;
+            }
+        }
+        #endregion
         public Dictionary<int,TM.Course> CourseDictionary { get; set; }
 
         public Dictionary<string, TM.Module> ModuleDictionary { get; set; }
@@ -34,20 +70,6 @@ namespace TmLms
                 return instance;
             }
         }
-
-
-        //public class Validation
-        //{
-        //    public Validation()
-        //    {
-        //        Form1 form1 = new Form1();
-        //        if(form1.LoginBtnTxt == "Admin")
-        //        {
-        //            return;
-        //        }
-        //    }
-
-        //}
 
     }
 }
