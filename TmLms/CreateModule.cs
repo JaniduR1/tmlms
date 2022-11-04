@@ -50,7 +50,7 @@ namespace TmLms
             set { creditsDropDown.Text = value; }
         }
 
-        public string ModuleDescription
+        public string GetModuleDescription
         {
             get { return moduleDescriptionTxtBox.Text; }
             set { moduleDescriptionTxtBox.Text = value; }
@@ -82,12 +82,16 @@ namespace TmLms
                 return;
             }
             //TmLms.TM.Module adminName = new TM.Module(GetModuleCode, AdminName);
-            TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName);// ("Module Code", "Admin Name");
+            TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName);
+            newModule.Name = GetModuleName;
+            newModule.Description = GetModuleDescription;
+            // ("Module Code", "Admin Name");
             TmLms.Program.tmEngine.ModuleDictionary.Add(newModule.Code, newModule);
 
 
             GetModuleName = "";
             GetModuleCode = "";
+            GetModuleDescription = "";
 
         }
 

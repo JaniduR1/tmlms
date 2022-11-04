@@ -37,17 +37,17 @@ namespace TmLms
 
         private void createCourseBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             var createCourse = new CreateCourse();
-            createCourse.Closed += (s, args) => this.Close();
+            //createCourse.Closed += (s, args) => this.Close();
             createCourse.Show();
         }
 
         private void createModuleBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            ///this.Hide();
             var createModule = new CreateModule();
-            createModule.Closed += (s, args) => this.Close();
+            //createModule.Closed += (s, args) => this.Close();
             createModule.Show();
         }
     }
