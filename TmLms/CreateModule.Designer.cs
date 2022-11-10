@@ -39,7 +39,7 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.moduleNameTxtBox = new System.Windows.Forms.TextBox();
             this.moduleCodeTxtBox = new System.Windows.Forms.TextBox();
-            this.memberNameLbl = new System.Windows.Forms.TextBox();
+            this.moduleMemberTxtBox = new System.Windows.Forms.TextBox();
             this.membersLbl = new System.Windows.Forms.Label();
             this.addMemberBtn = new System.Windows.Forms.Button();
             this.backHomeBtn = new System.Windows.Forms.Button();
@@ -151,19 +151,19 @@
             this.moduleCodeTxtBox.Size = new System.Drawing.Size(285, 27);
             this.moduleCodeTxtBox.TabIndex = 19;
             // 
-            // memberNameLbl
+            // moduleMemberTxtBox
             // 
-            this.memberNameLbl.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.memberNameLbl.Location = new System.Drawing.Point(960, 62);
-            this.memberNameLbl.Name = "memberNameLbl";
-            this.memberNameLbl.Size = new System.Drawing.Size(133, 30);
-            this.memberNameLbl.TabIndex = 20;
+            this.moduleMemberTxtBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moduleMemberTxtBox.Location = new System.Drawing.Point(812, 60);
+            this.moduleMemberTxtBox.Name = "moduleMemberTxtBox";
+            this.moduleMemberTxtBox.Size = new System.Drawing.Size(214, 30);
+            this.moduleMemberTxtBox.TabIndex = 20;
             // 
             // membersLbl
             // 
             this.membersLbl.AutoSize = true;
             this.membersLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.membersLbl.Location = new System.Drawing.Point(634, 63);
+            this.membersLbl.Location = new System.Drawing.Point(719, 64);
             this.membersLbl.Name = "membersLbl";
             this.membersLbl.Size = new System.Drawing.Size(87, 25);
             this.membersLbl.TabIndex = 21;
@@ -177,6 +177,7 @@
             this.addMemberBtn.TabIndex = 22;
             this.addMemberBtn.Text = "Add Member";
             this.addMemberBtn.UseVisualStyleBackColor = true;
+            this.addMemberBtn.Click += new System.EventHandler(this.addMemberBtn_Click);
             // 
             // backHomeBtn
             // 
@@ -194,7 +195,7 @@
             this.memberType.FormattingEnabled = true;
             this.memberType.Items.AddRange(new object[] {
             "Admin"});
-            this.memberType.Location = new System.Drawing.Point(806, 62);
+            this.memberType.Location = new System.Drawing.Point(738, 125);
             this.memberType.Name = "memberType";
             this.memberType.Size = new System.Drawing.Size(76, 31);
             this.memberType.TabIndex = 23;
@@ -208,7 +209,7 @@
             this.Controls.Add(this.memberType);
             this.Controls.Add(this.addMemberBtn);
             this.Controls.Add(this.membersLbl);
-            this.Controls.Add(this.memberNameLbl);
+            this.Controls.Add(this.moduleMemberTxtBox);
             this.Controls.Add(this.moduleCodeTxtBox);
             this.Controls.Add(this.moduleNameTxtBox);
             this.Controls.Add(this.submitBtn);
@@ -239,7 +240,7 @@
         private Button submitBtn;
         private TextBox moduleNameTxtBox;
         private TextBox moduleCodeTxtBox;
-        private TextBox memberNameLbl;
+        private TextBox moduleMemberTxtBox;
         private Label membersLbl;
         private Button addMemberBtn;
         private Button backHomeBtn;

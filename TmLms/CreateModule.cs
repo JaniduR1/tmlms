@@ -16,7 +16,7 @@ namespace TmLms
         //TM.Module.CreditEnum
 
         //////////////
-        
+
 
 
         string messageboxTitle = "Problem Encountered";
@@ -32,7 +32,7 @@ namespace TmLms
         }
 
         // Getting module Name to input into a dictionary //
-        public string GetModuleCode 
+        public string GetModuleCode
         {
             get { return moduleCodeTxtBox.Text; }
             set { moduleCodeTxtBox.Text = value; }
@@ -56,7 +56,13 @@ namespace TmLms
             set { moduleDescriptionTxtBox.Text = value; }
         }
 
+        public string GetModuleMember
+        {
+            get { return moduleMemberTxtBox.Text; }
+            set { moduleMemberTxtBox.Text= value; }
+        }
 
+        SortedSet<string> moduleMembers = new SortedSet<string>();
 
 
         public CreateModule()
@@ -72,6 +78,11 @@ namespace TmLms
         {
 
         }
+        private void addMemberBtn_Click(object sender, EventArgs e)
+        {
+            moduleMembers.Add(GetModuleMember);
+            moduleMemberTxtBox.Clear();
+        }
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
@@ -81,18 +92,11 @@ namespace TmLms
                 moduleCodeTxtBox.Clear(); 
                 return;
             }
-            //TmLms.TM.Module adminName = new TM.Module(GetModuleCode, AdminName);
             TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName);
             newModule.Name = GetModuleName;
             newModule.Description = GetModuleDescription;
-            // ("Module Code", "Admin Name");
+            //newModule.Members.Add(moduleMembers);
             TmLms.Program.tmEngine.ModuleDictionary.Add(newModule.Code, newModule);
-
-
-            GetModuleName = "";
-            GetModuleCode = "";
-            GetModuleDescription = "";
-
         }
 
         private void backHomeBtn_Click(object sender, EventArgs e)
