@@ -51,8 +51,9 @@ namespace TmLms
         public static void AddMToCBox()
         {
             var createCourse = new CreateCourse();
-            createCourse.availableModules.DataSource = ModuleDictionary.ToList();
-            createCourse.availableModules.Items.Add(ModuleDictionary.Values);
+            var engine = new TmLms.TMEngine();
+            createCourse.availableModules.DataSource = engine.ModuleDictionary.ToList();
+            //createCourse.availableModules.Items.Add(ModuleDictionary.Values);
         }
 
         public Dictionary<int,TM.Course> CourseDictionary { get; set; }

@@ -109,7 +109,11 @@ namespace TmLms
             //newModule.Members.Add(moduleMembers);
             newModule.Name = GetModuleName;
             newModule.Description = GetModuleDescription;
-            //newModule.Members.Add(moduleMembers);
+            foreach(object i in moduleMembers)
+            {
+                newModule.Members.Add(i);
+            }
+
             TmLms.Program.tmEngine.ModuleDictionary.Add(newModule.Code, newModule);
 
             //TmLms.Program.tmEngine.ModuleDictionary.ToList().ForEach(m => Console.WriteLine(m.Key));

@@ -26,5 +26,13 @@ namespace TmLms
         {
 
         }
+
+        private void CreateCourse_Load(object sender, EventArgs e)
+        {
+            foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
+            {
+                availableModules.Items.Add(m.Name);
+            }
+        }
     }
 }

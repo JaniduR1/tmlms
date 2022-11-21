@@ -40,7 +40,7 @@ namespace TmLms
             //this.Hide();
             var createCourse = new CreateCourse();
             //createCourse.Closed += (s, args) => this.Close();
-            //TMEngine.
+            TMEngine.AddMToCBox();
             createCourse.Show();
         }
 
