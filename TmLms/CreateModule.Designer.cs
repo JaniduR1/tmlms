@@ -43,7 +43,6 @@
             this.membersLbl = new System.Windows.Forms.Label();
             this.addMemberBtn = new System.Windows.Forms.Button();
             this.backHomeBtn = new System.Windows.Forms.Button();
-            this.memberType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // moduleNameLbl
@@ -189,24 +188,12 @@
             this.backHomeBtn.UseVisualStyleBackColor = true;
             this.backHomeBtn.Click += new System.EventHandler(this.backHomeBtn_Click);
             // 
-            // memberType
-            // 
-            this.memberType.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.memberType.FormattingEnabled = true;
-            this.memberType.Items.AddRange(new object[] {
-            "Admin"});
-            this.memberType.Location = new System.Drawing.Point(738, 125);
-            this.memberType.Name = "memberType";
-            this.memberType.Size = new System.Drawing.Size(76, 31);
-            this.memberType.TabIndex = 23;
-            // 
             // CreateModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 533);
             this.Controls.Add(this.backHomeBtn);
-            this.Controls.Add(this.memberType);
             this.Controls.Add(this.addMemberBtn);
             this.Controls.Add(this.membersLbl);
             this.Controls.Add(this.moduleMemberTxtBox);
@@ -223,6 +210,7 @@
             this.Controls.Add(this.moduleNameLbl);
             this.Name = "CreateModule";
             this.Text = "CreateModule";
+            this.Load += new System.EventHandler(this.CreateModule_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +232,5 @@
         private Label membersLbl;
         private Button addMemberBtn;
         private Button backHomeBtn;
-        private ComboBox memberType;
     }
 }

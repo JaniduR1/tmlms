@@ -7,17 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace TmLms
 {
     public partial class CreateModule : Form
     {
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
         // Storage ///
         //TM.Module.CreditEnum
 
         //////////////
 
-
+        public CreateModule()
+        {
+            InitializeComponent();
+        }
+        private void CreateModule_Load(object sender, EventArgs e)
+        {
+            creditsDropDown.SelectedIndex = 0;
+        }
 
         string messageboxTitle = "Problem Encountered";
         string moduleCodeExists = "There is already a module code that exist with that given input," +
@@ -31,29 +42,34 @@ namespace TmLms
 
         }
 
-        // Getting module Name to input into a dictionary //
+
+
+        // Getting module Code to input into a dictionary //
         public string GetModuleCode
         {
             get { return moduleCodeTxtBox.Text; }
             set { moduleCodeTxtBox.Text = value; }
         }
 
+        // Getting module Description to input into a TM.Description //
+        public string GetModuleDescription
+        {
+            get { return moduleDescriptionTxtBox.Text; }
+            set { moduleDescriptionTxtBox.Text = value; }
+        }
+        // Getting Admin Name to input into TM.Module //
+
         public string GetAdminName
         {
             get { return moduleAdminName.Text; }
             set { moduleAdminName.Text = value; }
         }
+        // Getting Credits to input into TM.Credits //
 
         public string ModuleCreditsNum
         {
             get { return creditsDropDown.Text; }
             set { creditsDropDown.Text = value; }
-        }
-
-        public string GetModuleDescription
-        {
-            get { return moduleDescriptionTxtBox.Text; }
-            set { moduleDescriptionTxtBox.Text = value; }
         }
 
         public string GetModuleMember
@@ -62,13 +78,8 @@ namespace TmLms
             set { moduleMemberTxtBox.Text= value; }
         }
 
-        SortedSet<string> moduleMembers = new SortedSet<string>();
+        SortedSet<object> moduleMembers = new SortedSet<object>();
 
-
-        public CreateModule()
-        {
-            InitializeComponent();
-        }
         private void creditsDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -78,6 +89,7 @@ namespace TmLms
         {
 
         }
+
         private void addMemberBtn_Click(object sender, EventArgs e)
         {
             moduleMembers.Add(GetModuleMember);
@@ -86,6 +98,7 @@ namespace TmLms
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            //AllocConsole();
             if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
             {
                 MessageBox.Show(moduleCodeExists, messageboxTitle);
@@ -93,10 +106,13 @@ namespace TmLms
                 return;
             }
             TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName);
+            //newModule.Members.Add(moduleMembers);
             newModule.Name = GetModuleName;
             newModule.Description = GetModuleDescription;
             //newModule.Members.Add(moduleMembers);
             TmLms.Program.tmEngine.ModuleDictionary.Add(newModule.Code, newModule);
+
+            //TmLms.Program.tmEngine.ModuleDictionary.ToList().ForEach(m => Console.WriteLine(m.Key));
         }
 
         private void backHomeBtn_Click(object sender, EventArgs e)

@@ -21,5 +21,10 @@ namespace TmLms
         {
 
         }
+
+        private void addModuleBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

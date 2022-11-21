@@ -14,6 +14,12 @@ namespace TmLms.TM
         /// <param name="moduleToAdd">The module to add</param>
         /// <param name="isCore">True if the moudle is core, else false if optional</param>
         /// <returns>True if succesfully added, False if not</returns>
+        /// 
+
+        public static void ModuleAddition()
+        {
+
+        }
         public bool AddModule(Module moduleToAdd, bool isCore)
         {
             return false;

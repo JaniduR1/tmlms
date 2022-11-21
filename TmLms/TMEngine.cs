@@ -46,6 +46,15 @@ namespace TmLms
             }
         }
         #endregion
+
+        // Adding Modules to ComboBox
+        public static void AddMToCBox()
+        {
+            var createCourse = new CreateCourse();
+            createCourse.availableModules.DataSource = ModuleDictionary.ToList();
+            createCourse.availableModules.Items.Add(ModuleDictionary.Values);
+        }
+
         public Dictionary<int,TM.Course> CourseDictionary { get; set; }
 
         public Dictionary<string, TM.Module> ModuleDictionary { get; set; }

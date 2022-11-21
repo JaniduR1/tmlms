@@ -1,6 +1,6 @@
 # Module
 
-##	A module shall be valid when it has an administrator member and a module code.
+##	A module shall be valid when it has an administrator member and a module code. - Done
 ##	A module shall store a list of members.
 ###	The list of members shall be included by students, instructors, and administrators.
 ###	The list of members should always have at least one administrator.
