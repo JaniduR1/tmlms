@@ -39,6 +39,13 @@
             this.courseCodeLbl = new System.Windows.Forms.Label();
             this.courseLevelCBox = new System.Windows.Forms.ComboBox();
             this.courseLevelLbl = new System.Windows.Forms.Label();
+            this.courseNameTxtBox = new System.Windows.Forms.TextBox();
+            this.courseNameLbl = new System.Windows.Forms.Label();
+            this.courseCodeTxtBox = new System.Windows.Forms.TextBox();
+            this.courseCodeLbl = new System.Windows.Forms.Label();
+            this.courseLevelCBox = new System.Windows.Forms.ComboBox();
+            this.courseLevelLbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // instructorMember

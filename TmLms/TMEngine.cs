@@ -56,7 +56,7 @@ namespace TmLms
             //createCourse.availableModules.Items.Add(ModuleDictionary.Values);
         }
 
-        public Dictionary<int,TM.Course> CourseDictionary { get; set; }
+        public Dictionary<string,TM.Course> CourseDictionary { get; set; }
 
         public Dictionary<string, TM.Module> ModuleDictionary { get; set; }
 
@@ -69,7 +69,7 @@ namespace TmLms
 
         private TMEngine()
         {
-            CourseDictionary = new Dictionary<int, TM.Course>();
+            CourseDictionary = new Dictionary<string, TM.Course>();
             ModuleDictionary = new Dictionary<string, TM.Module>();
         }
 
