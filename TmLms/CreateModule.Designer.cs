@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.moduleDescriptionLbl = new System.Windows.Forms.Label();
             this.moduleDescriptionTxtBox = new System.Windows.Forms.RichTextBox();
-            this.moduleAdminName = new System.Windows.Forms.TextBox();
+            this.moduleAdminNameTxtBox = new System.Windows.Forms.TextBox();
             this.moduleAdministratorName = new System.Windows.Forms.Label();
             this.creditsDropDown = new System.Windows.Forms.ComboBox();
             this.submitBtn = new System.Windows.Forms.Button();
@@ -43,6 +43,10 @@
             this.membersLbl = new System.Windows.Forms.Label();
             this.addMemberBtn = new System.Windows.Forms.Button();
             this.backHomeBtn = new System.Windows.Forms.Button();
+            this.deleteModulesLbl = new System.Windows.Forms.Label();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.allAvailableModules = new System.Windows.Forms.ComboBox();
+            this.deleteModulesBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // moduleNameLbl
@@ -93,14 +97,14 @@
             this.moduleDescriptionTxtBox.TabIndex = 10;
             this.moduleDescriptionTxtBox.Text = "";
             // 
-            // moduleAdminName
+            // moduleAdminNameTxtBox
             // 
-            this.moduleAdminName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.moduleAdminName.Location = new System.Drawing.Point(234, 140);
-            this.moduleAdminName.Name = "moduleAdminName";
-            this.moduleAdminName.Size = new System.Drawing.Size(285, 30);
-            this.moduleAdminName.TabIndex = 12;
-            this.moduleAdminName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.moduleAdminNameTxtBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moduleAdminNameTxtBox.Location = new System.Drawing.Point(234, 140);
+            this.moduleAdminNameTxtBox.Name = "moduleAdminNameTxtBox";
+            this.moduleAdminNameTxtBox.Size = new System.Drawing.Size(285, 30);
+            this.moduleAdminNameTxtBox.TabIndex = 12;
+            this.moduleAdminNameTxtBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // moduleAdministratorName
             // 
@@ -188,11 +192,54 @@
             this.backHomeBtn.UseVisualStyleBackColor = true;
             this.backHomeBtn.Click += new System.EventHandler(this.backHomeBtn_Click);
             // 
+            // deleteModulesLbl
+            // 
+            this.deleteModulesLbl.AutoSize = true;
+            this.deleteModulesLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.deleteModulesLbl.Location = new System.Drawing.Point(690, 334);
+            this.deleteModulesLbl.Name = "deleteModulesLbl";
+            this.deleteModulesLbl.Size = new System.Drawing.Size(136, 25);
+            this.deleteModulesLbl.TabIndex = 26;
+            this.deleteModulesLbl.Text = "Delete Modules";
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Location = new System.Drawing.Point(885, 370);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(82, 31);
+            this.deleteBtn.TabIndex = 27;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
+            // allAvailableModules
+            // 
+            this.allAvailableModules.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.allAvailableModules.FormattingEnabled = true;
+            this.allAvailableModules.Location = new System.Drawing.Point(832, 333);
+            this.allAvailableModules.Name = "allAvailableModules";
+            this.allAvailableModules.Size = new System.Drawing.Size(229, 31);
+            this.allAvailableModules.TabIndex = 28;
+            // 
+            // deleteModulesBtn
+            // 
+            this.deleteModulesBtn.Location = new System.Drawing.Point(871, 269);
+            this.deleteModulesBtn.Name = "deleteModulesBtn";
+            this.deleteModulesBtn.Size = new System.Drawing.Size(155, 58);
+            this.deleteModulesBtn.TabIndex = 29;
+            this.deleteModulesBtn.Text = "Delete Modules";
+            this.deleteModulesBtn.UseVisualStyleBackColor = true;
+            this.deleteModulesBtn.Click += new System.EventHandler(this.deleteModulesBtn_Click);
+            // 
             // CreateModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 533);
+            this.Controls.Add(this.deleteModulesBtn);
+            this.Controls.Add(this.allAvailableModules);
+            this.Controls.Add(this.deleteBtn);
+            this.Controls.Add(this.deleteModulesLbl);
             this.Controls.Add(this.backHomeBtn);
             this.Controls.Add(this.addMemberBtn);
             this.Controls.Add(this.membersLbl);
@@ -201,7 +248,7 @@
             this.Controls.Add(this.moduleNameTxtBox);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.creditsDropDown);
-            this.Controls.Add(this.moduleAdminName);
+            this.Controls.Add(this.moduleAdminNameTxtBox);
             this.Controls.Add(this.moduleAdministratorName);
             this.Controls.Add(this.moduleDescriptionTxtBox);
             this.Controls.Add(this.label1);
@@ -222,7 +269,7 @@
         private Label label1;
         private Label moduleDescriptionLbl;
         private RichTextBox moduleDescriptionTxtBox;
-        private TextBox moduleAdminName;
+        private TextBox moduleAdminNameTxtBox;
         private Label moduleAdministratorName;
         private ComboBox creditsDropDown;
         private Button submitBtn;
@@ -232,5 +279,9 @@
         private Label membersLbl;
         private Button addMemberBtn;
         private Button backHomeBtn;
+        private Label deleteModulesLbl;
+        private Button deleteBtn;
+        private ComboBox allAvailableModules;
+        private Button deleteModulesBtn;
     }
 }

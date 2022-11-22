@@ -30,16 +30,20 @@
         {
             this.createModuleBtn = new System.Windows.Forms.Button();
             this.createCourseBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.viewCoursesBtn = new System.Windows.Forms.Button();
+            this.viewModuleBtn = new System.Windows.Forms.Button();
+            this.takeTestBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createModuleBtn
             // 
-            this.createModuleBtn.Location = new System.Drawing.Point(11, 54);
+            this.createModuleBtn.Location = new System.Drawing.Point(11, 74);
             this.createModuleBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createModuleBtn.Name = "createModuleBtn";
-            this.createModuleBtn.Size = new System.Drawing.Size(133, 33);
+            this.createModuleBtn.Size = new System.Drawing.Size(133, 58);
             this.createModuleBtn.TabIndex = 3;
-            this.createModuleBtn.Text = "Create Module";
+            this.createModuleBtn.Text = "Add/Delete Modules";
             this.createModuleBtn.UseVisualStyleBackColor = true;
             this.createModuleBtn.Click += new System.EventHandler(this.createModuleBtn_Click);
             // 
@@ -48,17 +52,60 @@
             this.createCourseBtn.Location = new System.Drawing.Point(11, 12);
             this.createCourseBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createCourseBtn.Name = "createCourseBtn";
-            this.createCourseBtn.Size = new System.Drawing.Size(133, 36);
+            this.createCourseBtn.Size = new System.Drawing.Size(133, 56);
             this.createCourseBtn.TabIndex = 4;
-            this.createCourseBtn.Text = "Create Course";
+            this.createCourseBtn.Text = "Add/Delete Courses";
             this.createCourseBtn.UseVisualStyleBackColor = true;
             this.createCourseBtn.Click += new System.EventHandler(this.createCourseBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(149, -11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(2, 545);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
+            // 
+            // viewCoursesBtn
+            // 
+            this.viewCoursesBtn.Location = new System.Drawing.Point(11, 209);
+            this.viewCoursesBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.viewCoursesBtn.Name = "viewCoursesBtn";
+            this.viewCoursesBtn.Size = new System.Drawing.Size(133, 36);
+            this.viewCoursesBtn.TabIndex = 7;
+            this.viewCoursesBtn.Text = "View Courses";
+            this.viewCoursesBtn.UseVisualStyleBackColor = true;
+            // 
+            // viewModuleBtn
+            // 
+            this.viewModuleBtn.Location = new System.Drawing.Point(11, 251);
+            this.viewModuleBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.viewModuleBtn.Name = "viewModuleBtn";
+            this.viewModuleBtn.Size = new System.Drawing.Size(133, 33);
+            this.viewModuleBtn.TabIndex = 6;
+            this.viewModuleBtn.Text = "View Module";
+            this.viewModuleBtn.UseVisualStyleBackColor = true;
+            // 
+            // takeTestBtn
+            // 
+            this.takeTestBtn.Location = new System.Drawing.Point(11, 419);
+            this.takeTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.takeTestBtn.Name = "takeTestBtn";
+            this.takeTestBtn.Size = new System.Drawing.Size(133, 36);
+            this.takeTestBtn.TabIndex = 8;
+            this.takeTestBtn.Text = "Tests";
+            this.takeTestBtn.UseVisualStyleBackColor = true;
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 531);
+            this.Controls.Add(this.takeTestBtn);
+            this.Controls.Add(this.viewCoursesBtn);
+            this.Controls.Add(this.viewModuleBtn);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.createCourseBtn);
             this.Controls.Add(this.createModuleBtn);
             this.Name = "MainScreen";
@@ -71,5 +118,9 @@
 
         public Button createModuleBtn;
         public Button createCourseBtn;
+        private Label label1;
+        public Button viewCoursesBtn;
+        public Button viewModuleBtn;
+        public Button takeTestBtn;
     }
 }

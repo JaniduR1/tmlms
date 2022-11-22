@@ -28,6 +28,9 @@ namespace TmLms
         private void CreateModule_Load(object sender, EventArgs e)
         {
             creditsDropDown.SelectedIndex = 0;
+            allAvailableModules.Hide();
+            deleteBtn.Hide();
+            deleteModulesLbl.Hide();
         }
 
         string messageboxTitle = "Problem Encountered";
@@ -41,8 +44,6 @@ namespace TmLms
             set { moduleNameTxtBox.Text = value; }
 
         }
-
-
 
         // Getting module Code to input into a dictionary //
         public string GetModuleCode
@@ -61,8 +62,8 @@ namespace TmLms
 
         public string GetAdminName
         {
-            get { return moduleAdminName.Text; }
-            set { moduleAdminName.Text = value; }
+            get { return moduleAdminNameTxtBox.Text; }
+            set { moduleAdminNameTxtBox.Text = value; }
         }
         // Getting Credits to input into TM.Credits //
 
@@ -98,30 +99,59 @@ namespace TmLms
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            //AllocConsole();
             if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
             {
                 MessageBox.Show(moduleCodeExists, messageboxTitle);
                 moduleCodeTxtBox.Clear(); 
                 return;
             }
+
             TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName);
-            //newModule.Members.Add(moduleMembers);
             newModule.Name = GetModuleName;
             newModule.Description = GetModuleDescription;
-            foreach(object i in moduleMembers)
+
+            foreach (object i in moduleMembers)
             {
                 newModule.Members.Add(i);
             }
 
             TmLms.Program.tmEngine.ModuleDictionary.Add(newModule.Code, newModule);
-
-            //TmLms.Program.tmEngine.ModuleDictionary.ToList().ForEach(m => Console.WriteLine(m.Key));
+            moduleNameTxtBox.Clear();
+            moduleCodeTxtBox.Clear();
+            moduleAdminNameTxtBox.Clear();
+            moduleDescriptionTxtBox.Clear();
         }
 
         private void backHomeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void deleteModulesBtn_Click(object sender, EventArgs e)
+        {
+            allAvailableModules.Show();
+            deleteBtn.Show();
+            deleteModulesLbl.Show();
+
+            foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
+            {
+                allAvailableModules.Items.Add(m.Name);
+            }
+        }
+
+        public string GetModuleToDelete
+        {
+            get { return allAvailableModules.Text; }
+            set { allAvailableModules.Text = value; }
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
+            {
+                allAvailableModules.Items.Remove(m.Name);
+                TmLms.Program.tmEngine.ModuleDictionary.Remove(GetModuleToDelete);
+            }
         }
     }
 }
