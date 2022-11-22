@@ -16,6 +16,29 @@ namespace TmLms.TM
         /// <returns>True if succesfully added, False if not</returns>
         /// 
 
+
+        public string CourseName
+        {
+            get; set; 
+        }
+
+        public string CourseCode
+        {
+            get; set;
+        }
+
+        public string CourseInstructor
+        {
+            get; set;
+        }
+
+        public Course (string name, string code, object instructor)
+        {
+            name = CourseName;
+            code = CourseCode;
+            instructor = CourseInstructor;
+        }
+
         public static void ModuleAddition()
         {
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TmLms.Users;
 
 namespace TmLms
 {
@@ -33,6 +34,12 @@ namespace TmLms
             {
                 availableModules.Items.Add(m.Name);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Administrator administrator = new Administrator();
+            //administrator.CreateCourse(instructorMember)
         }
     }
 }
