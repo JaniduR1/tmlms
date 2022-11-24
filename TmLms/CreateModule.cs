@@ -31,6 +31,7 @@ namespace TmLms
             allAvailableModules.Hide();
             deleteBtn.Hide();
             deleteModulesLbl.Hide();
+
         }
 
         string messageboxTitle = "Problem Encountered";
@@ -109,11 +110,13 @@ namespace TmLms
             TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName);
             newModule.Name = GetModuleName;
             newModule.Description = GetModuleDescription;
+            //newModule.Credits = creditsDropDown;
 
             foreach (object i in moduleMembers)
             {
                 newModule.Members.Add(i);
             }
+
 
             TmLms.Program.tmEngine.ModuleDictionary.Add(newModule.Code, newModule);
             moduleNameTxtBox.Clear();
@@ -129,13 +132,15 @@ namespace TmLms
 
         private void deleteModulesBtn_Click(object sender, EventArgs e)
         {
+            deleteModulesBtn.Text = "Refresh";
+
             allAvailableModules.Show();
             deleteBtn.Show();
             deleteModulesLbl.Show();
 
             foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
             {
-                allAvailableModules.Items.Add(m.Name);
+                allAvailableModules.Items.Add(m.Code);
             }
         }
 
@@ -145,13 +150,14 @@ namespace TmLms
             set { allAvailableModules.Text = value; }
         }
 
+
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
-            {
-                allAvailableModules.Items.Remove(m.Name);
-                TmLms.Program.tmEngine.ModuleDictionary.Remove(GetModuleToDelete);
-            }
+            allAvailableModules.Items.Remove(GetModuleToDelete);
+
+
+            Users.Administrator administrator = new Users.Administrator();
+            administrator.DeleteCourse(GetModuleToDelete);
         }
     }
 }

@@ -39,13 +39,7 @@
             this.courseCodeLbl = new System.Windows.Forms.Label();
             this.courseLevelCBox = new System.Windows.Forms.ComboBox();
             this.courseLevelLbl = new System.Windows.Forms.Label();
-            this.courseNameTxtBox = new System.Windows.Forms.TextBox();
-            this.courseNameLbl = new System.Windows.Forms.Label();
-            this.courseCodeTxtBox = new System.Windows.Forms.TextBox();
-            this.courseCodeLbl = new System.Windows.Forms.Label();
-            this.courseLevelCBox = new System.Windows.Forms.ComboBox();
-            this.courseLevelLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.createCourseBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // instructorMember
@@ -150,11 +144,22 @@
             this.courseLevelLbl.TabIndex = 10;
             this.courseLevelLbl.Text = "Course Level";
             // 
+            // createCourseBtn
+            // 
+            this.createCourseBtn.Location = new System.Drawing.Point(422, 414);
+            this.createCourseBtn.Name = "createCourseBtn";
+            this.createCourseBtn.Size = new System.Drawing.Size(141, 47);
+            this.createCourseBtn.TabIndex = 11;
+            this.createCourseBtn.Text = "Create Course";
+            this.createCourseBtn.UseVisualStyleBackColor = true;
+            this.createCourseBtn.Click += new System.EventHandler(this.createCourseBtn_Click);
+            // 
             // CreateCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 517);
+            this.Controls.Add(this.createCourseBtn);
             this.Controls.Add(this.courseLevelLbl);
             this.Controls.Add(this.courseLevelCBox);
             this.Controls.Add(this.courseCodeTxtBox);
@@ -187,5 +192,6 @@
         private Label courseCodeLbl;
         internal ComboBox courseLevelCBox;
         private Label courseLevelLbl;
+        private Button createCourseBtn;
     }
 }

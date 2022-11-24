@@ -18,6 +18,22 @@ namespace TmLms
             InitializeComponent();
         }
 
+        public string CName 
+        { 
+            get { return courseNameTxtBox.Text; }
+            set { courseNameTxtBox.Text = value; }
+        }
+        public string CCode
+        {
+            get { return courseCodeTxtBox.Text; }
+            set { courseCodeTxtBox.Text = value; }
+        }
+        public string CInstructor
+        {
+            get { return courseInstructorTxtbox.Text; }
+            set { courseInstructorTxtbox.Text = value; }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -36,10 +52,14 @@ namespace TmLms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void createCourseBtn_Click(object sender, EventArgs e)
         {
             Administrator administrator = new Administrator();
-            //administrator.CreateCourse(instructorMember)
+            administrator.CreateCourse(CName, CCode, CInstructor);
+
+            courseNameTxtBox.Clear();
+            courseCodeTxtBox.Clear();
+            courseInstructorTxtbox.Clear();
         }
     }
 }

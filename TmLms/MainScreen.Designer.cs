@@ -34,6 +34,7 @@
             this.viewCoursesBtn = new System.Windows.Forms.Button();
             this.viewModuleBtn = new System.Windows.Forms.Button();
             this.takeTestBtn = new System.Windows.Forms.Button();
+            this.createTestBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createModuleBtn
@@ -69,7 +70,7 @@
             // 
             // viewCoursesBtn
             // 
-            this.viewCoursesBtn.Location = new System.Drawing.Point(11, 209);
+            this.viewCoursesBtn.Location = new System.Drawing.Point(11, 270);
             this.viewCoursesBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.viewCoursesBtn.Name = "viewCoursesBtn";
             this.viewCoursesBtn.Size = new System.Drawing.Size(133, 36);
@@ -79,7 +80,7 @@
             // 
             // viewModuleBtn
             // 
-            this.viewModuleBtn.Location = new System.Drawing.Point(11, 251);
+            this.viewModuleBtn.Location = new System.Drawing.Point(11, 312);
             this.viewModuleBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.viewModuleBtn.Name = "viewModuleBtn";
             this.viewModuleBtn.Size = new System.Drawing.Size(133, 33);
@@ -89,7 +90,7 @@
             // 
             // takeTestBtn
             // 
-            this.takeTestBtn.Location = new System.Drawing.Point(11, 419);
+            this.takeTestBtn.Location = new System.Drawing.Point(11, 483);
             this.takeTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.takeTestBtn.Name = "takeTestBtn";
             this.takeTestBtn.Size = new System.Drawing.Size(133, 36);
@@ -97,11 +98,22 @@
             this.takeTestBtn.Text = "Tests";
             this.takeTestBtn.UseVisualStyleBackColor = true;
             // 
+            // createTestBtn
+            // 
+            this.createTestBtn.Location = new System.Drawing.Point(11, 191);
+            this.createTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.createTestBtn.Name = "createTestBtn";
+            this.createTestBtn.Size = new System.Drawing.Size(133, 36);
+            this.createTestBtn.TabIndex = 9;
+            this.createTestBtn.Text = "Create Tests";
+            this.createTestBtn.UseVisualStyleBackColor = true;
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 531);
+            this.Controls.Add(this.createTestBtn);
             this.Controls.Add(this.takeTestBtn);
             this.Controls.Add(this.viewCoursesBtn);
             this.Controls.Add(this.viewModuleBtn);
@@ -122,5 +134,6 @@
         public Button viewCoursesBtn;
         public Button viewModuleBtn;
         public Button takeTestBtn;
+        public Button createTestBtn;
     }
 }

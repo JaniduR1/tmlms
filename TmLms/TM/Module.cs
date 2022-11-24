@@ -58,6 +58,7 @@ namespace TmLms.TM
             Description = "";
             Members = new SortedSet<object>();
             Members.Add(AdminPerson);
+            //Credits = CreditEnum;
         }
 
         /// <summary>

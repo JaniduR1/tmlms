@@ -204,7 +204,7 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(885, 370);
+            this.deleteBtn.Location = new System.Drawing.Point(912, 370);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(82, 31);
             this.deleteBtn.TabIndex = 27;
@@ -223,9 +223,9 @@
             // 
             // deleteModulesBtn
             // 
-            this.deleteModulesBtn.Location = new System.Drawing.Point(871, 269);
+            this.deleteModulesBtn.Location = new System.Drawing.Point(885, 290);
             this.deleteModulesBtn.Name = "deleteModulesBtn";
-            this.deleteModulesBtn.Size = new System.Drawing.Size(155, 58);
+            this.deleteModulesBtn.Size = new System.Drawing.Size(135, 37);
             this.deleteModulesBtn.TabIndex = 29;
             this.deleteModulesBtn.Text = "Delete Modules";
             this.deleteModulesBtn.UseVisualStyleBackColor = true;
