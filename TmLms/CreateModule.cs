@@ -68,16 +68,24 @@ namespace TmLms
         }
         // Getting Credits to input into TM.Credits //
 
-        public string ModuleCreditsNum
+        public string ModuleCreditsTxt
         {
             get { return creditsDropDown.Text; }
             set { creditsDropDown.Text = value; }
         }
+        // Getting Members to input into TM.Credits //
 
         public string GetModuleMember
         {
             get { return moduleMemberTxtBox.Text; }
             set { moduleMemberTxtBox.Text= value; }
+        }
+        // Getting Level to input into TM.Credits //
+
+        public string ModuleLevelTxt
+        {
+            get { return levelDropDown.Text; }
+            set { levelDropDown.Text = value; }
         }
 
         SortedSet<object> moduleMembers = new SortedSet<object>();
@@ -100,6 +108,10 @@ namespace TmLms
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+
+            var moduleCInt = Int32.Parse(ModuleCreditsTxt);
+            var moduleLInt = Int32.Parse(ModuleLevelTxt);
+
             if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
             {
                 MessageBox.Show(moduleCodeExists, messageboxTitle);
@@ -107,10 +119,8 @@ namespace TmLms
                 return;
             }
 
-            TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName);
-            newModule.Name = GetModuleName;
-            newModule.Description = GetModuleDescription;
-            //newModule.Credits = creditsDropDown;
+            TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName, GetModuleName, GetModuleDescription, 
+                moduleCInt, moduleLInt);
 
             foreach (object i in moduleMembers)
             {
@@ -123,6 +133,7 @@ namespace TmLms
             moduleCodeTxtBox.Clear();
             moduleAdminNameTxtBox.Clear();
             moduleDescriptionTxtBox.Clear();
+            //creditsDropDown.Items.Clear()
         }
 
         private void backHomeBtn_Click(object sender, EventArgs e)
@@ -132,8 +143,7 @@ namespace TmLms
 
         private void deleteModulesBtn_Click(object sender, EventArgs e)
         {
-            deleteModulesBtn.Text = "Refresh";
-
+            deleteModulesBtn.Hide();
             allAvailableModules.Show();
             deleteBtn.Show();
             deleteModulesLbl.Show();
@@ -153,11 +163,11 @@ namespace TmLms
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            allAvailableModules.Items.Remove(GetModuleToDelete);
-
-
             Users.Administrator administrator = new Users.Administrator();
             administrator.DeleteCourse(GetModuleToDelete);
+
+            allAvailableModules.Items.Remove(GetModuleToDelete);
+
         }
     }
 }

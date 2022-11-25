@@ -51,14 +51,15 @@ namespace TmLms.TM
         /// </summary>
         public SortedSet<object> Members { get; set; }
 
-        public Module(string code, object AdminPerson)
+        public Module(string code, object AdminPerson, string name, string description, int credits, int level)
         {
             Code = code;
-            Name = "";
-            Description = "";
+            Name = name;
+            Description = description;
             Members = new SortedSet<object>();
             Members.Add(AdminPerson);
-            //Credits = CreditEnum;
+            Credits = (CreditEnum)credits;
+            Level = (LevelEnum)level;
         }
 
         /// <summary>

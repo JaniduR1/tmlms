@@ -40,13 +40,17 @@
             this.courseLevelCBox = new System.Windows.Forms.ComboBox();
             this.courseLevelLbl = new System.Windows.Forms.Label();
             this.createCourseBtn = new System.Windows.Forms.Button();
+            this.chosenModules = new System.Windows.Forms.ListView();
+            this.moduleCode = new System.Windows.Forms.ColumnHeader();
+            this.moduleName = new System.Windows.Forms.ColumnHeader();
+            this.moduleCredits = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // instructorMember
             // 
             this.instructorMember.AutoSize = true;
             this.instructorMember.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.instructorMember.Location = new System.Drawing.Point(27, 132);
+            this.instructorMember.Location = new System.Drawing.Point(27, 279);
             this.instructorMember.Name = "instructorMember";
             this.instructorMember.Size = new System.Drawing.Size(161, 28);
             this.instructorMember.TabIndex = 0;
@@ -55,7 +59,7 @@
             // courseInstructorTxtbox
             // 
             this.courseInstructorTxtbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseInstructorTxtbox.Location = new System.Drawing.Point(213, 129);
+            this.courseInstructorTxtbox.Location = new System.Drawing.Point(213, 276);
             this.courseInstructorTxtbox.Name = "courseInstructorTxtbox";
             this.courseInstructorTxtbox.Size = new System.Drawing.Size(229, 34);
             this.courseInstructorTxtbox.TabIndex = 1;
@@ -93,7 +97,7 @@
             // courseNameTxtBox
             // 
             this.courseNameTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseNameTxtBox.Location = new System.Drawing.Point(213, 17);
+            this.courseNameTxtBox.Location = new System.Drawing.Point(213, 122);
             this.courseNameTxtBox.Name = "courseNameTxtBox";
             this.courseNameTxtBox.Size = new System.Drawing.Size(229, 34);
             this.courseNameTxtBox.TabIndex = 6;
@@ -102,7 +106,7 @@
             // 
             this.courseNameLbl.AutoSize = true;
             this.courseNameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseNameLbl.Location = new System.Drawing.Point(27, 20);
+            this.courseNameLbl.Location = new System.Drawing.Point(27, 125);
             this.courseNameLbl.Name = "courseNameLbl";
             this.courseNameLbl.Size = new System.Drawing.Size(129, 28);
             this.courseNameLbl.TabIndex = 5;
@@ -111,7 +115,7 @@
             // courseCodeTxtBox
             // 
             this.courseCodeTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseCodeTxtBox.Location = new System.Drawing.Point(213, 75);
+            this.courseCodeTxtBox.Location = new System.Drawing.Point(213, 193);
             this.courseCodeTxtBox.Name = "courseCodeTxtBox";
             this.courseCodeTxtBox.Size = new System.Drawing.Size(229, 34);
             this.courseCodeTxtBox.TabIndex = 8;
@@ -120,7 +124,7 @@
             // 
             this.courseCodeLbl.AutoSize = true;
             this.courseCodeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseCodeLbl.Location = new System.Drawing.Point(27, 78);
+            this.courseCodeLbl.Location = new System.Drawing.Point(27, 196);
             this.courseCodeLbl.Name = "courseCodeLbl";
             this.courseCodeLbl.Size = new System.Drawing.Size(123, 28);
             this.courseCodeLbl.TabIndex = 7;
@@ -129,7 +133,7 @@
             // courseLevelCBox
             // 
             this.courseLevelCBox.FormattingEnabled = true;
-            this.courseLevelCBox.Location = new System.Drawing.Point(213, 235);
+            this.courseLevelCBox.Location = new System.Drawing.Point(213, 362);
             this.courseLevelCBox.Name = "courseLevelCBox";
             this.courseLevelCBox.Size = new System.Drawing.Size(241, 28);
             this.courseLevelCBox.TabIndex = 9;
@@ -138,7 +142,7 @@
             // 
             this.courseLevelLbl.AutoSize = true;
             this.courseLevelLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseLevelLbl.Location = new System.Drawing.Point(27, 235);
+            this.courseLevelLbl.Location = new System.Drawing.Point(27, 362);
             this.courseLevelLbl.Name = "courseLevelLbl";
             this.courseLevelLbl.Size = new System.Drawing.Size(121, 28);
             this.courseLevelLbl.TabIndex = 10;
@@ -146,7 +150,7 @@
             // 
             // createCourseBtn
             // 
-            this.createCourseBtn.Location = new System.Drawing.Point(422, 414);
+            this.createCourseBtn.Location = new System.Drawing.Point(133, 476);
             this.createCourseBtn.Name = "createCourseBtn";
             this.createCourseBtn.Size = new System.Drawing.Size(141, 47);
             this.createCourseBtn.TabIndex = 11;
@@ -154,11 +158,40 @@
             this.createCourseBtn.UseVisualStyleBackColor = true;
             this.createCourseBtn.Click += new System.EventHandler(this.createCourseBtn_Click);
             // 
+            // chosenModules
+            // 
+            this.chosenModules.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.moduleCode,
+            this.moduleName,
+            this.moduleCredits});
+            this.chosenModules.Location = new System.Drawing.Point(560, 178);
+            this.chosenModules.Name = "chosenModules";
+            this.chosenModules.Size = new System.Drawing.Size(394, 366);
+            this.chosenModules.TabIndex = 12;
+            this.chosenModules.UseCompatibleStateImageBehavior = false;
+            this.chosenModules.View = System.Windows.Forms.View.Details;
+            // 
+            // moduleCode
+            // 
+            this.moduleCode.Text = "Module Code";
+            this.moduleCode.Width = 120;
+            // 
+            // moduleName
+            // 
+            this.moduleName.Text = "Module Name";
+            this.moduleName.Width = 150;
+            // 
+            // moduleCredits
+            // 
+            this.moduleCredits.Text = "Module Credits";
+            this.moduleCredits.Width = 150;
+            // 
             // CreateCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 517);
+            this.ClientSize = new System.Drawing.Size(966, 556);
+            this.Controls.Add(this.chosenModules);
             this.Controls.Add(this.createCourseBtn);
             this.Controls.Add(this.courseLevelLbl);
             this.Controls.Add(this.courseLevelCBox);
@@ -193,5 +226,9 @@
         internal ComboBox courseLevelCBox;
         private Label courseLevelLbl;
         private Button createCourseBtn;
+        private ListView chosenModules;
+        private ColumnHeader moduleCode;
+        private ColumnHeader moduleName;
+        private ColumnHeader moduleCredits;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.moduleNameLbl = new System.Windows.Forms.Label();
             this.moduleCodeLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.moduleCreditLbl = new System.Windows.Forms.Label();
             this.moduleDescriptionLbl = new System.Windows.Forms.Label();
             this.moduleDescriptionTxtBox = new System.Windows.Forms.RichTextBox();
             this.moduleAdminNameTxtBox = new System.Windows.Forms.TextBox();
@@ -47,6 +47,8 @@
             this.deleteBtn = new System.Windows.Forms.Button();
             this.allAvailableModules = new System.Windows.Forms.ComboBox();
             this.deleteModulesBtn = new System.Windows.Forms.Button();
+            this.levelDropDown = new System.Windows.Forms.ComboBox();
+            this.moduleLevelLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // moduleNameLbl
@@ -69,21 +71,21 @@
             this.moduleCodeLbl.TabIndex = 4;
             this.moduleCodeLbl.Text = "Module Code";
             // 
-            // label1
+            // moduleCreditLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(15, 415);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Number Of Credits";
+            this.moduleCreditLbl.AutoSize = true;
+            this.moduleCreditLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moduleCreditLbl.Location = new System.Drawing.Point(15, 370);
+            this.moduleCreditLbl.Name = "moduleCreditLbl";
+            this.moduleCreditLbl.Size = new System.Drawing.Size(162, 25);
+            this.moduleCreditLbl.TabIndex = 8;
+            this.moduleCreditLbl.Text = "Number Of Credits";
             // 
             // moduleDescriptionLbl
             // 
             this.moduleDescriptionLbl.AutoSize = true;
             this.moduleDescriptionLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.moduleDescriptionLbl.Location = new System.Drawing.Point(15, 252);
+            this.moduleDescriptionLbl.Location = new System.Drawing.Point(15, 202);
             this.moduleDescriptionLbl.Name = "moduleDescriptionLbl";
             this.moduleDescriptionLbl.Size = new System.Drawing.Size(168, 25);
             this.moduleDescriptionLbl.TabIndex = 6;
@@ -91,7 +93,7 @@
             // 
             // moduleDescriptionTxtBox
             // 
-            this.moduleDescriptionTxtBox.Location = new System.Drawing.Point(234, 253);
+            this.moduleDescriptionTxtBox.Location = new System.Drawing.Point(234, 203);
             this.moduleDescriptionTxtBox.Name = "moduleDescriptionTxtBox";
             this.moduleDescriptionTxtBox.Size = new System.Drawing.Size(285, 138);
             this.moduleDescriptionTxtBox.TabIndex = 10;
@@ -121,10 +123,10 @@
             this.creditsDropDown.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.creditsDropDown.FormattingEnabled = true;
             this.creditsDropDown.Items.AddRange(new object[] {
-            "TWENTY (20)",
-            "FORTY (40)",
-            "SIXTY (60)"});
-            this.creditsDropDown.Location = new System.Drawing.Point(234, 416);
+            "20",
+            "40",
+            "60"});
+            this.creditsDropDown.Location = new System.Drawing.Point(234, 371);
             this.creditsDropDown.Name = "creditsDropDown";
             this.creditsDropDown.Size = new System.Drawing.Size(285, 31);
             this.creditsDropDown.TabIndex = 15;
@@ -231,11 +233,36 @@
             this.deleteModulesBtn.UseVisualStyleBackColor = true;
             this.deleteModulesBtn.Click += new System.EventHandler(this.deleteModulesBtn_Click);
             // 
+            // levelDropDown
+            // 
+            this.levelDropDown.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.levelDropDown.FormattingEnabled = true;
+            this.levelDropDown.Items.AddRange(new object[] {
+            "4",
+            "5",
+            "6"});
+            this.levelDropDown.Location = new System.Drawing.Point(234, 438);
+            this.levelDropDown.Name = "levelDropDown";
+            this.levelDropDown.Size = new System.Drawing.Size(285, 31);
+            this.levelDropDown.TabIndex = 31;
+            // 
+            // moduleLevelLbl
+            // 
+            this.moduleLevelLbl.AutoSize = true;
+            this.moduleLevelLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moduleLevelLbl.Location = new System.Drawing.Point(15, 437);
+            this.moduleLevelLbl.Name = "moduleLevelLbl";
+            this.moduleLevelLbl.Size = new System.Drawing.Size(121, 25);
+            this.moduleLevelLbl.TabIndex = 30;
+            this.moduleLevelLbl.Text = "Level Number";
+            // 
             // CreateModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 533);
+            this.Controls.Add(this.levelDropDown);
+            this.Controls.Add(this.moduleLevelLbl);
             this.Controls.Add(this.deleteModulesBtn);
             this.Controls.Add(this.allAvailableModules);
             this.Controls.Add(this.deleteBtn);
@@ -251,7 +278,7 @@
             this.Controls.Add(this.moduleAdminNameTxtBox);
             this.Controls.Add(this.moduleAdministratorName);
             this.Controls.Add(this.moduleDescriptionTxtBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.moduleCreditLbl);
             this.Controls.Add(this.moduleDescriptionLbl);
             this.Controls.Add(this.moduleCodeLbl);
             this.Controls.Add(this.moduleNameLbl);
@@ -266,7 +293,7 @@
         #endregion
         private Label moduleNameLbl;
         private Label moduleCodeLbl;
-        private Label label1;
+        private Label moduleCreditLbl;
         private Label moduleDescriptionLbl;
         private RichTextBox moduleDescriptionTxtBox;
         private TextBox moduleAdminNameTxtBox;
@@ -283,5 +310,7 @@
         private Button deleteBtn;
         private ComboBox allAvailableModules;
         private Button deleteModulesBtn;
+        private ComboBox levelDropDown;
+        private Label moduleLevelLbl;
     }
 }

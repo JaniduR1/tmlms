@@ -41,7 +41,11 @@ namespace TmLms
 
         private void addModuleBtn_Click(object sender, EventArgs e)
         {
-
+            foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
+            {
+                chosenModules.Items.Add(m.Name);
+            }
+            //chosenModules.Items.Add()
         }
 
         private void CreateCourse_Load(object sender, EventArgs e)

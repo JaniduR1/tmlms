@@ -37,16 +37,18 @@ namespace TmLms.Users
         public void DeleteCourse(string ModuleCode)
         {
             MCode = ModuleCode;
+            TMEngine.Instance.ModuleDictionary.Remove(ModuleCode);
+            TmLms.Program.tmEngine.ModuleDictionary.Remove(ModuleCode);
 
-            if (ModuleCode != null)
-            {
-                TMEngine.Instance.ModuleDictionary.Remove(ModuleCode);
-                TmLms.Program.tmEngine.ModuleDictionary.Remove(ModuleCode);
-            }
-            else
-            {
-                MessageBox.Show("No Module Selected to Delete");
-            }
+            //if (ModuleCode != null)
+            //{
+            //    TMEngine.Instance.ModuleDictionary.Remove(ModuleCode);
+            //    TmLms.Program.tmEngine.ModuleDictionary.Remove(ModuleCode);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No Module Selected to Delete");
+            //}
         }
     }
 }
