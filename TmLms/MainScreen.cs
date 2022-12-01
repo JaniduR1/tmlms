@@ -51,5 +51,12 @@ namespace TmLms
             //createModule.Closed += (s, args) => this.Close();
             createModule.Show();
         }
+
+        private void createTestBtn_Click(object sender, EventArgs e)
+        {
+            var createTest = new CreateTests();
+
+            createTest.Show();
+        }
     }
 }

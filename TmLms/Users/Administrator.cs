@@ -9,14 +9,9 @@ namespace TmLms.Users
 {
     internal class Administrator
     {
-
-        public string MCode
-        {
-            get; set;
-        }
-
         public void CreateCourse(string CourseName, string CourseCode, object CourseInstructor)
         {
+            
             if (TmLms.Program.tmEngine.CourseDictionary.ContainsKey(CourseCode))
             {
                 MessageBox.Show("There is already a course code that exist with that given input please change it.");
@@ -32,6 +27,11 @@ namespace TmLms.Users
         public void CreateModule()
         {
 
+        }
+
+        public string MCode
+        {
+            get; set;
         }
 
         public void DeleteCourse(string ModuleCode)

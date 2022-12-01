@@ -107,6 +107,7 @@
             this.createTestBtn.TabIndex = 9;
             this.createTestBtn.Text = "Create Tests";
             this.createTestBtn.UseVisualStyleBackColor = true;
+            this.createTestBtn.Click += new System.EventHandler(this.createTestBtn_Click);
             // 
             // MainScreen
             // 

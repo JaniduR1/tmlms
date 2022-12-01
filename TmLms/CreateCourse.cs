@@ -34,6 +34,12 @@ namespace TmLms
             set { courseInstructorTxtbox.Text = value; }
         }
 
+        public string ChosenModuleToAdd
+        {
+            get { return availableModules.Text; }
+            set { availableModules.Text = value; }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -41,18 +47,21 @@ namespace TmLms
 
         private void addModuleBtn_Click(object sender, EventArgs e)
         {
-            foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
-            {
-                chosenModules.Items.Add(m.Name);
-            }
+            //foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
+            //{
+            //    availableModules.Items.Add(m.Name);
+            //}
+
             //chosenModules.Items.Add()
         }
 
+
         private void CreateCourse_Load(object sender, EventArgs e)
         {
+            //availableModules.Items.Add(TMEngine.GetModuleCodes());
             foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
             {
-                availableModules.Items.Add(m.Name);
+                availableModules.Items.Add(m.Code);
             }
         }
 

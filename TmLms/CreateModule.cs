@@ -119,6 +119,12 @@ namespace TmLms
                 return;
             }
 
+            if(creditsDropDown.Text == null || levelDropDown.Text == null)
+            {
+                MessageBox.Show("Choose Level / Credits");
+                return;
+            }
+
             TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName, GetModuleName, GetModuleDescription, 
                 moduleCInt, moduleLInt);
 

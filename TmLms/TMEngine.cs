@@ -60,6 +60,16 @@ namespace TmLms
 
         public Dictionary<string, TM.Module> ModuleDictionary { get; set; }
 
+        //public
+
+        //public static void GetModuleCodes()
+        //{
+        //    foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
+        //    {
+        //        m.Code;
+        //    }
+        //}
+
 
         private static readonly TMEngine instance = new TMEngine();
 
