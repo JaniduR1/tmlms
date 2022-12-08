@@ -39,6 +39,7 @@
             this.ans3TxtBox = new System.Windows.Forms.TextBox();
             this.ans2TxtBox = new System.Windows.Forms.TextBox();
             this.questionTxtBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // submitBtn
@@ -136,10 +137,18 @@
             this.questionTxtBox.Size = new System.Drawing.Size(545, 27);
             this.questionTxtBox.TabIndex = 10;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(351, 149);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 125);
+            this.panel1.TabIndex = 20;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -173,5 +182,6 @@
         private TextBox ans3TxtBox;
         private TextBox ans2TxtBox;
         private TextBox questionTxtBox;
+        private Panel panel1;
     }
 }

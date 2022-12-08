@@ -22,7 +22,18 @@ namespace MultipleChoice
 
         public (bool, TmLms.Question.MultipleChoiceQ) GetQandAns()
         {
+            bool returnBool = false;
+            TmLms.Question.MultipleChoiceQ multipleChoiceQu = new TmLms.Question.MultipleChoiceQ();
 
+            return (returnBool, multipleChoiceQu);
+
+            UserControl userControl = new MultipleChoice.UserControl1();
+
+            panel1.Controls.Add(userControl);
+
+            MultipleChoice.UserControl1 multiChoice = (MultipleChoice.UserControl1)userControl;
+
+            multiChoice.GetQandAns();
         }
 
     }
