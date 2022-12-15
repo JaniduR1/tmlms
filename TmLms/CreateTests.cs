@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TmLms
 {
     public partial class CreateTests : Form
@@ -30,10 +31,11 @@ namespace TmLms
 
         private void selectQuizType_Click(object sender, EventArgs e)
         {
-            if(quizTypes.SelectedIndex == 0) // Multiple Choice
+            if (quizTypes.SelectedIndex == 0) // Multiple Choice
             {
-                MultipleChoiceCreation multipleChoice = new MultipleChoiceCreation();
-                multipleChoice.ShowDialog();
+                MultipleChoiceCreation mCCreation = new MultipleChoiceCreation();
+                mCCreation.Show();
+
             }
 
             else if (quizTypes.SelectedIndex == 1)

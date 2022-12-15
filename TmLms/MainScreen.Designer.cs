@@ -70,7 +70,7 @@
             // 
             // viewCoursesBtn
             // 
-            this.viewCoursesBtn.Location = new System.Drawing.Point(11, 270);
+            this.viewCoursesBtn.Location = new System.Drawing.Point(11, 200);
             this.viewCoursesBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.viewCoursesBtn.Name = "viewCoursesBtn";
             this.viewCoursesBtn.Size = new System.Drawing.Size(133, 36);
@@ -80,7 +80,7 @@
             // 
             // viewModuleBtn
             // 
-            this.viewModuleBtn.Location = new System.Drawing.Point(11, 312);
+            this.viewModuleBtn.Location = new System.Drawing.Point(11, 242);
             this.viewModuleBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.viewModuleBtn.Name = "viewModuleBtn";
             this.viewModuleBtn.Size = new System.Drawing.Size(133, 33);
@@ -90,7 +90,7 @@
             // 
             // takeTestBtn
             // 
-            this.takeTestBtn.Location = new System.Drawing.Point(11, 483);
+            this.takeTestBtn.Location = new System.Drawing.Point(11, 418);
             this.takeTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.takeTestBtn.Name = "takeTestBtn";
             this.takeTestBtn.Size = new System.Drawing.Size(133, 36);
@@ -100,7 +100,7 @@
             // 
             // createTestBtn
             // 
-            this.createTestBtn.Location = new System.Drawing.Point(11, 191);
+            this.createTestBtn.Location = new System.Drawing.Point(11, 376);
             this.createTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createTestBtn.Name = "createTestBtn";
             this.createTestBtn.Size = new System.Drawing.Size(133, 36);

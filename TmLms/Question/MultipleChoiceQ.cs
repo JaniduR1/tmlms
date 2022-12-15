@@ -10,21 +10,26 @@ namespace TmLms.Question
     {
         public string Questions { get; set; }
 
-        public List<string> Answers { get; set; }
-        
-        public MultipleChoiceQ(string question, List<string> answers) : base(question)
+        private List<string> MultiChoices { get; set; }
+
+        public MultipleChoiceQ(string question) : base(question)
         {
             Questions = question;
-            Answers = answers;
+            MultiChoices = new List<string>();
         }
 
+        public void AddChoice(string choice, bool isCorrect)
+        {
+            MultiChoices.Add(choice);
 
+            if(isCorrect == true)
+            {
+                MultiChoices.IndexOf(choice);
+            }
+        }
         public MultipleChoiceQ()
         {
-            
+
         }
-
-
-
     }
 }

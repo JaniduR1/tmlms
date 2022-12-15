@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace TmLms
 {
+    //class quiz
+    //{
+    //    List<Question> 
+    //}
+
+
     //public static Form1 form1 = Application.OpenForms.OfType<Form1>().FirstOrDefault();
     //public static MainScreen mainScreen = Application.OpenForms.OfType<MainScreen>().FirstOrDefault();
     public sealed class TMEngine
@@ -60,15 +66,8 @@ namespace TmLms
 
         public Dictionary<string, TM.Module> ModuleDictionary { get; set; }
 
-        //public
+        public Dictionary<Question.Question, Question.MultipleChoiceQ> MCQDictionary { get; set; }
 
-        //public static void GetModuleCodes()
-        //{
-        //    foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
-        //    {
-        //        m.Code;
-        //    }
-        //}
 
 
         private static readonly TMEngine instance = new TMEngine();
@@ -81,6 +80,7 @@ namespace TmLms
         {
             CourseDictionary = new Dictionary<string, TM.Course>();
             ModuleDictionary = new Dictionary<string, TM.Module>();
+            MCQDictionary = new Dictionary<Question.Question, Question.MultipleChoiceQ>();
         }
 
         public static TMEngine Instance

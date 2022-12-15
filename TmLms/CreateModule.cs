@@ -112,12 +112,12 @@ namespace TmLms
             var moduleCInt = Int32.Parse(ModuleCreditsTxt);
             var moduleLInt = Int32.Parse(ModuleLevelTxt);
 
-            if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
-            {
-                MessageBox.Show(moduleCodeExists, messageboxTitle);
-                moduleCodeTxtBox.Clear(); 
-                return;
-            }
+            //if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
+            //{
+            //    MessageBox.Show(moduleCodeExists, messageboxTitle);
+            //    moduleCodeTxtBox.Clear(); 
+            //    return;
+            //}
 
             if(creditsDropDown.Text == null || levelDropDown.Text == null)
             {

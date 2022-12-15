@@ -52,7 +52,7 @@
             // 
             // selectQuizType
             // 
-            this.selectQuizType.Location = new System.Drawing.Point(49, 89);
+            this.selectQuizType.Location = new System.Drawing.Point(47, 123);
             this.selectQuizType.Name = "selectQuizType";
             this.selectQuizType.Size = new System.Drawing.Size(138, 49);
             this.selectQuizType.TabIndex = 1;
