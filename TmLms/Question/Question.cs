@@ -8,16 +8,18 @@ namespace TmLms.Question
 {
     public class Question
     {
-        public string QuestionText { get; set; }
+        public Quiz quiz { get; set; }
 
-        public Question()
+        public void AddQuestion(Question question)
         {
+            int id = 0;
 
-        }
+            foreach(Question q in TmLms.TMEngine.Instance.QuestionDictionary.Values)
+            {
+                id += 1;
+            }
 
-        public Question (string questionText)
-        {
-            this.QuestionText= questionText;
+            TmLms.Program.tmEngine.QuestionDictionary.Add(id, question);
         }
     }
 }

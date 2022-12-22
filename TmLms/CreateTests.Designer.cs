@@ -29,57 +29,123 @@
         private void InitializeComponent()
         {
             this.questionsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.quizTypes = new System.Windows.Forms.ComboBox();
-            this.selectQuizType = new System.Windows.Forms.Button();
+            this.quizCodeTxtBox = new System.Windows.Forms.TextBox();
+            this.quizCodeLbl = new System.Windows.Forms.Label();
+            this.moduleLbl = new System.Windows.Forms.Label();
+            this.addQuestionsBtn = new System.Windows.Forms.Button();
+            this.quizTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.quizTypeLbl = new System.Windows.Forms.Label();
+            this.moduleComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // questionsPanel
             // 
             this.questionsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.questionsPanel.Location = new System.Drawing.Point(231, 0);
+            this.questionsPanel.Location = new System.Drawing.Point(214, 0);
             this.questionsPanel.Name = "questionsPanel";
-            this.questionsPanel.Size = new System.Drawing.Size(835, 549);
+            this.questionsPanel.Size = new System.Drawing.Size(1006, 593);
             this.questionsPanel.TabIndex = 0;
             // 
-            // quizTypes
+            // quizCodeTxtBox
             // 
-            this.quizTypes.FormattingEnabled = true;
-            this.quizTypes.Location = new System.Drawing.Point(12, 12);
-            this.quizTypes.Name = "quizTypes";
-            this.quizTypes.Size = new System.Drawing.Size(213, 28);
-            this.quizTypes.TabIndex = 0;
+            this.quizCodeTxtBox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.quizCodeTxtBox.Location = new System.Drawing.Point(12, 49);
+            this.quizCodeTxtBox.Name = "quizCodeTxtBox";
+            this.quizCodeTxtBox.Size = new System.Drawing.Size(196, 31);
+            this.quizCodeTxtBox.TabIndex = 1;
             // 
-            // selectQuizType
+            // quizCodeLbl
             // 
-            this.selectQuizType.Location = new System.Drawing.Point(47, 123);
-            this.selectQuizType.Name = "selectQuizType";
-            this.selectQuizType.Size = new System.Drawing.Size(138, 49);
-            this.selectQuizType.TabIndex = 1;
-            this.selectQuizType.Text = "Select";
-            this.selectQuizType.UseVisualStyleBackColor = true;
-            this.selectQuizType.Click += new System.EventHandler(this.selectQuizType_Click);
+            this.quizCodeLbl.AutoSize = true;
+            this.quizCodeLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.quizCodeLbl.Location = new System.Drawing.Point(69, 21);
+            this.quizCodeLbl.Name = "quizCodeLbl";
+            this.quizCodeLbl.Size = new System.Drawing.Size(95, 25);
+            this.quizCodeLbl.TabIndex = 2;
+            this.quizCodeLbl.Text = "Quiz Code";
+            // 
+            // moduleLbl
+            // 
+            this.moduleLbl.AutoSize = true;
+            this.moduleLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moduleLbl.Location = new System.Drawing.Point(69, 105);
+            this.moduleLbl.Name = "moduleLbl";
+            this.moduleLbl.Size = new System.Drawing.Size(73, 25);
+            this.moduleLbl.TabIndex = 4;
+            this.moduleLbl.Text = "Module";
+            // 
+            // addQuestionsBtn
+            // 
+            this.addQuestionsBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addQuestionsBtn.Location = new System.Drawing.Point(52, 192);
+            this.addQuestionsBtn.Name = "addQuestionsBtn";
+            this.addQuestionsBtn.Size = new System.Drawing.Size(125, 59);
+            this.addQuestionsBtn.TabIndex = 5;
+            this.addQuestionsBtn.Text = "Add Questions";
+            this.addQuestionsBtn.UseVisualStyleBackColor = true;
+            this.addQuestionsBtn.Click += new System.EventHandler(this.addQuestionsBtn_Click);
+            // 
+            // quizTypeComboBox
+            // 
+            this.quizTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.quizTypeComboBox.FormattingEnabled = true;
+            this.quizTypeComboBox.Location = new System.Drawing.Point(12, 400);
+            this.quizTypeComboBox.Name = "quizTypeComboBox";
+            this.quizTypeComboBox.Size = new System.Drawing.Size(196, 33);
+            this.quizTypeComboBox.TabIndex = 6;
+            this.quizTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.quizTypeComboBox_SelectedIndexChanged);
+            // 
+            // quizTypeLbl
+            // 
+            this.quizTypeLbl.AutoSize = true;
+            this.quizTypeLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.quizTypeLbl.Location = new System.Drawing.Point(69, 372);
+            this.quizTypeLbl.Name = "quizTypeLbl";
+            this.quizTypeLbl.Size = new System.Drawing.Size(90, 25);
+            this.quizTypeLbl.TabIndex = 7;
+            this.quizTypeLbl.Text = "Quiz Type";
+            // 
+            // moduleComboBox
+            // 
+            this.moduleComboBox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.moduleComboBox.FormattingEnabled = true;
+            this.moduleComboBox.Location = new System.Drawing.Point(12, 133);
+            this.moduleComboBox.Name = "moduleComboBox";
+            this.moduleComboBox.Size = new System.Drawing.Size(196, 33);
+            this.moduleComboBox.TabIndex = 8;
             // 
             // CreateTests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 550);
-            this.Controls.Add(this.selectQuizType);
-            this.Controls.Add(this.quizTypes);
+            this.ClientSize = new System.Drawing.Size(1219, 594);
+            this.Controls.Add(this.moduleComboBox);
+            this.Controls.Add(this.quizTypeLbl);
+            this.Controls.Add(this.quizTypeComboBox);
+            this.Controls.Add(this.addQuestionsBtn);
+            this.Controls.Add(this.moduleLbl);
+            this.Controls.Add(this.quizCodeLbl);
+            this.Controls.Add(this.quizCodeTxtBox);
             this.Controls.Add(this.questionsPanel);
             this.MinimumSize = new System.Drawing.Size(1083, 597);
             this.Name = "CreateTests";
             this.Text = "CreateTests";
             this.Load += new System.EventHandler(this.CreateTests_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private FlowLayoutPanel questionsPanel;
-        private ComboBox quizTypes;
-        private Button selectQuizType;
+        private TextBox quizCodeTxtBox;
+        private Label quizCodeLbl;
+        private Label moduleLbl;
+        private Button addQuestionsBtn;
+        private ComboBox quizTypeComboBox;
+        private Label quizTypeLbl;
+        private ComboBox moduleComboBox;
     }
 }

@@ -66,7 +66,9 @@ namespace TmLms
 
         public Dictionary<string, TM.Module> ModuleDictionary { get; set; }
 
-        public Dictionary<Question.Question, Question.MultipleChoiceQ> MCQDictionary { get; set; }
+        //public Dictionary<Question.Question, Question.MultipleChoiceQ> MCQDictionary { get; set; }
+
+        public Dictionary<int, Question.Question> QuestionDictionary { get; set; }
 
 
 
@@ -80,7 +82,7 @@ namespace TmLms
         {
             CourseDictionary = new Dictionary<string, TM.Course>();
             ModuleDictionary = new Dictionary<string, TM.Module>();
-            MCQDictionary = new Dictionary<Question.Question, Question.MultipleChoiceQ>();
+            QuestionDictionary = new Dictionary<int, Question.Question>();
         }
 
         public static TMEngine Instance

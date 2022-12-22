@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="AddQuestionsUC\AddMCQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControlsFile\MChoiceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

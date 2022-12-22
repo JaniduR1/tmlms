@@ -7,30 +7,30 @@ using System.Threading.Tasks;
 namespace TmLms.Question
 {
     public class MultipleChoiceQ : Question
-    {
-        public string Questions { get; set; }
-
-        private List<string> MultiChoices { get; set; }
-
-        public MultipleChoiceQ(string question) : base(question)
+    { 
+        public string MCQuestion
         {
-            Questions = question;
-            MultiChoices = new List<string>();
+            get;
+            set;
+        }
+        public string CAnswer
+        {
+            get;
+            set;
         }
 
-        public void AddChoice(string choice, bool isCorrect)
+        public List<string> FAnswers
         {
-            MultiChoices.Add(choice);
-
-            if (isCorrect == true)
-            {
-                var indexOfCor = MultiChoices.IndexOf(choice);
-                MultiChoices.Add(indexOfCor.ToString());
-            }
+            get;
+            set;
         }
-        public MultipleChoiceQ()
-        {
 
+        public MultipleChoiceQ(Quiz quiz, string MCQuestion, string CAnswer, List<string>FAnswers)
+        {
+            this.quiz = quiz;
+            this.MCQuestion = MCQuestion;
+            this.CAnswer = CAnswer;
+            this.FAnswers = FAnswers;
         }
     }
 }
