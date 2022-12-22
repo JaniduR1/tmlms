@@ -95,11 +95,6 @@ namespace TmLms
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void addMemberBtn_Click(object sender, EventArgs e)
         {
             moduleMembers.Add(GetModuleMember);
@@ -108,22 +103,21 @@ namespace TmLms
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-
-            var moduleCInt = Int32.Parse(ModuleCreditsTxt);
-            var moduleLInt = Int32.Parse(ModuleLevelTxt);
-
-            //if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
+           //if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
             //{
             //    MessageBox.Show(moduleCodeExists, messageboxTitle);
             //    moduleCodeTxtBox.Clear(); 
             //    return;
             //}
 
-            if(creditsDropDown.Text == null || levelDropDown.Text == null)
+            if(creditsDropDown.Text == "" || levelDropDown.Text == "")
             {
-                MessageBox.Show("Choose Level / Credits");
+                MessageBox.Show("Choose Amount Of Credits");
                 return;
             }
+
+            var moduleCInt = Int32.Parse(ModuleCreditsTxt);
+            var moduleLInt = Int32.Parse(ModuleLevelTxt);
 
             TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName, GetModuleName, GetModuleDescription, 
                 moduleCInt, moduleLInt);

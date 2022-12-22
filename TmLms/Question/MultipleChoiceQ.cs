@@ -22,9 +22,10 @@ namespace TmLms.Question
         {
             MultiChoices.Add(choice);
 
-            if(isCorrect == true)
+            if (isCorrect == true)
             {
-                MultiChoices.IndexOf(choice);
+                var indexOfCor = MultiChoices.IndexOf(choice);
+                MultiChoices.Add(indexOfCor.ToString());
             }
         }
         public MultipleChoiceQ()

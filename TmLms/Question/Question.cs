@@ -17,7 +17,7 @@ namespace TmLms.Question
 
         public Question (string questionText)
         {
-            QuestionText = questionText;
+            this.QuestionText= questionText;
         }
     }
 }

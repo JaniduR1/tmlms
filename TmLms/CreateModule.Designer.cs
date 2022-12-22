@@ -106,7 +106,6 @@
             this.moduleAdminNameTxtBox.Name = "moduleAdminNameTxtBox";
             this.moduleAdminNameTxtBox.Size = new System.Drawing.Size(285, 30);
             this.moduleAdminNameTxtBox.TabIndex = 12;
-            this.moduleAdminNameTxtBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // moduleAdministratorName
             // 

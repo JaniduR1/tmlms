@@ -51,21 +51,12 @@ namespace TmLms
 
         private void addQuestionBtn_Click(object sender, EventArgs e)
         {
-
             TmLms.Question.MultipleChoiceQ multipleChoiceQ = new Question.MultipleChoiceQ(GetQuestionTxt);
 
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    multipleChoiceQ.AddChoice(GetCorrectAnswerTxt, true);
-                    multipleChoiceQ.AddChoice(GetAnswer2Txt, false);
-                    multipleChoiceQ.AddChoice(GetAnswer3Txt, false);
-                    multipleChoiceQ.AddChoice(GetAnswer4Txt, false);
-                }
-            }
-
-
+            multipleChoiceQ.AddChoice(GetCorrectAnswerTxt, true);
+            multipleChoiceQ.AddChoice(GetAnswer2Txt, false);
+            multipleChoiceQ.AddChoice(GetAnswer3Txt, false);
+            multipleChoiceQ.AddChoice(GetAnswer4Txt, false);
 
         }
 
