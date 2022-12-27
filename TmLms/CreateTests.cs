@@ -82,7 +82,7 @@ namespace TmLms
 
         private void addQuestionsBtn_Click(object sender, EventArgs e)
         {
-            if (moduleComboBox.SelectedIndex < 0 && quizCodeTxtBox.Text == null)
+            if (quizCodeTxtBox.Text == null && moduleComboBox.SelectedIndex == -1)
             {
                 MessageBox.Show("Error, Please choose a Quiz Type and Enter a Quiz Code");
             }
@@ -105,6 +105,12 @@ namespace TmLms
                 questionsPanel.Controls.Clear();
                 AddQuestionsUC.AddMCQ addmcq = new AddQuestionsUC.AddMCQ(quiz);
                 questionsPanel.Controls.Add(addmcq);
+            }
+            else if(quizTypeComboBox.SelectedItem == "Multiple Answer")
+            {
+                questionsPanel.Controls.Clear();
+                AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(quiz);
+                questionsPanel.Controls.Add(addmaq);
             }
         }
     }

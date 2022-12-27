@@ -42,27 +42,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddEQ.Designer.cs">
+      <DependentUpon>AddEQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMAQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddMAQ.designer.cs">
+      <DependentUpon>AddMAQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddMCQ.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AddMCQ.Designer.cs">
       <DependentUpon>AddMCQ.cs</DependentUpon>
     </Compile>
-    <Compile Include="MultiChoiceQuiz.cs">
+    <Compile Include="AddSAQ.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MultiChoiceQuiz.Designer.cs">
-      <DependentUpon>MultiChoiceQuiz.cs</DependentUpon>
+    <Compile Include="AddSAQ.Designer.cs">
+      <DependentUpon>AddSAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTFQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddTFQ.Designer.cs">
+      <DependentUpon>AddTFQ.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddEQ.resx">
+      <DependentUpon>AddEQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMAQ.resx">
+      <DependentUpon>AddMAQ.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddMCQ.resx">
       <DependentUpon>AddMCQ.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MultiChoiceQuiz.resx">
-      <DependentUpon>MultiChoiceQuiz.cs</DependentUpon>
+    <EmbeddedResource Include="AddSAQ.resx">
+      <DependentUpon>AddSAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTFQ.resx">
+      <DependentUpon>AddTFQ.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

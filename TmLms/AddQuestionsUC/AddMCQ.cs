@@ -41,18 +41,27 @@ namespace TmLms.AddQuestionsUC
 
         private void addQuestionBtn_Click(object sender, EventArgs e)
         {
-            List<string> falseAnswers = new List<string>();
-            falseAnswers.Add(fAnswer2TxtBox.Text);
-            falseAnswers.Add(fAnswer3TxtBox.Text);
-            falseAnswers.Add(fAnswer4TxtBox.Text);
+            if (questionTxtBox.Text != "" && cAnswerTxtBox.Text != "" && fAnswer2TxtBox.Text != "" && 
+                fAnswer3TxtBox.Text != "" && fAnswer4TxtBox.Text != "")
+            {
+                List<string> falseAnswers = new List<string>();
+                falseAnswers.Add(fAnswer2TxtBox.Text);
+                falseAnswers.Add(fAnswer3TxtBox.Text);
+                falseAnswers.Add(fAnswer4TxtBox.Text);
 
-            Random random = new Random();
-            var MixedAnswers = falseAnswers.OrderBy(_ => random.Next()).ToList();
+                Random random = new Random();
+                var MixedAnswers = falseAnswers.OrderBy(_ => random.Next()).ToList();
 
-            Question.Question question = new Question.MultipleChoiceQ(quiz, GetQuestion, GetCorrectAnswer, MixedAnswers);
-            question.AddQuestion(question);
-            MessageBox.Show("Question Added");
-            ClearText();
+                Question.Question question = new Question.MultipleChoiceQ(quiz, GetQuestion, GetCorrectAnswer, MixedAnswers);
+                question.AddQuestion(question);
+                MessageBox.Show("Question Added");
+                ClearText();
+            }
+            else
+            {
+                MessageBox.Show("Please fill out all the fields");
+            }
+
         }
     }
 }
