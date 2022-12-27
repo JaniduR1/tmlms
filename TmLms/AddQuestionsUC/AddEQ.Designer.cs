@@ -96,6 +96,7 @@
             this.addQuestionBtn.TabIndex = 25;
             this.addQuestionBtn.Text = "Add Question";
             this.addQuestionBtn.UseVisualStyleBackColor = true;
+            this.addQuestionBtn.Click += new System.EventHandler(this.addQuestionBtn_Click);
             // 
             // AddEQ
             // 

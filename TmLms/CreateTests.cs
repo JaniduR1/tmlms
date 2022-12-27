@@ -112,6 +112,31 @@ namespace TmLms
                 AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(quiz);
                 questionsPanel.Controls.Add(addmaq);
             }
+            else if (quizTypeComboBox.SelectedItem == "Short Answer")
+            {
+                questionsPanel.Controls.Clear();
+                AddQuestionsUC.AddSAQ addsaq = new AddQuestionsUC.AddSAQ(quiz);
+                questionsPanel.Controls.Add(addsaq);
+            }
+            else if (quizTypeComboBox.SelectedItem == "Essay")
+            {
+                questionsPanel.Controls.Clear();
+                AddQuestionsUC.AddEQ addeq = new AddQuestionsUC.AddEQ(quiz);
+                questionsPanel.Controls.Add(addeq);
+            }
+            //else if(quizTypeComboBox.SelectedItem == "Matching")
+            //{
+            //    questionsPanel.Controls.Clear();
+            //    AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(quiz);
+            //    questionsPanel.Controls.Add(addmaq);
+            //}            
+            else if (quizTypeComboBox.SelectedItem == "True/False")
+            {
+                questionsPanel.Controls.Clear();
+                AddQuestionsUC.AddTFQ addtfq = new AddQuestionsUC.AddTFQ(quiz);
+                questionsPanel.Controls.Add(addtfq);
+            }
+
         }
     }
 }

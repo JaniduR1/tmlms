@@ -34,8 +34,8 @@
             this.questionTxtBox = new System.Windows.Forms.TextBox();
             this.trueRadioBtn = new System.Windows.Forms.RadioButton();
             this.falseRadioBtn = new System.Windows.Forms.RadioButton();
-            this.corrAnsT = new System.Windows.Forms.CheckBox();
-            this.corrAnsF = new System.Windows.Forms.CheckBox();
+            this.corrTickBox = new System.Windows.Forms.CheckBox();
+            this.corrAnsLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addQuestionBtn
@@ -48,6 +48,7 @@
             this.addQuestionBtn.TabIndex = 37;
             this.addQuestionBtn.Text = "Add Question";
             this.addQuestionBtn.UseVisualStyleBackColor = true;
+            this.addQuestionBtn.Click += new System.EventHandler(this.addQuestionBtn_Click);
             // 
             // tfqLbl
             // 
@@ -105,32 +106,33 @@
             this.falseRadioBtn.Text = "False";
             this.falseRadioBtn.UseVisualStyleBackColor = true;
             // 
-            // corrAnsT
+            // corrTickBox
             // 
-            this.corrAnsT.AutoSize = true;
-            this.corrAnsT.Location = new System.Drawing.Point(567, 297);
-            this.corrAnsT.Name = "corrAnsT";
-            this.corrAnsT.Size = new System.Drawing.Size(131, 24);
-            this.corrAnsT.TabIndex = 40;
-            this.corrAnsT.Text = "Correct Answer";
-            this.corrAnsT.UseVisualStyleBackColor = true;
+            this.corrTickBox.AutoSize = true;
+            this.corrTickBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.corrTickBox.Location = new System.Drawing.Point(180, 353);
+            this.corrTickBox.Name = "corrTickBox";
+            this.corrTickBox.Size = new System.Drawing.Size(98, 32);
+            this.corrTickBox.TabIndex = 41;
+            this.corrTickBox.Text = "Correct";
+            this.corrTickBox.UseVisualStyleBackColor = true;
             // 
-            // corrAnsF
+            // corrAnsLbl
             // 
-            this.corrAnsF.AutoSize = true;
-            this.corrAnsF.Location = new System.Drawing.Point(567, 361);
-            this.corrAnsF.Name = "corrAnsF";
-            this.corrAnsF.Size = new System.Drawing.Size(131, 24);
-            this.corrAnsF.TabIndex = 41;
-            this.corrAnsF.Text = "Correct Answer";
-            this.corrAnsF.UseVisualStyleBackColor = true;
+            this.corrAnsLbl.AutoSize = true;
+            this.corrAnsLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.corrAnsLbl.Location = new System.Drawing.Point(120, 314);
+            this.corrAnsLbl.Name = "corrAnsLbl";
+            this.corrAnsLbl.Size = new System.Drawing.Size(219, 28);
+            this.corrAnsLbl.TabIndex = 42;
+            this.corrAnsLbl.Text = "Tick if the answer is True";
             // 
             // AddTFQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.corrAnsF);
-            this.Controls.Add(this.corrAnsT);
+            this.Controls.Add(this.corrAnsLbl);
+            this.Controls.Add(this.corrTickBox);
             this.Controls.Add(this.falseRadioBtn);
             this.Controls.Add(this.trueRadioBtn);
             this.Controls.Add(this.addQuestionBtn);
@@ -155,7 +157,7 @@
         private System.Windows.Forms.TextBox questionTxtBox;
         private System.Windows.Forms.RadioButton trueRadioBtn;
         private System.Windows.Forms.RadioButton falseRadioBtn;
-        private CheckBox corrAnsT;
-        private CheckBox corrAnsF;
+        private CheckBox corrTickBox;
+        private Label corrAnsLbl;
     }
 }

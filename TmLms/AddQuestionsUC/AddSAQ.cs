@@ -12,9 +12,40 @@ namespace TmLms.AddQuestionsUC
 {
     public partial class AddSAQ : UserControl
     {
-        public AddSAQ()
+        TmLms.Question.Quiz quiz;
+        public AddSAQ(TmLms.Question.Quiz quiz)
         {
             InitializeComponent();
+            this.quiz = quiz;
+        }
+
+        public string GetQuestion
+        {
+            get { return questionTxtBox.Text; }
+            set { questionTxtBox.Text = value; }
+        }
+
+        private void ClearText()
+        {
+            foreach (TextBox txtBox in this.Controls.OfType<TextBox>())
+            {
+                txtBox.Text = "";
+            }
+        }
+
+        private void addQuestionBtn_Click(object sender, EventArgs e)
+        {
+            if (questionTxtBox.Text != "")
+            {
+                Question.Question question = new Question.ShortAnswerQ(quiz, GetQuestion);
+                question.AddQuestion(question);
+                MessageBox.Show("Question Added");
+                ClearText();
+            }
+            else
+            {
+                MessageBox.Show("Please fill out all the fields");
+            }
         }
     }
 }

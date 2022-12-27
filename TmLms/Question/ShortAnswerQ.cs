@@ -8,6 +8,7 @@ namespace TmLms.Question
 {
     public class ShortAnswerQ : Question
     {
+        TmLms.Question.Quiz quiz;
         public string SAQuestion
         {
             get;
