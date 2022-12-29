@@ -37,39 +37,6 @@ namespace TmLms
 
         private void selectQuizType_Click(object sender, EventArgs e)
         {
-            //if (quizTypes.SelectedIndex == 0) // Multiple Choice
-            //{
-            //    MultipleChoiceCreation mCCreation = new MultipleChoiceCreation();
-            //    mCCreation.Show();
-
-            //}
-
-            //else if (quizTypes.SelectedIndex == 1)
-            //{
-            //    /// Same as multiple Choice, Create a new form that will allow the instructor to create
-            //    /// multiple Answer questions, (use tick boxes)
-            //    return;
-            //}
-            //else if (quizTypes.SelectedIndex == 2)
-            //{
-            //    return;
-            //}
-            //else if (quizTypes.SelectedIndex == 3)
-            //{
-            //    return;
-            //}
-            //else if (quizTypes.SelectedIndex == 4)
-            //{
-            //    return;
-            //}
-            //else if (quizTypes.SelectedIndex == 5)
-            //{
-            //    return;
-            //}
-            //else if (quizTypes.SelectedIndex == 6)
-            //{
-            //    return;
-            //}
         }
 
         private void SetComboBoxModule()

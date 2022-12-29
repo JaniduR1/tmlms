@@ -16,6 +16,43 @@ namespace TmLms.TM
         /// <returns>True if succesfully added, False if not</returns>
         /// 
 
+        List<Module> NonCompulsoryModules = new List<Module>();
+        List<Module> CompulsoryModules = new List<Module>();
+
+        public Course() 
+        { 
+
+        }
+
+        public void addCompulsoryModules(Module m)
+        {
+            CompulsoryModules.Add(m);
+        }
+
+        public void addNonCompulsoryModules(Module m)
+        {
+            NonCompulsoryModules.Add(m);
+        }
+
+        public void removeCompulsoryModules(Module m)
+        {
+            CompulsoryModules.Remove(m);
+        }
+
+        public void removeNonCompulsoryModules(Module m)
+        {
+            NonCompulsoryModules.Remove(m);
+        }
+
+        public List<Module> getNonCompulsoryModules()
+        {
+            return NonCompulsoryModules;
+        }
+        public List<Module> getCompulsoryModules()
+        {
+            return NonCompulsoryModules;
+        }
+
 
         public string CourseName
         {
@@ -48,9 +85,16 @@ namespace TmLms.TM
             return false;
         }
 
-        public void DeleteModule()
+        public void DeleteModule(Module m)
         {
-
+            if (NonCompulsoryModules.Contains(m))
+            {
+                NonCompulsoryModules.Remove(m);
+            }
+            else if (CompulsoryModules.Contains(m))
+            {
+                CompulsoryModules.Remove(m);
+            }
         }
 
 

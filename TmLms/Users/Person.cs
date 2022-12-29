@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TmLms.Users
 {
-    internal class Person
+    public class Person
     {
     }
 }

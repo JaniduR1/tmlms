@@ -7,15 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TmLms.Users;
+
 
 namespace TmLms
 {
     public partial class MainScreen : Form
     {
+        Person currentUser;
 
-        public MainScreen()
+        public MainScreen(Person user)
         {
             InitializeComponent();
+            currentUser = user;
+            ControlUI();
+            logoPictureBox.Show();
+        }
+
+        private void ControlUI()
+        {
+            if (currentUser.GetType() == typeof(Administrator))
+            {
+
+            }
+            else if (currentUser.GetType() == typeof(Instructor))
+            {
+                createCourseBtn.Enabled = false;
+                createModuleBtn.Enabled = false;
+            }
+            else if (currentUser.GetType() == typeof(Student))
+            {
+                createCourseBtn.Enabled = false;
+                createModuleBtn.Enabled = false;
+                viewCoursesBtn.Enabled = false;
+                viewModuleBtn.Enabled = false;
+                createTestBtn.Enabled = false;
+            }
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
@@ -38,9 +65,8 @@ namespace TmLms
         private void createCourseBtn_Click(object sender, EventArgs e)
         {
             //this.Hide();
-            var createCourse = new CreateCourse();
+            var createCourse = new CreateCourse(currentUser);
             //createCourse.Closed += (s, args) => this.Close();
-            TMEngine.AddMToCBox();
             createCourse.Show();
         }
 
@@ -57,6 +83,11 @@ namespace TmLms
             var createTest = new CreateTests();
 
             createTest.Show();
+        }
+
+        private void logoPictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

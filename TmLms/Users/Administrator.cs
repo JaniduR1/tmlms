@@ -7,7 +7,7 @@ using TmLms.TM;
 
 namespace TmLms.Users
 {
-    internal class Administrator
+    internal class Administrator : Person
     {
         public void CreateCourse(string CourseName, string CourseCode, object CourseInstructor)
         {
@@ -24,8 +24,18 @@ namespace TmLms.Users
 
         }
 
-        public void CreateModule()
+        public void CreateModule(string code, object AdminPerson, string name, string description, int credits, int level)
         {
+            if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(code))
+            {
+                MessageBox.Show("There is already a module code that exist with that given input please change it.");
+            }
+            else
+            {
+                Module module = new Module(code, AdminPerson, name, description, credits, level);
+                module.saveModule(module);
+                MessageBox.Show("Done!");
+            }
 
         }
 
@@ -34,21 +44,16 @@ namespace TmLms.Users
             get; set;
         }
 
-        public void DeleteCourse(string ModuleCode)
+        public void DeleteCourse(string courseCode)
         {
-            MCode = ModuleCode;
-            TMEngine.Instance.ModuleDictionary.Remove(ModuleCode);
-            TmLms.Program.tmEngine.ModuleDictionary.Remove(ModuleCode);
+            MessageBox.Show("Deleted the course with the code " + courseCode);
+            TmLms.Program.tmEngine.CourseDictionary.Remove(courseCode);
+        }
 
-            //if (ModuleCode != null)
-            //{
-            //    TMEngine.Instance.ModuleDictionary.Remove(ModuleCode);
-            //    TmLms.Program.tmEngine.ModuleDictionary.Remove(ModuleCode);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No Module Selected to Delete");
-            //}
+        public void DeleteModule(string moduleCode)
+        {
+            TmLms.Program.tmEngine.ModuleDictionary.Remove(moduleCode);
+            MessageBox.Show("Deleted the module with the code " + moduleCode);
         }
     }
 }

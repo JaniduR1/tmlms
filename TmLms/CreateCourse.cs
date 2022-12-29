@@ -13,9 +13,21 @@ namespace TmLms
 {
     public partial class CreateCourse : Form
     {
-        public CreateCourse()
+        Administrator admin;
+
+        public CreateCourse(Person person)
         {
             InitializeComponent();
+            admin = person as Administrator;
+            addCmbModuleItems();
+        }
+
+        private void addCmbModuleItems()
+        {
+            foreach (TM.Module module in TMEngine.Instance.ModuleDictionary.Values)
+            {
+                availableModules.Items.Add(module.Code);
+            }
         }
 
         public string CName 
@@ -47,28 +59,16 @@ namespace TmLms
 
         private void addModuleBtn_Click(object sender, EventArgs e)
         {
-            //foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
-            //{
-            //    availableModules.Items.Add(m.Name);
-            //}
-
-            //chosenModules.Items.Add()
         }
 
 
         private void CreateCourse_Load(object sender, EventArgs e)
         {
-            //availableModules.Items.Add(TMEngine.GetModuleCodes());
-            foreach (TM.Module m in TMEngine.Instance.ModuleDictionary.Values)
-            {
-                availableModules.Items.Add(m.Code);
-            }
         }
 
         private void createCourseBtn_Click(object sender, EventArgs e)
         {
-            Administrator administrator = new Administrator();
-            administrator.CreateCourse(CName, CCode, CInstructor);
+            admin.CreateCourse(CName, CCode, CInstructor);
 
             courseNameTxtBox.Clear();
             courseCodeTxtBox.Clear();

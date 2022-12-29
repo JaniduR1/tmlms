@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TmLms.Users
 {
-    internal class Instructor
+    internal class Instructor : Person
     {
+        public void assignStudent(TmLms.TM.Module m, Student s)
+        {
+            m.addMembers(s);
+        }
     }
 }

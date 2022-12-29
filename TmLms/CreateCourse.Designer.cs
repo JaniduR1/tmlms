@@ -44,6 +44,8 @@
             this.moduleCode = new System.Windows.Forms.ColumnHeader();
             this.moduleName = new System.Windows.Forms.ColumnHeader();
             this.moduleCredits = new System.Windows.Forms.ColumnHeader();
+            this.moduleIsCore = new System.Windows.Forms.ColumnHeader();
+            this.isCoreCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // instructorMember
@@ -68,7 +70,7 @@
             // availableModules
             // 
             this.availableModules.FormattingEnabled = true;
-            this.availableModules.Location = new System.Drawing.Point(638, 69);
+            this.availableModules.Location = new System.Drawing.Point(920, 72);
             this.availableModules.Name = "availableModules";
             this.availableModules.Size = new System.Drawing.Size(241, 28);
             this.availableModules.TabIndex = 2;
@@ -77,7 +79,7 @@
             // 
             this.addModulesLbl.AutoSize = true;
             this.addModulesLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addModulesLbl.Location = new System.Drawing.Point(648, 33);
+            this.addModulesLbl.Location = new System.Drawing.Point(930, 36);
             this.addModulesLbl.Name = "addModulesLbl";
             this.addModulesLbl.Size = new System.Drawing.Size(220, 28);
             this.addModulesLbl.TabIndex = 3;
@@ -86,7 +88,7 @@
             // addModuleBtn
             // 
             this.addModuleBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addModuleBtn.Location = new System.Drawing.Point(710, 104);
+            this.addModuleBtn.Location = new System.Drawing.Point(1067, 106);
             this.addModuleBtn.Name = "addModuleBtn";
             this.addModuleBtn.Size = new System.Drawing.Size(94, 36);
             this.addModuleBtn.TabIndex = 4;
@@ -163,10 +165,11 @@
             this.chosenModules.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.moduleCode,
             this.moduleName,
-            this.moduleCredits});
-            this.chosenModules.Location = new System.Drawing.Point(560, 178);
+            this.moduleCredits,
+            this.moduleIsCore});
+            this.chosenModules.Location = new System.Drawing.Point(606, 178);
             this.chosenModules.Name = "chosenModules";
-            this.chosenModules.Size = new System.Drawing.Size(394, 366);
+            this.chosenModules.Size = new System.Drawing.Size(555, 366);
             this.chosenModules.TabIndex = 12;
             this.chosenModules.UseCompatibleStateImageBehavior = false;
             this.chosenModules.View = System.Windows.Forms.View.Details;
@@ -179,18 +182,38 @@
             // moduleName
             // 
             this.moduleName.Text = "Module Name";
-            this.moduleName.Width = 150;
+            this.moduleName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.moduleName.Width = 170;
             // 
             // moduleCredits
             // 
             this.moduleCredits.Text = "Module Credits";
-            this.moduleCredits.Width = 150;
+            this.moduleCredits.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.moduleCredits.Width = 120;
+            // 
+            // moduleIsCore
+            // 
+            this.moduleIsCore.Text = "Type";
+            this.moduleIsCore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.moduleIsCore.Width = 140;
+            // 
+            // isCoreCheckBox
+            // 
+            this.isCoreCheckBox.AutoSize = true;
+            this.isCoreCheckBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.isCoreCheckBox.Location = new System.Drawing.Point(920, 116);
+            this.isCoreCheckBox.Name = "isCoreCheckBox";
+            this.isCoreCheckBox.Size = new System.Drawing.Size(79, 24);
+            this.isCoreCheckBox.TabIndex = 13;
+            this.isCoreCheckBox.Text = "Is Core";
+            this.isCoreCheckBox.UseVisualStyleBackColor = true;
             // 
             // CreateCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 556);
+            this.ClientSize = new System.Drawing.Size(1178, 556);
+            this.Controls.Add(this.isCoreCheckBox);
             this.Controls.Add(this.chosenModules);
             this.Controls.Add(this.createCourseBtn);
             this.Controls.Add(this.courseLevelLbl);
@@ -230,5 +253,7 @@
         private ColumnHeader moduleCode;
         private ColumnHeader moduleName;
         private ColumnHeader moduleCredits;
+        private ColumnHeader moduleIsCore;
+        private CheckBox isCoreCheckBox;
     }
 }

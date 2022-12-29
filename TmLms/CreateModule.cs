@@ -103,16 +103,16 @@ namespace TmLms
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-           //if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
-            //{
-            //    MessageBox.Show(moduleCodeExists, messageboxTitle);
-            //    moduleCodeTxtBox.Clear(); 
-            //    return;
-            //}
-
-            if(creditsDropDown.Text == "" || levelDropDown.Text == "")
+            if (TmLms.Program.tmEngine.ModuleDictionary.ContainsKey(GetModuleCode))
             {
-                MessageBox.Show("Choose Amount Of Credits");
+                MessageBox.Show(moduleCodeExists, messageboxTitle);
+                moduleCodeTxtBox.Clear();
+                return;
+            }
+
+            if (creditsDropDown.Text == "" || levelDropDown.Text == "")
+            {
+                MessageBox.Show("Choose Module Level");
                 return;
             }
 
@@ -124,7 +124,7 @@ namespace TmLms
 
             foreach (object i in moduleMembers)
             {
-                newModule.Members.Add(i);
+                newModule.addMembers(i);
             }
 
 

@@ -49,14 +49,23 @@ namespace TmLms.TM
         /// <summary>
         /// A sorted list to store the members associated with the module
         /// </summary>
-        public SortedSet<object> Members { get; set; }
+        private SortedSet<object> Members = new SortedSet<object>();
+
+        public void addMembers(object member)
+        {
+            Members.Add(member);
+        }
+
+        public SortedSet<object> getMembersList()
+        {
+            return Members;
+        }
 
         public Module(string code, object AdminPerson, string name, string description, int credits, int level)
         {
             Code = code;
             Name = name;
             Description = description;
-            Members = new SortedSet<object>();
             Members.Add(AdminPerson);
             Credits = (CreditEnum)credits;
             Level = (LevelEnum)level;
@@ -85,6 +94,32 @@ namespace TmLms.TM
             }
 
             return ((Module)obj).Code == this.Code;
+        }
+
+        public bool saveModule(Module module)
+        {
+            TmLms.Program.tmEngine.ModuleDictionary.Add(module.Code, module);
+            return true;
+        }
+
+        public bool deleteModule(Module module)
+        {
+            TmLms.Program.tmEngine.ModuleDictionary.Remove(module.Code);
+            return true;
+        }
+
+        public void updateModule(Module module)
+        {
+            foreach (Module m in TMEngine.Instance.ModuleDictionary.Values)
+            {
+                if (m.Code.Equals(module.Code))
+                {
+                    Program.tmEngine.ModuleDictionary.Remove(m.Code);
+                    break;
+                }
+                saveModule(module);
+            }
+
         }
 
     }
