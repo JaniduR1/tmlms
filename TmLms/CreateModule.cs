@@ -24,6 +24,7 @@ namespace TmLms
         public CreateModule()
         {
             InitializeComponent();
+            TestDB();
         }
         private void CreateModule_Load(object sender, EventArgs e)
         {
@@ -78,7 +79,7 @@ namespace TmLms
         public string GetModuleMember
         {
             get { return moduleMemberTxtBox.Text; }
-            set { moduleMemberTxtBox.Text= value; }
+            set { moduleMemberTxtBox.Text = value; }
         }
         // Getting Level to input into TM.Credits //
 
@@ -119,7 +120,7 @@ namespace TmLms
             var moduleCInt = Int32.Parse(ModuleCreditsTxt);
             var moduleLInt = Int32.Parse(ModuleLevelTxt);
 
-            TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName, GetModuleName, GetModuleDescription, 
+            TmLms.TM.Module newModule = new TM.Module(GetModuleCode, GetAdminName, GetModuleName, GetModuleDescription,
                 moduleCInt, moduleLInt);
 
             foreach (object i in moduleMembers)
@@ -168,6 +169,41 @@ namespace TmLms
 
             allAvailableModules.Items.Remove(GetModuleToDelete);
 
+        }
+
+
+        //DB
+        public void TestDB()
+        {
+            TM.Module module = new TM.Module("MA001", "Andy", "Maths", "Learn Maths", 20, 4);
+            AddModule(module);
+            module = new TM.Module("SC001", "Bob", "Science", "Learn Science", 20, 4);
+            AddModule(module);
+            module = new TM.Module("EN001", "Charles", "English", "Learn English", 20, 4);
+            AddModule(module);
+            module = new TM.Module("GE001", "Dan", "Grog", "Learn Grog", 20, 4);
+            AddModule(module);
+            module = new TM.Module("HI001", "E", "History", "Learn History", 20, 4);
+            AddModule(module);
+            module = new TM.Module("CS001", "F", "Computer Sci", "Learn Computer Sci", 20, 4);
+            AddModule(module);
+            module = new TM.Module("CH001", "G", "Chem", "Learn Chem", 20, 4);
+            AddModule(module);
+            module = new TM.Module("PH001", "H", "Physics", "Learn Physics", 20, 4);
+            AddModule(module);
+            module = new TM.Module("BI001", "I", "Biology", "Learn Biology", 20, 4);
+            AddModule(module);
+            module = new TM.Module("MU001", "J", "Music", "Learn Music", 20, 4);
+            AddModule(module);
+            module = new TM.Module("DR001", "K", "Drama", "Learn Drama", 20, 4);
+            AddModule(module);
+            module = new TM.Module("LA001", "L", "Latin", "Learn Latin", 20, 4);
+            AddModule(module);
+        }
+        //DB
+        public void AddModule(TM.Module module)
+        {
+            TmLms.TMEngine.Instance.ModuleDictionary.Add(module.Code, module);
         }
     }
 }

@@ -57,8 +57,56 @@ namespace TmLms
 
         }
 
+        List<TM.Module> NonCompulsoryModules = new List<TM.Module>();
+        List<TM.Module> coreModules = new List<TM.Module>();
+
         private void addModuleBtn_Click(object sender, EventArgs e)
         {
+            TM.Course c = new TM.Course();
+            string type;
+
+            foreach (TM.Module module in TMEngine.Instance.ModuleDictionary.Values)
+            {
+                if (module.Code == availableModules.SelectedItem)
+                {
+                    if (isCoreCheckBox.Checked)
+                    {
+                        type = "Core";
+                        if (!coreModules.Contains(module))
+                        {
+                            if (c.coreModuleCreditsLimitCheck(module, coreModules))
+                            {
+                                coreModules.Add(module);
+                                string[] row = { module.Code, module.Name, module.Credits.ToString(), type };
+                                var listViewItem = new ListViewItem(row);
+                                chosenModules.Items.Add(listViewItem);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("The module is already added");
+                        }
+                    }
+                    else
+                    {
+                        type = "Optional";
+                        if (!NonCompulsoryModules.Contains(module))
+                        {
+                            if (c.optionalModuleCreditCheck(module, NonCompulsoryModules))
+                            {
+                                NonCompulsoryModules.Add(module);
+                                string[] row = { module.Code, module.Name, module.Credits.ToString(), type };
+                                var listViewItem = new ListViewItem(row);
+                                chosenModules.Items.Add(listViewItem);
+                            }
+                        }
+                        {
+                            MessageBox.Show("The module is already added");
+                        }
+                    }
+                }
+
+            }
         }
 
 
