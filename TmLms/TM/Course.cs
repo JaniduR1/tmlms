@@ -76,18 +76,49 @@ namespace TmLms.TM
             instructor = CourseInstructor;
         }
 
-        public bool coreModuleCreditsLimitCheck(Module moduleToBeAdd, List<Module> CompulsoryModules)
+        //Get rid of duplicate mdules take each module from the list and check if is already there in the original list
+        private void UpdateCompulsoryModuleList(List<Module> Compulsory)
         {
+            foreach (Module m in Compulsory)
+            {
+                if (CompulsoryModules.Contains(m))
+                {
+                }
+                else
+                {
+                    CompulsoryModules.Add(m);
+                }
+            }
+        }
+
+        //Get rid of duplicate mdules take each module from the list and check if is already there in the original list
+        private void UpdateNonCompulsoryModuleList(List<Module> NonCompulsory)
+        {
+            foreach (Module m in NonCompulsory)
+            {
+                if (NonCompulsoryModules.Contains(m))
+                {
+                }
+                else
+                {
+                    NonCompulsoryModules.Add(m);
+                }
+            }
+        }
+
+        public bool coreModuleCreditsLimitCheck(Module moduleToBeAdd, List<Module> Compulsory)
+        {
+            UpdateCompulsoryModuleList(Compulsory); // Was Duplicating the same module multiple times so this makes sure no duplicates are added
+                                                    // Credit check now checks 120 correctly
             int totCreditCount = 0;
             foreach (Module m in CompulsoryModules)
             {
                 totCreditCount += Convert.ToInt32(m.Credits);
             }
             totCreditCount += Convert.ToInt32(moduleToBeAdd.Credits);
-            MessageBox.Show("" + Convert.ToInt32(moduleToBeAdd.Credits));
             if (totCreditCount > 120)
             {
-                MessageBox.Show("Core Modules Can not Exceed 120 credit Limit");
+                MessageBox.Show("Core Modules Cannot Exceed 120 credit Limit");
                 return false;
             }
             else
@@ -97,8 +128,9 @@ namespace TmLms.TM
             }
         }
 
-        public bool optionalModuleCreditCheck(Module moduleToBeAdd, List<Module> NonCompulsoryModules)
+        public bool optionalModuleCreditCheck(Module moduleToBeAdd, List<Module> NonCompulsory)
         {
+            UpdateNonCompulsoryModuleList(NonCompulsory);
             int totCreditCountl4 = 0;
             int totCreditCountl5 = 0;
             int totCreditCountl6 = 0;
@@ -124,7 +156,7 @@ namespace TmLms.TM
                     totCreditCountl4 += Convert.ToInt32(moduleToBeAdd.Credits);
                     if (totCreditCountl4 > 20)
                     {
-                        MessageBox.Show("Optional Modules Can not Exceed 20 credit Limit For Level 4 Modules");
+                        MessageBox.Show("Optional Modules Cannot Exceed 20 credit Limit For Level 4 Modules");
                         return false;
                     }
                     else
@@ -137,7 +169,7 @@ namespace TmLms.TM
                     totCreditCountl5 += Convert.ToInt32(moduleToBeAdd.Credits);
                     if (totCreditCountl5 > 40)
                     {
-                        MessageBox.Show("Optional Modules Can not Exceed 40 credit Limit For Level 5 Modules");
+                        MessageBox.Show("Optional Modules Cannot Exceed 40 credit Limit For Level 5 Modules");
                         return false;
                     }
                     else
@@ -150,7 +182,7 @@ namespace TmLms.TM
                     totCreditCountl6 += Convert.ToInt32(moduleToBeAdd.Credits);
                     if (totCreditCountl6 > 100)
                     {
-                        MessageBox.Show("Optional Modules Can not Exceed 100 credit Limit For Level 6 Modules");
+                        MessageBox.Show("Optional Modules Cannot Exceed 100 credit Limit For Level 6 Modules");
                         return false;
                     }
                     else

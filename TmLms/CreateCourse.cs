@@ -100,6 +100,7 @@ namespace TmLms
                                 chosenModules.Items.Add(listViewItem);
                             }
                         }
+                        else 
                         {
                             MessageBox.Show("The module is already added");
                         }

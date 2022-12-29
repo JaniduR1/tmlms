@@ -37,8 +37,6 @@
             this.courseNameLbl = new System.Windows.Forms.Label();
             this.courseCodeTxtBox = new System.Windows.Forms.TextBox();
             this.courseCodeLbl = new System.Windows.Forms.Label();
-            this.courseLevelCBox = new System.Windows.Forms.ComboBox();
-            this.courseLevelLbl = new System.Windows.Forms.Label();
             this.createCourseBtn = new System.Windows.Forms.Button();
             this.chosenModules = new System.Windows.Forms.ListView();
             this.moduleCode = new System.Windows.Forms.ColumnHeader();
@@ -132,24 +130,6 @@
             this.courseCodeLbl.TabIndex = 7;
             this.courseCodeLbl.Text = "Course Code";
             // 
-            // courseLevelCBox
-            // 
-            this.courseLevelCBox.FormattingEnabled = true;
-            this.courseLevelCBox.Location = new System.Drawing.Point(213, 362);
-            this.courseLevelCBox.Name = "courseLevelCBox";
-            this.courseLevelCBox.Size = new System.Drawing.Size(241, 28);
-            this.courseLevelCBox.TabIndex = 9;
-            // 
-            // courseLevelLbl
-            // 
-            this.courseLevelLbl.AutoSize = true;
-            this.courseLevelLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseLevelLbl.Location = new System.Drawing.Point(27, 362);
-            this.courseLevelLbl.Name = "courseLevelLbl";
-            this.courseLevelLbl.Size = new System.Drawing.Size(121, 28);
-            this.courseLevelLbl.TabIndex = 10;
-            this.courseLevelLbl.Text = "Course Level";
-            // 
             // createCourseBtn
             // 
             this.createCourseBtn.Location = new System.Drawing.Point(133, 476);
@@ -167,9 +147,9 @@
             this.moduleName,
             this.moduleCredits,
             this.moduleIsCore});
-            this.chosenModules.Location = new System.Drawing.Point(606, 178);
+            this.chosenModules.Location = new System.Drawing.Point(586, 178);
             this.chosenModules.Name = "chosenModules";
-            this.chosenModules.Size = new System.Drawing.Size(555, 366);
+            this.chosenModules.Size = new System.Drawing.Size(575, 366);
             this.chosenModules.TabIndex = 12;
             this.chosenModules.UseCompatibleStateImageBehavior = false;
             this.chosenModules.View = System.Windows.Forms.View.Details;
@@ -177,7 +157,7 @@
             // moduleCode
             // 
             this.moduleCode.Text = "Module Code";
-            this.moduleCode.Width = 120;
+            this.moduleCode.Width = 140;
             // 
             // moduleName
             // 
@@ -216,8 +196,6 @@
             this.Controls.Add(this.isCoreCheckBox);
             this.Controls.Add(this.chosenModules);
             this.Controls.Add(this.createCourseBtn);
-            this.Controls.Add(this.courseLevelLbl);
-            this.Controls.Add(this.courseLevelCBox);
             this.Controls.Add(this.courseCodeTxtBox);
             this.Controls.Add(this.courseCodeLbl);
             this.Controls.Add(this.courseNameTxtBox);
@@ -246,8 +224,6 @@
         private Label courseNameLbl;
         private TextBox courseCodeTxtBox;
         private Label courseCodeLbl;
-        internal ComboBox courseLevelCBox;
-        private Label courseLevelLbl;
         private Button createCourseBtn;
         private ListView chosenModules;
         private ColumnHeader moduleCode;
