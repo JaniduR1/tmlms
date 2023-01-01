@@ -89,5 +89,11 @@ namespace TmLms
         {
 
         }
+
+        private void takeTestBtn_Click(object sender, EventArgs e)
+        {
+            var takeTest = new TakeTest();
+            takeTest.Show();
+        }
     }
 }

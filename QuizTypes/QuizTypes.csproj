@@ -73,6 +73,36 @@
       <DependentUpon>AddTFQ.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TakeEQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TakeEQ.Designer.cs">
+      <DependentUpon>TakeEQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeMAQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TakeMAQ.Designer.cs">
+      <DependentUpon>TakeMAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeMCQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TakeMCQ.Designer.cs">
+      <DependentUpon>TakeMCQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeSAQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TakeSAQ.Designer.cs">
+      <DependentUpon>TakeSAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeTFQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TakeTFQ.Designer.cs">
+      <DependentUpon>TakeTFQ.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +120,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddTFQ.resx">
       <DependentUpon>AddTFQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeEQ.resx">
+      <DependentUpon>TakeEQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeMAQ.resx">
+      <DependentUpon>TakeMAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeMCQ.resx">
+      <DependentUpon>TakeMCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeSAQ.resx">
+      <DependentUpon>TakeSAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeTFQ.resx">
+      <DependentUpon>TakeTFQ.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
