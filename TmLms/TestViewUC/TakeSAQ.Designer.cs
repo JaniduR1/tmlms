@@ -1,4 +1,4 @@
-﻿namespace QuizTypes
+﻿namespace TmLms.TestViewUC
 {
     partial class TakeSAQ
     {
@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.answerTextBox = new System.Windows.Forms.TextBox();
             this.questionLbl = new System.Windows.Forms.Label();
             this.submitAnsBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // answerTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(33, 107);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(950, 249);
-            this.textBox1.TabIndex = 11;
+            this.answerTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.answerTextBox.Location = new System.Drawing.Point(33, 134);
+            this.answerTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.answerTextBox.Multiline = true;
+            this.answerTextBox.Name = "answerTextBox";
+            this.answerTextBox.Size = new System.Drawing.Size(948, 352);
+            this.answerTextBox.TabIndex = 11;
             // 
             // questionLbl
             // 
             this.questionLbl.AutoSize = true;
-            this.questionLbl.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionLbl.Location = new System.Drawing.Point(404, 41);
+            this.questionLbl.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionLbl.Location = new System.Drawing.Point(404, 51);
             this.questionLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.questionLbl.MaximumSize = new System.Drawing.Size(1572, 0);
             this.questionLbl.Name = "questionLbl";
@@ -57,25 +58,28 @@
             // 
             // submitAnsBtn
             // 
-            this.submitAnsBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitAnsBtn.Location = new System.Drawing.Point(446, 398);
+            this.submitAnsBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.submitAnsBtn.Location = new System.Drawing.Point(444, 515);
+            this.submitAnsBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.submitAnsBtn.Name = "submitAnsBtn";
-            this.submitAnsBtn.Size = new System.Drawing.Size(125, 47);
+            this.submitAnsBtn.Size = new System.Drawing.Size(125, 59);
             this.submitAnsBtn.TabIndex = 13;
             this.submitAnsBtn.Text = "Submit";
             this.submitAnsBtn.UseVisualStyleBackColor = true;
             // 
             // TakeSAQ
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.submitAnsBtn);
             this.Controls.Add(this.questionLbl);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.answerTextBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximumSize = new System.Drawing.Size(1006, 593);
             this.MinimumSize = new System.Drawing.Size(1006, 593);
             this.Name = "TakeSAQ";
             this.Size = new System.Drawing.Size(1006, 593);
+            this.Load += new System.EventHandler(this.TakeSAQ_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox answerTextBox;
         private System.Windows.Forms.Label questionLbl;
         private System.Windows.Forms.Button submitAnsBtn;
     }

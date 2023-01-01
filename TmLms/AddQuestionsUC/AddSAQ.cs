@@ -13,10 +13,10 @@ namespace TmLms.AddQuestionsUC
     public partial class AddSAQ : UserControl
     {
         TmLms.Question.Quiz quiz;
-        public AddSAQ(TmLms.Question.Quiz quiz)
+        public AddSAQ(CreateTests containerForm)
         {
             InitializeComponent();
-            this.quiz = quiz;
+            this.quiz = containerForm.GetQuiz();
         }
 
         public string GetQuestion
@@ -37,8 +37,11 @@ namespace TmLms.AddQuestionsUC
         {
             if (questionTxtBox.Text != "")
             {
-                Question.Question question = new Question.ShortAnswerQ(quiz, GetQuestion);
-                question.AddQuestion(question);
+                List<string> answer = new List<string>();
+                answer.Add(questionTxtBox.Text);
+                Question.Question question = new Question.ShortAnswerQ(GetQuestion, answer);
+                quiz.addQuestionList(quiz, question); // Add to List
+                question.AddQuestion(question); // Add to Dictionary
                 MessageBox.Show("Question Added");
                 ClearText();
             }

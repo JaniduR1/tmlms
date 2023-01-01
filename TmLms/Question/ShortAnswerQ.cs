@@ -8,17 +8,8 @@ namespace TmLms.Question
 {
     public class ShortAnswerQ : Question
     {
-        TmLms.Question.Quiz quiz;
-        public string SAQuestion
+        public ShortAnswerQ(string question, List<string> answer) : base(question, answer)
         {
-            get;
-            set;
-        }
-
-        public ShortAnswerQ(Quiz quiz, string SAQuestion)
-        {
-            this.quiz = quiz;
-            this.SAQuestion = SAQuestion;
         }
     }
 }

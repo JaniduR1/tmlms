@@ -60,6 +60,12 @@
     <Compile Include="AddMCQ.Designer.cs">
       <DependentUpon>AddMCQ.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddMQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddMQ.Designer.cs">
+      <DependentUpon>AddMQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSAQ.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddMCQ.resx">
       <DependentUpon>AddMCQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMQ.resx">
+      <DependentUpon>AddMQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddSAQ.resx">
       <DependentUpon>AddSAQ.cs</DependentUpon>

@@ -7,30 +7,11 @@ using System.Threading.Tasks;
 namespace TmLms.Question
 {
     public class MultipleChoiceQ : Question
-    { 
-        public string MCQuestion
+    {
+        List<string> GivenAnswerSet;
+        public MultipleChoiceQ(string question, List<string> answer, List<string> givenAnswerSet) : base(question, answer)
         {
-            get;
-            set;
-        }
-        public string CAnswer
-        {
-            get;
-            set;
-        }
-
-        public List<string> FAnswers
-        {
-            get;
-            set;
-        }
-
-        public MultipleChoiceQ(Quiz quiz, string MCQuestion, string CAnswer, List<string>FAnswers)
-        {
-            this.quiz = quiz;
-            this.MCQuestion = MCQuestion;
-            this.CAnswer = CAnswer;
-            this.FAnswers = FAnswers;
+            GivenAnswerSet = givenAnswerSet;
         }
     }
 }

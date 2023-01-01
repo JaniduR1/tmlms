@@ -29,6 +29,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="TestViewUC\TakeEQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TestViewUC\TakeMAQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TestViewUC\TakeMCQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TestViewUC\TakeSAQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TestViewUC\TakeTFQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControlsFile\MChoiceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -42,10 +57,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="TestViewUC\" />
   </ItemGroup>
 
 </Project>

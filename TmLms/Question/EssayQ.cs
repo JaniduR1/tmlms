@@ -8,16 +8,8 @@ namespace TmLms.Question
 {
     public class EssayQ : Question
     {
-        public string EQuestion
+        public EssayQ(string question, List<string> answer) : base(question, answer)
         {
-            get;
-            set;
-        }
-
-        public EssayQ(Quiz quiz, string EQuestion)
-        {
-            this.quiz = quiz;
-            this.EQuestion = EQuestion;
         }
     }
 }

@@ -14,10 +14,10 @@ namespace TmLms.AddQuestionsUC
     {
         TmLms.Question.Quiz quiz;
 
-        public AddMAQ(TmLms.Question.Quiz quiz)
+        public AddMAQ(CreateTests containerForm)
         {
             InitializeComponent();
-            this.quiz = quiz;
+            this.quiz = containerForm.GetQuiz();
         }
 
         private void ClearFields()
@@ -36,13 +36,12 @@ namespace TmLms.AddQuestionsUC
         private void addQuestionBtn_Click(object sender, EventArgs e)
         {
             List<string> answers = new List<string>();
+            foreach (TextBox txtBox in this.Controls.OfType<TextBox>())
+            {
+                answers.Add(txtBox.Text);
+            }
+
             List<string> cAnswers = new List<string>();
-
-            answers.Add(answerTxtBox1.Text);
-            answers.Add(answerTxtBox2.Text);
-            answers.Add(answerTxtBox3.Text);
-            answers.Add(answerTxtBox4.Text);
-
             if (corrAns1.Checked) 
             {
                 cAnswers.Add(answerTxtBox1.Text); 
@@ -60,8 +59,8 @@ namespace TmLms.AddQuestionsUC
                 cAnswers.Add(answerTxtBox1.Text); 
             }
 
-            Question.Question question = new TmLms.Question.MultipleAnswerQ(quiz, questionTxtBox.Text, answers, cAnswers);
-            quiz.addQuestionList(question); // Add to List
+            Question.Question question = new TmLms.Question.MultipleAnswerQ(questionTxtBox.Text, answers, cAnswers);
+            quiz.addQuestionList(quiz, question); // Add to List
             question.AddQuestion(question); // Add to Dictionary
             MessageBox.Show("Question Added");
             ClearFields();

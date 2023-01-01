@@ -13,10 +13,10 @@ namespace TmLms.AddQuestionsUC
     public partial class AddMCQ : UserControl
     {
         TmLms.Question.Quiz quiz;
-        public AddMCQ(TmLms.Question.Quiz quiz)
+        public AddMCQ(CreateTests containerForm)
         {
             InitializeComponent();
-            this.quiz = quiz;
+            this.quiz = containerForm.GetQuiz();
         }
 
         public string GetQuestion
@@ -52,8 +52,11 @@ namespace TmLms.AddQuestionsUC
                 Random random = new Random();
                 var MixedAnswers = falseAnswers.OrderBy(_ => random.Next()).ToList();
 
-                Question.Question question = new Question.MultipleChoiceQ(quiz, GetQuestion, GetCorrectAnswer, MixedAnswers);
-                quiz.addQuestionList(question); // Add to List
+                List<string> CorrectAnswer = new List<string>();
+                CorrectAnswer.Add(GetCorrectAnswer);
+
+                Question.Question question = new Question.MultipleChoiceQ(GetQuestion, CorrectAnswer, MixedAnswers);
+                quiz.addQuestionList(quiz, question); // Add to List
                 question.AddQuestion(question); // Add to Dictionary
                 MessageBox.Show("Question Added");
                 ClearText();

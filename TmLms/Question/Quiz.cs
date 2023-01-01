@@ -12,6 +12,7 @@ namespace TmLms.Question
         TM.Module module;
         List<Question> questionList = new List<Question>();
 
+
         public string quizCode { get; set; }
 
         public Quiz(TM.Module module, string quizCode)
@@ -20,16 +21,21 @@ namespace TmLms.Question
             this.quizCode = quizCode;
         }
 
+        public List<Question> GetQuestions()
+        {
+            return questionList;
+        }
+
         public void saveQuiz(Quiz q)
         {
             TMEngine.Instance.QuizDictionary.Add(quizCode, q);
         }
 
-        public void addQuestionList(Question q)
+        public void addQuestionList(Quiz quiz, Question q)
         {
-            if (!questionList.Contains(q))
+            if (!quiz.questionList.Contains(q))
             {
-                questionList.Add(q);
+                quiz.questionList.Add(q);
             }
         }
     }

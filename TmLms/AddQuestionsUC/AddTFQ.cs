@@ -12,12 +12,13 @@ namespace TmLms.AddQuestionsUC
 {
     public partial class AddTFQ : UserControl
     {
+        bool answer;
         TmLms.Question.Quiz quiz;
 
-        public AddTFQ(TmLms.Question.Quiz quiz)
+        public AddTFQ(CreateTests containerForm)
         {
             InitializeComponent();
-            this.quiz = quiz;
+            this.quiz = containerForm.GetQuiz();
         }
 
         public string GetQuestion
@@ -37,20 +38,22 @@ namespace TmLms.AddQuestionsUC
 
         private void addQuestionBtn_Click(object sender, EventArgs e)
         {
-            bool answer = false;
-
-            foreach(RadioButton r in this.Controls)
+            List<string> ans = new List<string>();
+            if (answer)
             {
-                if (r.Checked && r.Text.Equals("True"))
-                {
-                    answer = true;
-                }
+                ans.Clear();
+                ans.Add("True");
+            }
+            else
+            {
+                ans.Clear();
+                ans.Add("False");
             }
 
             if (questionTxtBox.Text != "")
             {
-                Question.Question question = new Question.TrueOrFalseQ(quiz, GetQuestion, answer);
-                quiz.addQuestionList(question); // Add to List
+                Question.Question question = new Question.TrueOrFalseQ(GetQuestion, ans);
+                quiz.addQuestionList(quiz, question); // Add to List
                 question.AddQuestion(question); // Add to Dictionary
                 MessageBox.Show("Question Added");
                 ClearText();

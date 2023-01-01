@@ -13,10 +13,10 @@ namespace TmLms.AddQuestionsUC
     public partial class AddEQ : UserControl
     {
         TmLms.Question.Quiz quiz;
-        public AddEQ(TmLms.Question.Quiz quiz)
+        public AddEQ(CreateTests containerForm)
         {
             InitializeComponent();
-            this.quiz = quiz;
+            this.quiz = containerForm.GetQuiz();
         }
 
         public string GetQuestion
@@ -37,8 +37,10 @@ namespace TmLms.AddQuestionsUC
         {
             if (questionTxtBox.Text != "")
             {
-                Question.Question question = new Question.EssayQ(quiz, GetQuestion);
-                quiz.addQuestionList(question); // Add to List
+                List<string> answer = new List<string>();
+                answer.Add(questionTxtBox.Text);
+                Question.Question question = new Question.EssayQ(GetQuestion, answer);
+                quiz.addQuestionList(quiz, question); // Add to List
                 question.AddQuestion(question); // Add to Dictionary
                 MessageBox.Show("Question Added");
                 ClearText();

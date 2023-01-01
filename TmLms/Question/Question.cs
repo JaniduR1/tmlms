@@ -10,6 +10,24 @@ namespace TmLms.Question
     {
         public Quiz quiz { get; set; }
 
+        string question;
+        List<string> answer;
+
+        public Question(string question, List<string> answer)
+        {
+            this.question = question;
+            this.answer = answer;
+        }
+
+        //public string GetQuestion()
+        //{
+        //    return question;
+        //}
+
+        //public List<string> GetAnswer()
+        //{
+        //    return answer;
+        //}
         public void AddQuestion(Question question)
         {
             int id = 0;

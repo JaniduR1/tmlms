@@ -40,6 +40,11 @@ namespace TmLms
         {
         }
 
+        public Question.Quiz GetQuiz()
+        {
+            return quiz;
+        }
+
         private void SetComboBoxModule()
         {
             foreach (TM.Module module in TMEngine.Instance.ModuleDictionary.Values)
@@ -73,37 +78,37 @@ namespace TmLms
             if (quizTypeComboBox.SelectedItem == "Multiple Choice")
             {
                 questionsPanel.Controls.Clear();
-                AddQuestionsUC.AddMCQ addmcq = new AddQuestionsUC.AddMCQ(quiz);
+                AddQuestionsUC.AddMCQ addmcq = new AddQuestionsUC.AddMCQ(this);
                 questionsPanel.Controls.Add(addmcq);
             }
             else if(quizTypeComboBox.SelectedItem == "Multiple Answer")
             {
                 questionsPanel.Controls.Clear();
-                AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(quiz);
+                AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(this);
                 questionsPanel.Controls.Add(addmaq);
             }
             else if (quizTypeComboBox.SelectedItem == "Short Answer")
             {
                 questionsPanel.Controls.Clear();
-                AddQuestionsUC.AddSAQ addsaq = new AddQuestionsUC.AddSAQ(quiz);
+                AddQuestionsUC.AddSAQ addsaq = new AddQuestionsUC.AddSAQ(this);
                 questionsPanel.Controls.Add(addsaq);
             }
             else if (quizTypeComboBox.SelectedItem == "Essay")
             {
                 questionsPanel.Controls.Clear();
-                AddQuestionsUC.AddEQ addeq = new AddQuestionsUC.AddEQ(quiz);
+                AddQuestionsUC.AddEQ addeq = new AddQuestionsUC.AddEQ(this);
                 questionsPanel.Controls.Add(addeq);
             }
             //else if(quizTypeComboBox.SelectedItem == "Matching")
             //{
             //    questionsPanel.Controls.Clear();
-            //    AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(quiz);
+            //    AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(this);
             //    questionsPanel.Controls.Add(addmaq);
             //}            
             else if (quizTypeComboBox.SelectedItem == "True/False")
             {
                 questionsPanel.Controls.Clear();
-                AddQuestionsUC.AddTFQ addtfq = new AddQuestionsUC.AddTFQ(quiz);
+                AddQuestionsUC.AddTFQ addtfq = new AddQuestionsUC.AddTFQ(this);
                 questionsPanel.Controls.Add(addtfq);
             }
 
