@@ -50,11 +50,11 @@
             // answerTextBox
             // 
             this.answerTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerTextBox.Location = new System.Drawing.Point(48, 107);
+            this.answerTextBox.Location = new System.Drawing.Point(17, 107);
             this.answerTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.answerTextBox.Multiline = true;
             this.answerTextBox.Name = "answerTextBox";
-            this.answerTextBox.Size = new System.Drawing.Size(938, 402);
+            this.answerTextBox.Size = new System.Drawing.Size(969, 402);
             this.answerTextBox.TabIndex = 10;
             // 
             // submitAnsBtn

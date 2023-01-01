@@ -55,9 +55,11 @@ namespace TmLms
 
         private void addQuestionsBtn_Click(object sender, EventArgs e)
         {
-            if (quizCodeTxtBox.Text != null && moduleComboBox.SelectedIndex <= 0)
+            if (quizCodeTxtBox.Text != "" && moduleComboBox.SelectedIndex > -1)
             {
                 quiz = new Question.Quiz(module, quizCodeTxtBox.Text);
+                module.addQuiz(quiz);
+
                 quizCodeTxtBox.ReadOnly = true;
                 moduleComboBox.Enabled = false;
                 addQuestionsBtn.Enabled = false;
@@ -68,7 +70,7 @@ namespace TmLms
             }
             else
             {
-                MessageBox.Show("Error, Please choose a Quiz Type and Enter a Quiz Code");
+                MessageBox.Show("Error, Please choose a Module and Enter a Quiz Code");
 
             }
         }
@@ -112,6 +114,23 @@ namespace TmLms
                 questionsPanel.Controls.Add(addtfq);
             }
 
+        }
+
+        private void finishQuizBtn_Click(object sender, EventArgs e)
+        {
+            quiz.saveQuiz(quiz);
+        }
+
+        private void moduleComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (TM.Module module in TMEngine.Instance.ModuleDictionary.Values)
+            {
+                if (moduleComboBox.SelectedItem.ToString().Contains(module.Code))
+                {
+                    this.module = module;
+                    break;
+                }
+            }
         }
     }
 }

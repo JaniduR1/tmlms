@@ -22,6 +22,8 @@ namespace TmLms
             currentUser = user;
             ControlUI();
             logoPictureBox.Show();
+            this.splitContainer1.Panel1.BackColor = ColorTranslator.FromHtml("#40826D");
+            this.splitContainer1.Panel2.BackColor = ColorTranslator.FromHtml("#9DB3FF");
         }
 
         private void ControlUI()

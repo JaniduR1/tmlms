@@ -126,7 +126,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel1.Controls.Add(this.logoPictureBox);
             this.splitContainer1.Panel1.Controls.Add(this.createTestBtn);
             this.splitContainer1.Panel1.Controls.Add(this.createCourseBtn);

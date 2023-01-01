@@ -281,6 +281,8 @@
             this.Controls.Add(this.moduleDescriptionLbl);
             this.Controls.Add(this.moduleCodeLbl);
             this.Controls.Add(this.moduleNameLbl);
+            this.MaximumSize = new System.Drawing.Size(1114, 580);
+            this.MinimumSize = new System.Drawing.Size(1114, 580);
             this.Name = "CreateModule";
             this.Text = "CreateModule";
             this.Load += new System.EventHandler(this.CreateModule_Load);

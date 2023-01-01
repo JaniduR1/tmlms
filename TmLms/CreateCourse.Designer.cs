@@ -205,6 +205,8 @@
             this.Controls.Add(this.availableModules);
             this.Controls.Add(this.courseInstructorTxtbox);
             this.Controls.Add(this.instructorMember);
+            this.MaximumSize = new System.Drawing.Size(1196, 603);
+            this.MinimumSize = new System.Drawing.Size(1196, 603);
             this.Name = "CreateCourse";
             this.Text = "CreateCourse";
             this.Load += new System.EventHandler(this.CreateCourse_Load);

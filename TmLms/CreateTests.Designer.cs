@@ -115,6 +115,7 @@
             this.moduleComboBox.Name = "moduleComboBox";
             this.moduleComboBox.Size = new System.Drawing.Size(196, 33);
             this.moduleComboBox.TabIndex = 8;
+            this.moduleComboBox.SelectedIndexChanged += new System.EventHandler(this.moduleComboBox_SelectedIndexChanged);
             // 
             // finishQuizBtn
             // 
@@ -125,6 +126,7 @@
             this.finishQuizBtn.TabIndex = 9;
             this.finishQuizBtn.Text = "Finish Quiz";
             this.finishQuizBtn.UseVisualStyleBackColor = true;
+            this.finishQuizBtn.Click += new System.EventHandler(this.finishQuizBtn_Click);
             // 
             // CreateTests
             // 
@@ -140,7 +142,8 @@
             this.Controls.Add(this.quizCodeLbl);
             this.Controls.Add(this.quizCodeTxtBox);
             this.Controls.Add(this.questionsPanel);
-            this.MinimumSize = new System.Drawing.Size(1083, 597);
+            this.MaximumSize = new System.Drawing.Size(1237, 641);
+            this.MinimumSize = new System.Drawing.Size(1237, 641);
             this.Name = "CreateTests";
             this.Text = "CreateTests";
             this.Load += new System.EventHandler(this.CreateTests_Load);

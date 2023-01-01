@@ -117,11 +117,18 @@ namespace TmLms
 
         private void createCourseBtn_Click(object sender, EventArgs e)
         {
-            admin.CreateCourse(CName, CCode, CInstructor);
+            if (courseNameTxtBox.Text != "" && courseCodeTxtBox.Text != "" && courseInstructorTxtbox.Text != "")
+            {
+                admin.CreateCourse(CName, CCode, CInstructor);
 
-            courseNameTxtBox.Clear();
-            courseCodeTxtBox.Clear();
-            courseInstructorTxtbox.Clear();
+                courseNameTxtBox.Clear();
+                courseCodeTxtBox.Clear();
+                courseInstructorTxtbox.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Please Complete ALL Fields!");
+            }
         }
     }
 }

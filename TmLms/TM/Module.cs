@@ -56,6 +56,17 @@ namespace TmLms.TM
             Members.Add(member);
         }
 
+        private List<TmLms.Question.Quiz> listofQuestions = new List<Question.Quiz>();
+
+        public List<Question.Quiz> GetQuizList()
+        {
+            return listofQuestions;
+        }
+        public void addQuiz(Question.Quiz q)
+        {
+            listofQuestions.Add(q);
+        }
+
         public SortedSet<object> getMembersList()
         {
             return Members;
