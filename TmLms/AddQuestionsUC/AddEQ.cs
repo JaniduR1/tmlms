@@ -38,7 +38,8 @@ namespace TmLms.AddQuestionsUC
             if (questionTxtBox.Text != "")
             {
                 Question.Question question = new Question.EssayQ(quiz, GetQuestion);
-                question.AddQuestion(question);
+                quiz.addQuestionList(question); // Add to List
+                question.AddQuestion(question); // Add to Dictionary
                 MessageBox.Show("Question Added");
                 ClearText();
             }

@@ -34,14 +34,12 @@
             this.questionTxtBox = new System.Windows.Forms.TextBox();
             this.trueRadioBtn = new System.Windows.Forms.RadioButton();
             this.falseRadioBtn = new System.Windows.Forms.RadioButton();
-            this.corrTickBox = new System.Windows.Forms.CheckBox();
-            this.corrAnsLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addQuestionBtn
             // 
             this.addQuestionBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addQuestionBtn.Location = new System.Drawing.Point(421, 457);
+            this.addQuestionBtn.Location = new System.Drawing.Point(411, 436);
             this.addQuestionBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addQuestionBtn.Name = "addQuestionBtn";
             this.addQuestionBtn.Size = new System.Drawing.Size(192, 59);
@@ -84,7 +82,7 @@
             // 
             this.trueRadioBtn.AutoSize = true;
             this.trueRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.trueRadioBtn.Location = new System.Drawing.Point(478, 292);
+            this.trueRadioBtn.Location = new System.Drawing.Point(365, 307);
             this.trueRadioBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.trueRadioBtn.Name = "trueRadioBtn";
             this.trueRadioBtn.Size = new System.Drawing.Size(74, 29);
@@ -97,7 +95,7 @@
             // 
             this.falseRadioBtn.AutoSize = true;
             this.falseRadioBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.falseRadioBtn.Location = new System.Drawing.Point(478, 356);
+            this.falseRadioBtn.Location = new System.Drawing.Point(574, 307);
             this.falseRadioBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.falseRadioBtn.Name = "falseRadioBtn";
             this.falseRadioBtn.Size = new System.Drawing.Size(81, 29);
@@ -106,33 +104,10 @@
             this.falseRadioBtn.Text = "False";
             this.falseRadioBtn.UseVisualStyleBackColor = true;
             // 
-            // corrTickBox
-            // 
-            this.corrTickBox.AutoSize = true;
-            this.corrTickBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.corrTickBox.Location = new System.Drawing.Point(180, 353);
-            this.corrTickBox.Name = "corrTickBox";
-            this.corrTickBox.Size = new System.Drawing.Size(98, 32);
-            this.corrTickBox.TabIndex = 41;
-            this.corrTickBox.Text = "Correct";
-            this.corrTickBox.UseVisualStyleBackColor = true;
-            // 
-            // corrAnsLbl
-            // 
-            this.corrAnsLbl.AutoSize = true;
-            this.corrAnsLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.corrAnsLbl.Location = new System.Drawing.Point(120, 314);
-            this.corrAnsLbl.Name = "corrAnsLbl";
-            this.corrAnsLbl.Size = new System.Drawing.Size(219, 28);
-            this.corrAnsLbl.TabIndex = 42;
-            this.corrAnsLbl.Text = "Tick if the answer is True";
-            // 
             // AddTFQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.corrAnsLbl);
-            this.Controls.Add(this.corrTickBox);
             this.Controls.Add(this.falseRadioBtn);
             this.Controls.Add(this.trueRadioBtn);
             this.Controls.Add(this.addQuestionBtn);
@@ -157,7 +132,5 @@
         private System.Windows.Forms.TextBox questionTxtBox;
         private System.Windows.Forms.RadioButton trueRadioBtn;
         private System.Windows.Forms.RadioButton falseRadioBtn;
-        private CheckBox corrTickBox;
-        private Label corrAnsLbl;
     }
 }

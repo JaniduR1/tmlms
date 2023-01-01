@@ -37,16 +37,21 @@ namespace TmLms.AddQuestionsUC
 
         private void addQuestionBtn_Click(object sender, EventArgs e)
         {
-            var questionFalse = true;
-            if (corrTickBox.Checked)
-            { 
-                questionFalse = false;
+            bool answer = false;
+
+            foreach(RadioButton r in this.Controls)
+            {
+                if (r.Checked && r.Text.Equals("True"))
+                {
+                    answer = true;
+                }
             }
 
             if (questionTxtBox.Text != "")
             {
-                Question.Question question = new Question.TrueOrFalseQ(quiz, GetQuestion, questionFalse);
-                question.AddQuestion(question);
+                Question.Question question = new Question.TrueOrFalseQ(quiz, GetQuestion, answer);
+                quiz.addQuestionList(question); // Add to List
+                question.AddQuestion(question); // Add to Dictionary
                 MessageBox.Show("Question Added");
                 ClearText();
             }

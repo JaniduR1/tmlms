@@ -203,7 +203,15 @@ namespace TmLms
         //DB
         public void AddModule(TM.Module module)
         {
-            TmLms.TMEngine.Instance.ModuleDictionary.Add(module.Code, module);
+            if (TmLms.TMEngine.Instance.ModuleDictionary.Values.Contains(module))
+            {
+
+            }
+            else
+            {
+                TmLms.TMEngine.Instance.ModuleDictionary.Add(module.Code, module);
+
+            }
         }
     }
 }

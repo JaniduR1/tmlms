@@ -53,7 +53,8 @@ namespace TmLms.AddQuestionsUC
                 var MixedAnswers = falseAnswers.OrderBy(_ => random.Next()).ToList();
 
                 Question.Question question = new Question.MultipleChoiceQ(quiz, GetQuestion, GetCorrectAnswer, MixedAnswers);
-                question.AddQuestion(question);
+                quiz.addQuestionList(question); // Add to List
+                question.AddQuestion(question); // Add to Dictionary
                 MessageBox.Show("Question Added");
                 ClearText();
             }

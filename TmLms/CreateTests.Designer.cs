@@ -36,6 +36,7 @@
             this.quizTypeComboBox = new System.Windows.Forms.ComboBox();
             this.quizTypeLbl = new System.Windows.Forms.Label();
             this.moduleComboBox = new System.Windows.Forms.ComboBox();
+            this.finishQuizBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // questionsPanel
@@ -78,9 +79,9 @@
             // addQuestionsBtn
             // 
             this.addQuestionsBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addQuestionsBtn.Location = new System.Drawing.Point(52, 192);
+            this.addQuestionsBtn.Location = new System.Drawing.Point(12, 196);
             this.addQuestionsBtn.Name = "addQuestionsBtn";
-            this.addQuestionsBtn.Size = new System.Drawing.Size(125, 59);
+            this.addQuestionsBtn.Size = new System.Drawing.Size(196, 41);
             this.addQuestionsBtn.TabIndex = 5;
             this.addQuestionsBtn.Text = "Add Questions";
             this.addQuestionsBtn.UseVisualStyleBackColor = true;
@@ -115,11 +116,22 @@
             this.moduleComboBox.Size = new System.Drawing.Size(196, 33);
             this.moduleComboBox.TabIndex = 8;
             // 
+            // finishQuizBtn
+            // 
+            this.finishQuizBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.finishQuizBtn.Location = new System.Drawing.Point(12, 497);
+            this.finishQuizBtn.Name = "finishQuizBtn";
+            this.finishQuizBtn.Size = new System.Drawing.Size(196, 41);
+            this.finishQuizBtn.TabIndex = 9;
+            this.finishQuizBtn.Text = "Finish Quiz";
+            this.finishQuizBtn.UseVisualStyleBackColor = true;
+            // 
             // CreateTests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 594);
+            this.Controls.Add(this.finishQuizBtn);
             this.Controls.Add(this.moduleComboBox);
             this.Controls.Add(this.quizTypeLbl);
             this.Controls.Add(this.quizTypeComboBox);
@@ -147,5 +159,6 @@
         private ComboBox quizTypeComboBox;
         private Label quizTypeLbl;
         private ComboBox moduleComboBox;
+        private Button finishQuizBtn;
     }
 }

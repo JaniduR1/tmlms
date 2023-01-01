@@ -25,6 +25,7 @@ namespace TmLms
         {
             quizTypeComboBox.Hide();
             quizTypeLbl.Hide();
+            finishQuizBtn.Hide();
 
             quizTypeComboBox.Items.Add("Multiple Choice");
             quizTypeComboBox.Items.Add("Multiple Answer");
@@ -49,18 +50,20 @@ namespace TmLms
 
         private void addQuestionsBtn_Click(object sender, EventArgs e)
         {
-            if (quizCodeTxtBox.Text == null && moduleComboBox.SelectedIndex == -1)
+            if (quizCodeTxtBox.Text != null && moduleComboBox.SelectedIndex <= 0)
             {
-                MessageBox.Show("Error, Please choose a Quiz Type and Enter a Quiz Code");
-            }
-            else
-            {
-                Question.Quiz qz = new Question.Quiz(module, quizCodeTxtBox.Text);
+                quiz = new Question.Quiz(module, quizCodeTxtBox.Text);
                 quizCodeTxtBox.ReadOnly = true;
                 moduleComboBox.Enabled = false;
                 addQuestionsBtn.Enabled = false;
+                finishQuizBtn.Show();
                 quizTypeComboBox.Show();
                 quizTypeLbl.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Error, Please choose a Quiz Type and Enter a Quiz Code");
 
             }
         }

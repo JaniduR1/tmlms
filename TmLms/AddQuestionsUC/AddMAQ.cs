@@ -20,11 +20,16 @@ namespace TmLms.AddQuestionsUC
             this.quiz = quiz;
         }
 
-        private void ClearText()
+        private void ClearFields()
         {
             foreach (TextBox txtBox in this.Controls.OfType<TextBox>())
             {
                 txtBox.Text = "";
+            }
+
+            foreach (CheckBox chkb in this.Controls.OfType<CheckBox>())
+            {
+                chkb.Checked = false;
             }
         }
 
@@ -32,20 +37,34 @@ namespace TmLms.AddQuestionsUC
         {
             List<string> answers = new List<string>();
             List<string> cAnswers = new List<string>();
+
             answers.Add(answerTxtBox1.Text);
             answers.Add(answerTxtBox2.Text);
             answers.Add(answerTxtBox3.Text);
             answers.Add(answerTxtBox4.Text);
 
-            foreach(CheckBox cb in this.Controls.OfType<CheckBox>())
+            if (corrAns1.Checked) 
             {
-                if (cb.Checked)
-                {
-                    //
-                }
+                cAnswers.Add(answerTxtBox1.Text); 
+            }
+            if (corrAns2.Checked) 
+            { 
+                cAnswers.Add(answerTxtBox2.Text); 
+            }
+            if (corrAns3.Checked) 
+            { 
+                cAnswers.Add(answerTxtBox3.Text); 
+            }
+            if (corrAns4.Checked) 
+            { 
+                cAnswers.Add(answerTxtBox1.Text); 
             }
 
-            ClearText();
+            Question.Question question = new TmLms.Question.MultipleAnswerQ(quiz, questionTxtBox.Text, answers, cAnswers);
+            quiz.addQuestionList(question); // Add to List
+            question.AddQuestion(question); // Add to Dictionary
+            MessageBox.Show("Question Added");
+            ClearFields();
         }
     }
 }
