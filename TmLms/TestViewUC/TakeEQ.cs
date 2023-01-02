@@ -7,24 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TmLms.Question;
 
 namespace TmLms.TestViewUC
 {
     public partial class TakeEQ : UserControl
     {
-        public TakeEQ()
+        EssayQ eq;
+
+        public TakeEQ(Question.Question q)
         {
             InitializeComponent();
+            eq = q as EssayQ;
+            setData();
         }
-
-        private void TakeEQ_Load(object sender, EventArgs e)
+        private void setData()
         {
-
-        }
-
-        private void submitBtn_Click(object sender, EventArgs e)
-        {
-
+            this.questionLbl.Text = eq.GetQuestion();
         }
     }
 }

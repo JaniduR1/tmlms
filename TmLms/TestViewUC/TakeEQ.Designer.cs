@@ -80,7 +80,6 @@
             this.MinimumSize = new System.Drawing.Size(1006, 593);
             this.Name = "TakeEQ";
             this.Size = new System.Drawing.Size(1006, 593);
-            this.Load += new System.EventHandler(this.TakeEQ_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

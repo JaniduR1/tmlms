@@ -19,15 +19,15 @@ namespace TmLms.Question
             this.answer = answer;
         }
 
-        //public string GetQuestion()
-        //{
-        //    return question;
-        //}
+        public string GetQuestion()
+        {
+            return question;
+        }
 
-        //public List<string> GetAnswer()
-        //{
-        //    return answer;
-        //}
+        public List<string> GetAnswer()
+        {
+            return answer;
+        }
         public void AddQuestion(Question question)
         {
             int id = 0;
