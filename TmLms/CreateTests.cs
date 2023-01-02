@@ -104,8 +104,8 @@ namespace TmLms
             else if (quizTypeComboBox.SelectedItem == "Matching")
             {
                 questionsPanel.Controls.Clear();
-                AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(this);
-                questionsPanel.Controls.Add(addmaq);
+                AddQuestionsUC.AddMQ addmq= new AddQuestionsUC.AddMQ(this);
+                questionsPanel.Controls.Add(addmq);
             }
             else if (quizTypeComboBox.SelectedItem == "True/False")
             {

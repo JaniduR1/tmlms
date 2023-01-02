@@ -16,7 +16,7 @@ namespace TMUnitTest
             TmLms.TM.Course cource = new TmLms.TM.Course();
             bool isCore = false;
 
-            TmLms.TM.Module module1 = new TmLms.TM.Module("U100", "");
+            TmLms.TM.Module module1 = new TmLms.TM.Module("U100", "Sam", "Maths", "Learn Maths", 20, 5);
             module1.Credits = (TmLms.TM.Module.CreditEnum) credits ;
             module1.Level = (TmLms.TM.Module.LevelEnum) level;
 

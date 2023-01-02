@@ -18,6 +18,9 @@
     <Compile Update="AddQuestionsUC\AddMCQ.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="AddQuestionsUC\AddMQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="AddQuestionsUC\AddSAQ.cs">
       <SubType>UserControl</SubType>
     </Compile>
