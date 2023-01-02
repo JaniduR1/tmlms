@@ -101,12 +101,12 @@ namespace TmLms
                 AddQuestionsUC.AddEQ addeq = new AddQuestionsUC.AddEQ(this);
                 questionsPanel.Controls.Add(addeq);
             }
-            //else if(quizTypeComboBox.SelectedItem == "Matching")
-            //{
-            //    questionsPanel.Controls.Clear();
-            //    AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(this);
-            //    questionsPanel.Controls.Add(addmaq);
-            //}            
+            else if (quizTypeComboBox.SelectedItem == "Matching")
+            {
+                questionsPanel.Controls.Clear();
+                AddQuestionsUC.AddMAQ addmaq = new AddQuestionsUC.AddMAQ(this);
+                questionsPanel.Controls.Add(addmaq);
+            }
             else if (quizTypeComboBox.SelectedItem == "True/False")
             {
                 questionsPanel.Controls.Clear();
