@@ -9,6 +9,12 @@ namespace TmLms.Question
     public class MultipleAnswerQ : Question
     {
         List<string> GivenAnswerSet;
+
+        public List<string> GetGivenAnswerSet()
+        {
+            return GivenAnswerSet;
+        }
+
         public MultipleAnswerQ(string question, List<string> answer, List<string> givenAnswerSet) : base(question, answer)
         {
             GivenAnswerSet = givenAnswerSet;

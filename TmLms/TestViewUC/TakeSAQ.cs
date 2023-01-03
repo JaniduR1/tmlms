@@ -7,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TmLms.Question;
+
 
 namespace TmLms.TestViewUC
 {
     public partial class TakeSAQ : UserControl
     {
-        public TakeSAQ()
+        ShortAnswerQ saq;
+        public TakeSAQ(Question.Question q)
         {
             InitializeComponent();
+            saq = q as ShortAnswerQ;
+            setData();
         }
 
-        private void TakeSAQ_Load(object sender, EventArgs e)
+        private void setData()
         {
-
+            this.questionLbl.Text = saq.GetQuestion();
         }
     }
 }

@@ -95,7 +95,7 @@
             // right4TxtBox
             // 
             this.right4TxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.right4TxtBox.Location = new System.Drawing.Point(3, 223);
+            this.right4TxtBox.Location = new System.Drawing.Point(3, 226);
             this.right4TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.right4TxtBox.Name = "right4TxtBox";
             this.right4TxtBox.Size = new System.Drawing.Size(298, 30);
@@ -104,7 +104,7 @@
             // right2TxtBox
             // 
             this.right2TxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.right2TxtBox.Location = new System.Drawing.Point(3, 81);
+            this.right2TxtBox.Location = new System.Drawing.Point(3, 78);
             this.right2TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.right2TxtBox.Name = "right2TxtBox";
             this.right2TxtBox.Size = new System.Drawing.Size(298, 30);
@@ -113,7 +113,7 @@
             // right3TxtBox
             // 
             this.right3TxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.right3TxtBox.Location = new System.Drawing.Point(3, 157);
+            this.right3TxtBox.Location = new System.Drawing.Point(3, 152);
             this.right3TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.right3TxtBox.Name = "right3TxtBox";
             this.right3TxtBox.Size = new System.Drawing.Size(298, 30);
@@ -122,7 +122,7 @@
             // right1TxtBox
             // 
             this.right1TxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.right1TxtBox.Location = new System.Drawing.Point(3, 17);
+            this.right1TxtBox.Location = new System.Drawing.Point(3, 4);
             this.right1TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.right1TxtBox.Name = "right1TxtBox";
             this.right1TxtBox.Size = new System.Drawing.Size(298, 30);
@@ -153,7 +153,7 @@
             // left4TxtBox
             // 
             this.left4TxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.left4TxtBox.Location = new System.Drawing.Point(3, 223);
+            this.left4TxtBox.Location = new System.Drawing.Point(3, 226);
             this.left4TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.left4TxtBox.Name = "left4TxtBox";
             this.left4TxtBox.Size = new System.Drawing.Size(298, 30);
@@ -162,7 +162,7 @@
             // left3TxtBox
             // 
             this.left3TxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.left3TxtBox.Location = new System.Drawing.Point(3, 157);
+            this.left3TxtBox.Location = new System.Drawing.Point(3, 152);
             this.left3TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.left3TxtBox.Name = "left3TxtBox";
             this.left3TxtBox.Size = new System.Drawing.Size(298, 30);
@@ -171,7 +171,7 @@
             // left2TxtBox
             // 
             this.left2TxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.left2TxtBox.Location = new System.Drawing.Point(3, 81);
+            this.left2TxtBox.Location = new System.Drawing.Point(3, 78);
             this.left2TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.left2TxtBox.Name = "left2TxtBox";
             this.left2TxtBox.Size = new System.Drawing.Size(298, 30);
@@ -189,7 +189,7 @@
             // left1TxtBox
             // 
             this.left1TxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.left1TxtBox.Location = new System.Drawing.Point(3, 17);
+            this.left1TxtBox.Location = new System.Drawing.Point(3, 4);
             this.left1TxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.left1TxtBox.Name = "left1TxtBox";
             this.left1TxtBox.Size = new System.Drawing.Size(298, 30);

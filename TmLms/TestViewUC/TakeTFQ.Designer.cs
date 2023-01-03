@@ -97,7 +97,6 @@
             this.MinimumSize = new System.Drawing.Size(1006, 593);
             this.Name = "TakeTFQ";
             this.Size = new System.Drawing.Size(1006, 593);
-            this.Load += new System.EventHandler(this.TakeTFQ_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

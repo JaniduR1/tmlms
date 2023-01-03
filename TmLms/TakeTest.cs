@@ -89,7 +89,21 @@ namespace TmLms
                     TestViewUC.TakeEQ eq = new TestViewUC.TakeEQ(q);
                     QuestionUCs.Add(eq);
                 }
-                //
+                else if(q.GetType() == typeof(Question.MultipleChoiceQ))
+                {
+                    TestViewUC.TakeMCQ mcq = new TestViewUC.TakeMCQ(q);
+                    QuestionUCs.Add(mcq);
+                }
+                else if(q.GetType() == typeof(Question.MultipleAnswerQ))
+                {
+                    TestViewUC.TakeMCQ maq = new TestViewUC.TakeMCQ(q);
+                    QuestionUCs.Add(maq);
+                }
+                else if (q.GetType() == typeof(Question.ShortAnswerQ))
+                {
+                    TestViewUC.TakeMCQ saq = new TestViewUC.TakeMCQ(q);
+                    QuestionUCs.Add(saq);
+                }
                 questionsPanel.Controls.Clear();
                 questionsPanel.Controls.Add(QuestionUCs.ElementAt(i));
             }

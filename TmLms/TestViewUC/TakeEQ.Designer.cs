@@ -36,9 +36,10 @@
             // 
             // questionLbl
             // 
+            this.questionLbl.AllowDrop = true;
             this.questionLbl.AutoSize = true;
             this.questionLbl.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.questionLbl.Location = new System.Drawing.Point(433, 35);
+            this.questionLbl.Location = new System.Drawing.Point(416, 12);
             this.questionLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.questionLbl.MaximumSize = new System.Drawing.Size(1572, 0);
             this.questionLbl.Name = "questionLbl";
@@ -50,7 +51,7 @@
             // answerTextBox
             // 
             this.answerTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerTextBox.Location = new System.Drawing.Point(17, 107);
+            this.answerTextBox.Location = new System.Drawing.Point(24, 82);
             this.answerTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.answerTextBox.Multiline = true;
             this.answerTextBox.Name = "answerTextBox";
@@ -60,7 +61,7 @@
             // submitAnsBtn
             // 
             this.submitAnsBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.submitAnsBtn.Location = new System.Drawing.Point(471, 517);
+            this.submitAnsBtn.Location = new System.Drawing.Point(446, 492);
             this.submitAnsBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.submitAnsBtn.Name = "submitAnsBtn";
             this.submitAnsBtn.Size = new System.Drawing.Size(125, 59);

@@ -7,18 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TmLms.Question;
+
 
 namespace TmLms.TestViewUC
 {
     public partial class TakeMCQ : UserControl
     {
-        public TakeMCQ()
+        MultipleChoiceQ mcq;
+
+        public TakeMCQ(Question.Question q)
         {
             InitializeComponent();
+            this.mcq = q as MultipleChoiceQ;
+            setData();
         }
 
-        private void TakeMCQ_Load(object sender, EventArgs e)
+        private void setData()
         {
+            this.questionLbl.Text = mcq.GetQuestion();
+            List<string> mixed = mcq.GetGivenAnswerSet().OrderBy(x => Guid.NewGuid()).ToList();
+            int i = 0;
+            foreach (CheckBox check in this.Controls.OfType<CheckBox>())
+            {
+                check.Text = mixed.ElementAt(i);
+                i++;
+            }
 
         }
     }
