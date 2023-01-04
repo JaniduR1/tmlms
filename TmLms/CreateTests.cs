@@ -119,6 +119,7 @@ namespace TmLms
         private void finishQuizBtn_Click(object sender, EventArgs e)
         {
             quiz.saveQuiz(quiz);
+            MessageBox.Show("Quiz Created!");
         }
 
         private void moduleComboBox_SelectedIndexChanged(object sender, EventArgs e)

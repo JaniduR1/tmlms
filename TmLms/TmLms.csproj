@@ -41,6 +41,9 @@
     <Compile Update="TestViewUC\TakeMCQ.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="TestViewUC\TakeMQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="TestViewUC\TakeSAQ.cs">
       <SubType>UserControl</SubType>
     </Compile>

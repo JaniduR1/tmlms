@@ -19,16 +19,14 @@ namespace TmLms.TestViewUC
         {
             InitializeComponent();
             tfq = q as TrueOrFalseQ;
+            setData();
         }
 
         private void setData()
         {
             this.questionLbl.Text = tfq.GetQuestion();
-            List<string> answer = new List<string>();
-            if(trueRadioBtn.Checked == true)
-            {
-
-            }
+            this.trueRadioBtn.Text = "TRUE";
+            this.falseRadioBtn.Text = "FALSE";
         }
     }
 }

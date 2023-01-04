@@ -41,7 +41,7 @@
             this.questionLbl.AllowDrop = true;
             this.questionLbl.AutoSize = true;
             this.questionLbl.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.questionLbl.Location = new System.Drawing.Point(366, 23);
+            this.questionLbl.Location = new System.Drawing.Point(355, 24);
             this.questionLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.questionLbl.MaximumSize = new System.Drawing.Size(1258, 0);
             this.questionLbl.Name = "questionLbl";
@@ -53,9 +53,9 @@
             // submitAnsBtn
             // 
             this.submitAnsBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.submitAnsBtn.Location = new System.Drawing.Point(393, 404);
+            this.submitAnsBtn.Location = new System.Drawing.Point(393, 400);
             this.submitAnsBtn.Name = "submitAnsBtn";
-            this.submitAnsBtn.Size = new System.Drawing.Size(125, 47);
+            this.submitAnsBtn.Size = new System.Drawing.Size(111, 47);
             this.submitAnsBtn.TabIndex = 14;
             this.submitAnsBtn.Text = "Submit";
             this.submitAnsBtn.UseVisualStyleBackColor = true;
@@ -64,11 +64,11 @@
             // 
             this.ans4ChkBox.AutoSize = true;
             this.ans4ChkBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ans4ChkBox.Location = new System.Drawing.Point(408, 319);
+            this.ans4ChkBox.Location = new System.Drawing.Point(393, 313);
             this.ans4ChkBox.Margin = new System.Windows.Forms.Padding(4);
             this.ans4ChkBox.Name = "ans4ChkBox";
             this.ans4ChkBox.Size = new System.Drawing.Size(111, 28);
-            this.ans4ChkBox.TabIndex = 18;
+            this.ans4ChkBox.TabIndex = 26;
             this.ans4ChkBox.Text = "checkBox4";
             this.ans4ChkBox.UseVisualStyleBackColor = true;
             // 
@@ -76,11 +76,11 @@
             // 
             this.ans3ChkBox.AutoSize = true;
             this.ans3ChkBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ans3ChkBox.Location = new System.Drawing.Point(408, 250);
+            this.ans3ChkBox.Location = new System.Drawing.Point(393, 248);
             this.ans3ChkBox.Margin = new System.Windows.Forms.Padding(4);
             this.ans3ChkBox.Name = "ans3ChkBox";
             this.ans3ChkBox.Size = new System.Drawing.Size(111, 28);
-            this.ans3ChkBox.TabIndex = 17;
+            this.ans3ChkBox.TabIndex = 25;
             this.ans3ChkBox.Text = "checkBox3";
             this.ans3ChkBox.UseVisualStyleBackColor = true;
             // 
@@ -88,11 +88,11 @@
             // 
             this.ans2ChkBox.AutoSize = true;
             this.ans2ChkBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ans2ChkBox.Location = new System.Drawing.Point(408, 181);
+            this.ans2ChkBox.Location = new System.Drawing.Point(393, 183);
             this.ans2ChkBox.Margin = new System.Windows.Forms.Padding(4);
             this.ans2ChkBox.Name = "ans2ChkBox";
             this.ans2ChkBox.Size = new System.Drawing.Size(111, 28);
-            this.ans2ChkBox.TabIndex = 16;
+            this.ans2ChkBox.TabIndex = 24;
             this.ans2ChkBox.Text = "checkBox2";
             this.ans2ChkBox.UseVisualStyleBackColor = true;
             // 
@@ -100,11 +100,11 @@
             // 
             this.ans1ChkBox.AutoSize = true;
             this.ans1ChkBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ans1ChkBox.Location = new System.Drawing.Point(408, 112);
+            this.ans1ChkBox.Location = new System.Drawing.Point(393, 118);
             this.ans1ChkBox.Margin = new System.Windows.Forms.Padding(4);
             this.ans1ChkBox.Name = "ans1ChkBox";
             this.ans1ChkBox.Size = new System.Drawing.Size(111, 28);
-            this.ans1ChkBox.TabIndex = 15;
+            this.ans1ChkBox.TabIndex = 23;
             this.ans1ChkBox.Text = "checkBox1";
             this.ans1ChkBox.UseVisualStyleBackColor = true;
             // 

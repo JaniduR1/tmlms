@@ -30,10 +30,10 @@
         {
             this.questionLbl = new System.Windows.Forms.Label();
             this.submitAnsBtn = new System.Windows.Forms.Button();
-            this.ans4ChkBox = new System.Windows.Forms.CheckBox();
-            this.ans3ChkBox = new System.Windows.Forms.CheckBox();
-            this.ans2ChkBox = new System.Windows.Forms.CheckBox();
-            this.ans1ChkBox = new System.Windows.Forms.CheckBox();
+            this.ans4RadioBtn = new System.Windows.Forms.RadioButton();
+            this.ans3RadioBtn = new System.Windows.Forms.RadioButton();
+            this.ans2RadioBtn = new System.Windows.Forms.RadioButton();
+            this.ans1RadioBtn = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // questionLbl
@@ -41,7 +41,7 @@
             this.questionLbl.AllowDrop = true;
             this.questionLbl.AutoSize = true;
             this.questionLbl.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.questionLbl.Location = new System.Drawing.Point(370, 52);
+            this.questionLbl.Location = new System.Drawing.Point(370, 43);
             this.questionLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.questionLbl.MaximumSize = new System.Drawing.Size(1572, 0);
             this.questionLbl.Name = "questionLbl";
@@ -53,69 +53,65 @@
             // submitAnsBtn
             // 
             this.submitAnsBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.submitAnsBtn.Location = new System.Drawing.Point(391, 416);
+            this.submitAnsBtn.Location = new System.Drawing.Point(393, 416);
             this.submitAnsBtn.Name = "submitAnsBtn";
-            this.submitAnsBtn.Size = new System.Drawing.Size(125, 47);
+            this.submitAnsBtn.Size = new System.Drawing.Size(123, 47);
             this.submitAnsBtn.TabIndex = 14;
             this.submitAnsBtn.Text = "Submit";
             this.submitAnsBtn.UseVisualStyleBackColor = true;
             // 
-            // ans4ChkBox
+            // ans4RadioBtn
             // 
-            this.ans4ChkBox.AutoSize = true;
-            this.ans4ChkBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ans4ChkBox.Location = new System.Drawing.Point(405, 343);
-            this.ans4ChkBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ans4ChkBox.Name = "ans4ChkBox";
-            this.ans4ChkBox.Size = new System.Drawing.Size(111, 28);
-            this.ans4ChkBox.TabIndex = 18;
-            this.ans4ChkBox.Text = "checkBox4";
-            this.ans4ChkBox.UseVisualStyleBackColor = true;
+            this.ans4RadioBtn.AutoSize = true;
+            this.ans4RadioBtn.Location = new System.Drawing.Point(393, 332);
+            this.ans4RadioBtn.Name = "ans4RadioBtn";
+            this.ans4RadioBtn.Size = new System.Drawing.Size(123, 28);
+            this.ans4RadioBtn.TabIndex = 26;
+            this.ans4RadioBtn.TabStop = true;
+            this.ans4RadioBtn.Text = "radioButton4";
+            this.ans4RadioBtn.UseVisualStyleBackColor = true;
             // 
-            // ans3ChkBox
+            // ans3RadioBtn
             // 
-            this.ans3ChkBox.AutoSize = true;
-            this.ans3ChkBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ans3ChkBox.Location = new System.Drawing.Point(405, 278);
-            this.ans3ChkBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ans3ChkBox.Name = "ans3ChkBox";
-            this.ans3ChkBox.Size = new System.Drawing.Size(111, 28);
-            this.ans3ChkBox.TabIndex = 17;
-            this.ans3ChkBox.Text = "checkBox3";
-            this.ans3ChkBox.UseVisualStyleBackColor = true;
+            this.ans3RadioBtn.AutoSize = true;
+            this.ans3RadioBtn.Location = new System.Drawing.Point(393, 265);
+            this.ans3RadioBtn.Name = "ans3RadioBtn";
+            this.ans3RadioBtn.Size = new System.Drawing.Size(123, 28);
+            this.ans3RadioBtn.TabIndex = 25;
+            this.ans3RadioBtn.TabStop = true;
+            this.ans3RadioBtn.Text = "radioButton3";
+            this.ans3RadioBtn.UseVisualStyleBackColor = true;
             // 
-            // ans2ChkBox
+            // ans2RadioBtn
             // 
-            this.ans2ChkBox.AutoSize = true;
-            this.ans2ChkBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ans2ChkBox.Location = new System.Drawing.Point(405, 213);
-            this.ans2ChkBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ans2ChkBox.Name = "ans2ChkBox";
-            this.ans2ChkBox.Size = new System.Drawing.Size(111, 28);
-            this.ans2ChkBox.TabIndex = 16;
-            this.ans2ChkBox.Text = "checkBox2";
-            this.ans2ChkBox.UseVisualStyleBackColor = true;
+            this.ans2RadioBtn.AutoSize = true;
+            this.ans2RadioBtn.Location = new System.Drawing.Point(393, 198);
+            this.ans2RadioBtn.Name = "ans2RadioBtn";
+            this.ans2RadioBtn.Size = new System.Drawing.Size(123, 28);
+            this.ans2RadioBtn.TabIndex = 24;
+            this.ans2RadioBtn.TabStop = true;
+            this.ans2RadioBtn.Text = "radioButton2";
+            this.ans2RadioBtn.UseVisualStyleBackColor = true;
             // 
-            // ans1ChkBox
+            // ans1RadioBtn
             // 
-            this.ans1ChkBox.AutoSize = true;
-            this.ans1ChkBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ans1ChkBox.Location = new System.Drawing.Point(405, 148);
-            this.ans1ChkBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ans1ChkBox.Name = "ans1ChkBox";
-            this.ans1ChkBox.Size = new System.Drawing.Size(111, 28);
-            this.ans1ChkBox.TabIndex = 15;
-            this.ans1ChkBox.Text = "checkBox1";
-            this.ans1ChkBox.UseVisualStyleBackColor = true;
+            this.ans1RadioBtn.AutoSize = true;
+            this.ans1RadioBtn.Location = new System.Drawing.Point(393, 131);
+            this.ans1RadioBtn.Name = "ans1RadioBtn";
+            this.ans1RadioBtn.Size = new System.Drawing.Size(123, 28);
+            this.ans1RadioBtn.TabIndex = 23;
+            this.ans1RadioBtn.TabStop = true;
+            this.ans1RadioBtn.Text = "radioButton1";
+            this.ans1RadioBtn.UseVisualStyleBackColor = true;
             // 
             // TakeMCQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ans4ChkBox);
-            this.Controls.Add(this.ans3ChkBox);
-            this.Controls.Add(this.ans2ChkBox);
-            this.Controls.Add(this.ans1ChkBox);
+            this.Controls.Add(this.ans4RadioBtn);
+            this.Controls.Add(this.ans3RadioBtn);
+            this.Controls.Add(this.ans2RadioBtn);
+            this.Controls.Add(this.ans1RadioBtn);
             this.Controls.Add(this.submitAnsBtn);
             this.Controls.Add(this.questionLbl);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -133,9 +129,9 @@
 
         private System.Windows.Forms.Label questionLbl;
         private System.Windows.Forms.Button submitAnsBtn;
-        private CheckBox ans4ChkBox;
-        private CheckBox ans3ChkBox;
-        private CheckBox ans2ChkBox;
-        private CheckBox ans1ChkBox;
+        private RadioButton ans4RadioBtn;
+        private RadioButton ans3RadioBtn;
+        private RadioButton ans2RadioBtn;
+        private RadioButton ans1RadioBtn;
     }
 }

@@ -28,9 +28,9 @@ namespace TmLms.TestViewUC
             this.questionLbl.Text = maq.GetQuestion();
             List<string> mixed = maq.GetGivenAnswerSet().OrderBy(x => Guid.NewGuid()).ToList();
             int i = 0;
-            foreach (RadioButton rBtn in this.Controls.OfType<RadioButton>())
+            foreach (CheckBox chkBox in this.Controls.OfType<CheckBox>())
             {
-                rBtn.Text = mixed.ElementAt(i);
+                chkBox.Text = mixed.ElementAt(i);
                 i++;
             }
         }

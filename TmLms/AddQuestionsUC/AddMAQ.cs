@@ -35,35 +35,44 @@ namespace TmLms.AddQuestionsUC
 
         private void addQuestionBtn_Click(object sender, EventArgs e)
         {
-            List<string> answers = new List<string>();
-            foreach (TextBox txtBox in this.Controls.OfType<TextBox>())
-            {
-                answers.Add(txtBox.Text);
-            }
 
-            List<string> cAnswers = new List<string>();
-            if (corrAns1.Checked) 
+            foreach (TextBox textBox in this.Controls.OfType<TextBox>())
             {
-                cAnswers.Add(answerTxtBox1.Text); 
+                if (textBox.Text != "")
+                {
+                    List<string> answers = new List<string>();
+                    foreach (TextBox txtBox in this.Controls.OfType<TextBox>())
+                    {
+                        answers.Add(txtBox.Text);
+                    }
+                    List<string> cAnswers = new List<string>();
+                    if (corrAns1.Checked)
+                    {
+                        cAnswers.Add(answerTxtBox1.Text);
+                    }
+                    if (corrAns2.Checked)
+                    {
+                        cAnswers.Add(answerTxtBox2.Text);
+                    }
+                    if (corrAns3.Checked)
+                    {
+                        cAnswers.Add(answerTxtBox3.Text);
+                    }
+                    if (corrAns4.Checked)
+                    {
+                        cAnswers.Add(answerTxtBox1.Text);
+                    }
+                    Question.Question question = new TmLms.Question.MultipleAnswerQ(questionTxtBox.Text, answers, cAnswers);
+                    quiz.addQuestionList(quiz, question); // Add to List
+                    question.AddQuestion(question); // Add to Dictionary
+                    MessageBox.Show("Question Added");
+                    ClearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill out all the fields");
+                }
             }
-            if (corrAns2.Checked) 
-            { 
-                cAnswers.Add(answerTxtBox2.Text); 
-            }
-            if (corrAns3.Checked) 
-            { 
-                cAnswers.Add(answerTxtBox3.Text); 
-            }
-            if (corrAns4.Checked) 
-            { 
-                cAnswers.Add(answerTxtBox1.Text); 
-            }
-
-            Question.Question question = new TmLms.Question.MultipleAnswerQ(questionTxtBox.Text, answers, cAnswers);
-            quiz.addQuestionList(quiz, question); // Add to List
-            question.AddQuestion(question); // Add to Dictionary
-            MessageBox.Show("Question Added");
-            ClearFields();
         }
     }
 }

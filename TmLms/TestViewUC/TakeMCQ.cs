@@ -25,12 +25,13 @@ namespace TmLms.TestViewUC
 
         private void setData()
         {
+            //
             this.questionLbl.Text = mcq.GetQuestion();
             List<string> mixed = mcq.GetGivenAnswerSet().OrderBy(x => Guid.NewGuid()).ToList();
             int i = 0;
-            foreach (CheckBox check in this.Controls.OfType<CheckBox>())
+            foreach (RadioButton rBtn in this.Controls.OfType<RadioButton>())
             {
-                check.Text = mixed.ElementAt(i);
+                rBtn.Text = mixed.ElementAt(i);
                 i++;
             }
 

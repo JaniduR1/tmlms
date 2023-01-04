@@ -22,6 +22,15 @@ namespace TmLms.Question
         List<string> left = new List<string>();
         List<string> right = new List<string>();
 
+        public List<string> GetRight()
+        {
+            return right;
+        }
+        public List<string> GetLeft()
+        {
+            return left;
+        }
+
         public MatchingQ(string question, List<string> answer, List<string> left, List<string> right) : base(question, answer)
         {
             this.left = left;
