@@ -42,6 +42,7 @@
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(948, 352);
             this.answerTextBox.TabIndex = 11;
+            this.answerTextBox.TextChanged += new System.EventHandler(this.answerTextBox_TextChanged);
             // 
             // questionLbl
             // 
@@ -66,6 +67,7 @@
             this.submitAnsBtn.TabIndex = 13;
             this.submitAnsBtn.Text = "Submit";
             this.submitAnsBtn.UseVisualStyleBackColor = true;
+            this.submitAnsBtn.Click += new System.EventHandler(this.submitAnsBtn_Click);
             // 
             // TakeSAQ
             // 

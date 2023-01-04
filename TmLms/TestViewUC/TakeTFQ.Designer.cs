@@ -83,6 +83,7 @@
             this.submitAnsBtn.TabIndex = 14;
             this.submitAnsBtn.Text = "Submit";
             this.submitAnsBtn.UseVisualStyleBackColor = true;
+            this.submitAnsBtn.Click += new System.EventHandler(this.submitAnsBtn_Click);
             // 
             // TakeTFQ
             // 

@@ -9,9 +9,12 @@ namespace TmLms.Question
     public class Question
     {
         public Quiz quiz { get; set; }
+        public int QuestionId { get => questionid; set => questionid = value; }
 
         string question;
         List<string> answer;
+        int questionid;
+
 
         public Question(string question, List<string> answer)
         {
@@ -30,14 +33,16 @@ namespace TmLms.Question
         }
         public void AddQuestion(Question question)
         {
-            int id = 0;
+            //int id = 0;
+            questionid = 0;
 
             foreach(Question q in TmLms.TMEngine.Instance.QuestionDictionary.Values)
             {
-                id += 1;
+                questionid += 1;
+                question.questionid = questionid;
             }
 
-            TmLms.Program.tmEngine.QuestionDictionary.Add(id, question);
+            TmLms.Program.tmEngine.QuestionDictionary.Add(questionid, question);
         }
     }
 }

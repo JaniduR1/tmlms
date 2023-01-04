@@ -16,6 +16,7 @@ namespace TmLms
         TM.Module module;
         Question.Quiz quiz;
         List<UserControl> QuestionUCs;
+        string index;//
         public TakeTest()
         {
             InitializeComponent();
@@ -86,22 +87,22 @@ namespace TmLms
             {
                 if (q.GetType() == typeof(Question.EssayQ))
                 {
-                    TestViewUC.TakeEQ eq = new TestViewUC.TakeEQ(q);
+                    TestViewUC.TakeEQ eq = new TestViewUC.TakeEQ(q, quiz.quizCode, module.Code, index);
                     QuestionUCs.Add(eq);
                 }
                 else if(q.GetType() == typeof(Question.MultipleChoiceQ))
                 {
-                    TestViewUC.TakeMCQ mcq = new TestViewUC.TakeMCQ(q);
+                    TestViewUC.TakeMCQ mcq = new TestViewUC.TakeMCQ(q, quiz.quizCode, module.Code, index);
                     QuestionUCs.Add(mcq);
                 }
                 else if(q.GetType() == typeof(Question.MultipleAnswerQ))
                 {
-                    TestViewUC.TakeMAQ maq = new TestViewUC.TakeMAQ(q);
+                    TestViewUC.TakeMAQ maq = new TestViewUC.TakeMAQ(q, quiz.quizCode, module.Code, index);
                     QuestionUCs.Add(maq);
                 }
                 else if (q.GetType() == typeof(Question.ShortAnswerQ))
                 {
-                    TestViewUC.TakeSAQ saq = new TestViewUC.TakeSAQ(q);
+                    TestViewUC.TakeSAQ saq = new TestViewUC.TakeSAQ(q, quiz.quizCode, module.Code, index);
                     QuestionUCs.Add(saq);
                 }
                 else if (q.GetType() == typeof(Question.MatchingQ))

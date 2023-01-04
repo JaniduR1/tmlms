@@ -57,6 +57,7 @@
             this.answerTextBox.Name = "answerTextBox";
             this.answerTextBox.Size = new System.Drawing.Size(969, 402);
             this.answerTextBox.TabIndex = 10;
+            this.answerTextBox.TextChanged += new System.EventHandler(this.answerTextBox_TextChanged);
             // 
             // submitAnsBtn
             // 
@@ -68,6 +69,7 @@
             this.submitAnsBtn.TabIndex = 14;
             this.submitAnsBtn.Text = "Submit";
             this.submitAnsBtn.UseVisualStyleBackColor = true;
+            this.submitAnsBtn.Click += new System.EventHandler(this.submitAnsBtn_Click);
             // 
             // TakeEQ
             // 

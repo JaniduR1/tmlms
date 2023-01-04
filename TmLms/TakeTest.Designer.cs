@@ -37,6 +37,8 @@
             this.takeExamLbl = new System.Windows.Forms.Label();
             this.rightArrowPic = new System.Windows.Forms.PictureBox();
             this.leftArrowPic = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.studentIndexTxtBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.rightArrowPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftArrowPic)).BeginInit();
             this.SuspendLayout();
@@ -122,11 +124,31 @@
             this.leftArrowPic.TabStop = false;
             this.leftArrowPic.Click += new System.EventHandler(this.leftArrowPic_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(234, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 28);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Student Index";
+            // 
+            // studentIndexTxtBox
+            // 
+            this.studentIndexTxtBox.Location = new System.Drawing.Point(395, 177);
+            this.studentIndexTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.studentIndexTxtBox.Name = "studentIndexTxtBox";
+            this.studentIndexTxtBox.Size = new System.Drawing.Size(395, 27);
+            this.studentIndexTxtBox.TabIndex = 11;
+            // 
             // TakeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 819);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.studentIndexTxtBox);
             this.Controls.Add(this.rightArrowPic);
             this.Controls.Add(this.leftArrowPic);
             this.Controls.Add(this.takeExamLbl);
@@ -156,5 +178,7 @@
         private Label takeExamLbl;
         private PictureBox rightArrowPic;
         private PictureBox leftArrowPic;
+        private Label label3;
+        private TextBox studentIndexTxtBox;
     }
 }

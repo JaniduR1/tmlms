@@ -26,6 +26,9 @@ namespace TmLms
 
         public Dictionary<string, Question.Quiz> QuizDictionary { get; set; }
 
+        public Dictionary<string, Question.StudentAnswers> AnswerDictionary { get; set; }
+
+
 
 
         private static readonly TMEngine instance = new TMEngine();
@@ -40,6 +43,7 @@ namespace TmLms
             ModuleDictionary = new Dictionary<string, TM.Module>();
             QuestionDictionary = new Dictionary<int, Question.Question>();
             QuizDictionary = new Dictionary<string, Question.Quiz>();
+            AnswerDictionary = new Dictionary<string, Question.StudentAnswers>();
         }
 
         public static TMEngine Instance

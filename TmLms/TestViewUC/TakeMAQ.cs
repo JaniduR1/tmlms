@@ -16,11 +16,18 @@ namespace TmLms.TestViewUC
     public partial class TakeMAQ : UserControl
     {
         MultipleAnswerQ maq;
-        public TakeMAQ(Question.Question q)
+        List<string> studentAnswer = new List<string>();
+        string quizId;
+        string moduleId;
+        string studentIndex;
+        public TakeMAQ(Question.Question q, string quizId, string moduleId, string studentIndex)
         {
             InitializeComponent();
             maq = q as MultipleAnswerQ;
             setData();
+            this.quizId = quizId;
+            this.moduleId = moduleId;
+            this.studentIndex = studentIndex;
         }
 
         private void setData()
@@ -32,6 +39,28 @@ namespace TmLms.TestViewUC
             {
                 chkBox.Text = mixed.ElementAt(i);
                 i++;
+            }
+        }
+
+        private void submitAnsBtn_Click(object sender, EventArgs e)
+        {
+            StudentAnswers sa = new StudentAnswers();
+            sa.AnswerId = moduleId + quizId + maq.QuestionId + studentIndex;
+            foreach (CheckBox checkBox in this.Controls.OfType<CheckBox>())
+            {
+                if (checkBox.Checked)
+                {
+                    studentAnswer.Add(checkBox.Text);
+                }
+            }
+            sa.StudentAnswer = this.studentAnswer;
+            if (TMEngine.Instance.AnswerDictionary.ContainsKey(sa.AnswerId))
+            {
+                sa.UpdateAnswer(sa);
+            }
+            else
+            {
+                sa.SaveAnswer(sa);
             }
         }
     }
