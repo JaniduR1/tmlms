@@ -53,7 +53,7 @@
             // submitAnsBtn
             // 
             this.submitAnsBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.submitAnsBtn.Location = new System.Drawing.Point(393, 416);
+            this.submitAnsBtn.Location = new System.Drawing.Point(393, 375);
             this.submitAnsBtn.Name = "submitAnsBtn";
             this.submitAnsBtn.Size = new System.Drawing.Size(123, 47);
             this.submitAnsBtn.TabIndex = 14;
@@ -64,7 +64,7 @@
             // ans4RadioBtn
             // 
             this.ans4RadioBtn.AutoSize = true;
-            this.ans4RadioBtn.Location = new System.Drawing.Point(393, 332);
+            this.ans4RadioBtn.Location = new System.Drawing.Point(393, 311);
             this.ans4RadioBtn.Name = "ans4RadioBtn";
             this.ans4RadioBtn.Size = new System.Drawing.Size(123, 28);
             this.ans4RadioBtn.TabIndex = 26;
@@ -75,7 +75,7 @@
             // ans3RadioBtn
             // 
             this.ans3RadioBtn.AutoSize = true;
-            this.ans3RadioBtn.Location = new System.Drawing.Point(393, 265);
+            this.ans3RadioBtn.Location = new System.Drawing.Point(393, 251);
             this.ans3RadioBtn.Name = "ans3RadioBtn";
             this.ans3RadioBtn.Size = new System.Drawing.Size(123, 28);
             this.ans3RadioBtn.TabIndex = 25;
@@ -86,7 +86,7 @@
             // ans2RadioBtn
             // 
             this.ans2RadioBtn.AutoSize = true;
-            this.ans2RadioBtn.Location = new System.Drawing.Point(393, 198);
+            this.ans2RadioBtn.Location = new System.Drawing.Point(393, 191);
             this.ans2RadioBtn.Name = "ans2RadioBtn";
             this.ans2RadioBtn.Size = new System.Drawing.Size(123, 28);
             this.ans2RadioBtn.TabIndex = 24;

@@ -60,7 +60,7 @@
             // 
             this.questionLbl.AutoSize = true;
             this.questionLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.questionLbl.Location = new System.Drawing.Point(110, 151);
+            this.questionLbl.Location = new System.Drawing.Point(110, 106);
             this.questionLbl.Name = "questionLbl";
             this.questionLbl.Size = new System.Drawing.Size(91, 25);
             this.questionLbl.TabIndex = 16;
@@ -81,7 +81,7 @@
             // questionTxtBox
             // 
             this.questionTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.questionTxtBox.Location = new System.Drawing.Point(264, 121);
+            this.questionTxtBox.Location = new System.Drawing.Point(264, 76);
             this.questionTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.questionTxtBox.Multiline = true;
             this.questionTxtBox.Name = "questionTxtBox";
@@ -91,7 +91,7 @@
             // answerTxtBox1
             // 
             this.answerTxtBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerTxtBox1.Location = new System.Drawing.Point(264, 288);
+            this.answerTxtBox1.Location = new System.Drawing.Point(264, 243);
             this.answerTxtBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.answerTxtBox1.Name = "answerTxtBox1";
             this.answerTxtBox1.Size = new System.Drawing.Size(355, 30);
@@ -101,7 +101,7 @@
             // 
             this.answerLbl1.AutoSize = true;
             this.answerLbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerLbl1.Location = new System.Drawing.Point(54, 291);
+            this.answerLbl1.Location = new System.Drawing.Point(54, 246);
             this.answerLbl1.Name = "answerLbl1";
             this.answerLbl1.Size = new System.Drawing.Size(78, 25);
             this.answerLbl1.TabIndex = 25;
@@ -110,7 +110,7 @@
             // answerTxtBox2
             // 
             this.answerTxtBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerTxtBox2.Location = new System.Drawing.Point(264, 336);
+            this.answerTxtBox2.Location = new System.Drawing.Point(264, 291);
             this.answerTxtBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.answerTxtBox2.Name = "answerTxtBox2";
             this.answerTxtBox2.Size = new System.Drawing.Size(355, 30);
@@ -120,7 +120,7 @@
             // 
             this.answerLbl2.AutoSize = true;
             this.answerLbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerLbl2.Location = new System.Drawing.Point(54, 339);
+            this.answerLbl2.Location = new System.Drawing.Point(54, 294);
             this.answerLbl2.Name = "answerLbl2";
             this.answerLbl2.Size = new System.Drawing.Size(78, 25);
             this.answerLbl2.TabIndex = 27;
@@ -129,7 +129,7 @@
             // answerTxtBox4
             // 
             this.answerTxtBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerTxtBox4.Location = new System.Drawing.Point(264, 434);
+            this.answerTxtBox4.Location = new System.Drawing.Point(264, 389);
             this.answerTxtBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.answerTxtBox4.Name = "answerTxtBox4";
             this.answerTxtBox4.Size = new System.Drawing.Size(355, 30);
@@ -139,7 +139,7 @@
             // 
             this.answerLbl4.AutoSize = true;
             this.answerLbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerLbl4.Location = new System.Drawing.Point(54, 437);
+            this.answerLbl4.Location = new System.Drawing.Point(54, 392);
             this.answerLbl4.Name = "answerLbl4";
             this.answerLbl4.Size = new System.Drawing.Size(78, 25);
             this.answerLbl4.TabIndex = 31;
@@ -148,7 +148,7 @@
             // answerTxtBox3
             // 
             this.answerTxtBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerTxtBox3.Location = new System.Drawing.Point(264, 386);
+            this.answerTxtBox3.Location = new System.Drawing.Point(264, 341);
             this.answerTxtBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.answerTxtBox3.Name = "answerTxtBox3";
             this.answerTxtBox3.Size = new System.Drawing.Size(355, 30);
@@ -158,7 +158,7 @@
             // 
             this.answerLbl3.AutoSize = true;
             this.answerLbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.answerLbl3.Location = new System.Drawing.Point(54, 389);
+            this.answerLbl3.Location = new System.Drawing.Point(54, 344);
             this.answerLbl3.Name = "answerLbl3";
             this.answerLbl3.Size = new System.Drawing.Size(78, 25);
             this.answerLbl3.TabIndex = 29;
@@ -167,7 +167,7 @@
             // corrAns1
             // 
             this.corrAns1.AutoSize = true;
-            this.corrAns1.Location = new System.Drawing.Point(625, 294);
+            this.corrAns1.Location = new System.Drawing.Point(625, 249);
             this.corrAns1.Name = "corrAns1";
             this.corrAns1.Size = new System.Drawing.Size(131, 24);
             this.corrAns1.TabIndex = 33;
@@ -177,7 +177,7 @@
             // corrAns2
             // 
             this.corrAns2.AutoSize = true;
-            this.corrAns2.Location = new System.Drawing.Point(625, 342);
+            this.corrAns2.Location = new System.Drawing.Point(625, 297);
             this.corrAns2.Name = "corrAns2";
             this.corrAns2.Size = new System.Drawing.Size(131, 24);
             this.corrAns2.TabIndex = 34;
@@ -187,7 +187,7 @@
             // corrAns4
             // 
             this.corrAns4.AutoSize = true;
-            this.corrAns4.Location = new System.Drawing.Point(625, 440);
+            this.corrAns4.Location = new System.Drawing.Point(625, 395);
             this.corrAns4.Name = "corrAns4";
             this.corrAns4.Size = new System.Drawing.Size(131, 24);
             this.corrAns4.TabIndex = 36;
@@ -197,7 +197,7 @@
             // corrAns3
             // 
             this.corrAns3.AutoSize = true;
-            this.corrAns3.Location = new System.Drawing.Point(625, 392);
+            this.corrAns3.Location = new System.Drawing.Point(625, 347);
             this.corrAns3.Name = "corrAns3";
             this.corrAns3.Size = new System.Drawing.Size(131, 24);
             this.corrAns3.TabIndex = 35;

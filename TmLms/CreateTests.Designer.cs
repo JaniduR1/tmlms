@@ -91,7 +91,7 @@
             // 
             this.quizTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.quizTypeComboBox.FormattingEnabled = true;
-            this.quizTypeComboBox.Location = new System.Drawing.Point(12, 400);
+            this.quizTypeComboBox.Location = new System.Drawing.Point(12, 330);
             this.quizTypeComboBox.Name = "quizTypeComboBox";
             this.quizTypeComboBox.Size = new System.Drawing.Size(196, 33);
             this.quizTypeComboBox.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             this.quizTypeLbl.AutoSize = true;
             this.quizTypeLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.quizTypeLbl.Location = new System.Drawing.Point(69, 372);
+            this.quizTypeLbl.Location = new System.Drawing.Point(69, 302);
             this.quizTypeLbl.Name = "quizTypeLbl";
             this.quizTypeLbl.Size = new System.Drawing.Size(90, 25);
             this.quizTypeLbl.TabIndex = 7;

@@ -16,10 +16,10 @@ namespace TmLms.Question
         int questionid;
 
 
-        public Question(string question, List<string> answer)
+        public Question(string question, List<string> canswer)
         {
             this.question = question;
-            this.answer = answer;
+            this.answer = canswer;
         }
 
         public string GetQuestion()

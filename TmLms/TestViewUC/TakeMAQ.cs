@@ -45,7 +45,7 @@ namespace TmLms.TestViewUC
         private void submitAnsBtn_Click(object sender, EventArgs e)
         {
             StudentAnswers sa = new StudentAnswers();
-            sa.AnswerId = moduleId + quizId + maq.QuestionId + studentIndex;
+            sa.AnswerId = moduleId + quizId + maq.QuestionId + "O_o" + studentIndex;
             foreach (CheckBox checkBox in this.Controls.OfType<CheckBox>())
             {
                 if (checkBox.Checked)

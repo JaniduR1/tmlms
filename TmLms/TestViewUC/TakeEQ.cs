@@ -36,8 +36,9 @@ namespace TmLms.TestViewUC
         private void submitAnsBtn_Click(object sender, EventArgs e)
         {
             StudentAnswers sa = new StudentAnswers();
-            sa.AnswerId = moduleId + quizId + eq.QuestionId + studentIndex;
+            sa.AnswerId = moduleId + quizId + eq.QuestionId + "O_o" + studentIndex;
             sa.StudentAnswer = this.studentAnswer;
+            sa.QuestionId = eq.QuestionId;
             if (TMEngine.Instance.AnswerDictionary.ContainsKey(sa.AnswerId))
             {
                 sa.UpdateAnswer(sa);

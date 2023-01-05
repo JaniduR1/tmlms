@@ -44,18 +44,16 @@ namespace TmLms.AddQuestionsUC
             if (questionTxtBox.Text != "" && cAnswerTxtBox.Text != "" && fAnswer2TxtBox.Text != "" && 
                 fAnswer3TxtBox.Text != "" && fAnswer4TxtBox.Text != "")
             {
-                List<string> falseAnswers = new List<string>();
-                falseAnswers.Add(fAnswer2TxtBox.Text);
-                falseAnswers.Add(fAnswer3TxtBox.Text);
-                falseAnswers.Add(fAnswer4TxtBox.Text);
-
-                Random random = new Random();
-                var MixedAnswers = falseAnswers.OrderBy(_ => random.Next()).ToList();
+                List<string> allAnswers = new List<string>();
+                allAnswers.Add(GetCorrectAnswer);
+                allAnswers.Add(fAnswer2TxtBox.Text);
+                allAnswers.Add(fAnswer3TxtBox.Text);
+                allAnswers.Add(fAnswer4TxtBox.Text);
 
                 List<string> CorrectAnswer = new List<string>();
                 CorrectAnswer.Add(GetCorrectAnswer);
 
-                Question.Question question = new Question.MultipleChoiceQ(GetQuestion, CorrectAnswer, MixedAnswers);
+                Question.Question question = new Question.MultipleChoiceQ(GetQuestion, CorrectAnswer, allAnswers);
                 quiz.addQuestionList(quiz, question); // Add to List
                 question.AddQuestion(question); // Add to Dictionary
                 MessageBox.Show("Question Added");

@@ -97,5 +97,11 @@ namespace TmLms
             var takeTest = new TakeTest();
             takeTest.Show();
         }
+
+        private void gradeTestBtn_Click(object sender, EventArgs e)
+        {
+            GradeStudents gradeStudents = new GradeStudents();
+            gradeStudents.ShowDialog();
+        }
     }
 }

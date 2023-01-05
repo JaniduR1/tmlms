@@ -37,6 +37,7 @@
             this.createTestBtn = new System.Windows.Forms.Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.gradeTestBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -45,7 +46,7 @@
             // 
             // createModuleBtn
             // 
-            this.createModuleBtn.Location = new System.Drawing.Point(83, 243);
+            this.createModuleBtn.Location = new System.Drawing.Point(83, 226);
             this.createModuleBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createModuleBtn.Name = "createModuleBtn";
             this.createModuleBtn.Size = new System.Drawing.Size(133, 58);
@@ -56,7 +57,7 @@
             // 
             // createCourseBtn
             // 
-            this.createCourseBtn.Location = new System.Drawing.Point(83, 181);
+            this.createCourseBtn.Location = new System.Drawing.Point(83, 164);
             this.createCourseBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createCourseBtn.Name = "createCourseBtn";
             this.createCourseBtn.Size = new System.Drawing.Size(133, 56);
@@ -67,7 +68,7 @@
             // 
             // viewCoursesBtn
             // 
-            this.viewCoursesBtn.Location = new System.Drawing.Point(83, 334);
+            this.viewCoursesBtn.Location = new System.Drawing.Point(83, 307);
             this.viewCoursesBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.viewCoursesBtn.Name = "viewCoursesBtn";
             this.viewCoursesBtn.Size = new System.Drawing.Size(133, 36);
@@ -77,7 +78,7 @@
             // 
             // viewModuleBtn
             // 
-            this.viewModuleBtn.Location = new System.Drawing.Point(83, 376);
+            this.viewModuleBtn.Location = new System.Drawing.Point(83, 349);
             this.viewModuleBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.viewModuleBtn.Name = "viewModuleBtn";
             this.viewModuleBtn.Size = new System.Drawing.Size(133, 33);
@@ -87,7 +88,7 @@
             // 
             // takeTestBtn
             // 
-            this.takeTestBtn.Location = new System.Drawing.Point(83, 491);
+            this.takeTestBtn.Location = new System.Drawing.Point(83, 493);
             this.takeTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.takeTestBtn.Name = "takeTestBtn";
             this.takeTestBtn.Size = new System.Drawing.Size(133, 36);
@@ -98,7 +99,7 @@
             // 
             // createTestBtn
             // 
-            this.createTestBtn.Location = new System.Drawing.Point(83, 415);
+            this.createTestBtn.Location = new System.Drawing.Point(83, 411);
             this.createTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createTestBtn.Name = "createTestBtn";
             this.createTestBtn.Size = new System.Drawing.Size(133, 36);
@@ -111,7 +112,7 @@
             // 
             this.logoPictureBox.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-            this.logoPictureBox.Location = new System.Drawing.Point(63, 13);
+            this.logoPictureBox.Location = new System.Drawing.Point(60, 3);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.Size = new System.Drawing.Size(177, 155);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,6 +128,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer1.Panel1.Controls.Add(this.gradeTestBtn);
             this.splitContainer1.Panel1.Controls.Add(this.logoPictureBox);
             this.splitContainer1.Panel1.Controls.Add(this.createTestBtn);
             this.splitContainer1.Panel1.Controls.Add(this.createCourseBtn);
@@ -137,6 +139,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(903, 533);
             this.splitContainer1.SplitterDistance = 301;
             this.splitContainer1.TabIndex = 11;
+            // 
+            // gradeTestBtn
+            // 
+            this.gradeTestBtn.Location = new System.Drawing.Point(83, 451);
+            this.gradeTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gradeTestBtn.Name = "gradeTestBtn";
+            this.gradeTestBtn.Size = new System.Drawing.Size(133, 36);
+            this.gradeTestBtn.TabIndex = 11;
+            this.gradeTestBtn.Text = "Grade Tests";
+            this.gradeTestBtn.UseVisualStyleBackColor = true;
+            this.gradeTestBtn.Click += new System.EventHandler(this.gradeTestBtn_Click);
             // 
             // MainScreen
             // 
@@ -164,5 +177,6 @@
         public Button createTestBtn;
         private PictureBox logoPictureBox;
         private SplitContainer splitContainer1;
+        public Button gradeTestBtn;
     }
 }

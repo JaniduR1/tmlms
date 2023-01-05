@@ -38,8 +38,9 @@ namespace TmLms.TestViewUC
             int i = 0;
             foreach (RadioButton rBtn in this.Controls.OfType<RadioButton>())
             {
+                //MessageBox.Show(mixed.ElementAt(i));
                 rBtn.Text = mixed.ElementAt(i);
-                i++;
+                i = i + 1;
             }
 
         }
@@ -47,7 +48,7 @@ namespace TmLms.TestViewUC
         private void submitAnsBtn_Click(object sender, EventArgs e)
         {
             StudentAnswers sa = new StudentAnswers();
-            sa.AnswerId = moduleId + quizId + mcq.QuestionId + studentIndex;
+            sa.AnswerId = moduleId + quizId + mcq.QuestionId + "O_o" + studentIndex;
             foreach (RadioButton rBtn in this.Controls.OfType<RadioButton> ())
             {
                 if (rBtn.Checked)

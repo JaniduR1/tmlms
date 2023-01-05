@@ -16,7 +16,7 @@ namespace TmLms
         TM.Module module;
         Question.Quiz quiz;
         List<UserControl> QuestionUCs;
-        string index;//
+        string index;
         public TakeTest()
         {
             InitializeComponent();
@@ -73,12 +73,14 @@ namespace TmLms
             quizComboBox.Enabled = false;
             SetQuiz();
             QuestionUCs = new List<UserControl>();
-            prepareQuiz();
-            takeExamLbl.Text = "Good Luck!";
         }
 
         private void prepareQuiz()
         {
+            if (studentIndexTxtBox.Text != "")
+            {
+                index = studentIndexTxtBox.Text;
+            }
             i = 0;
             leftArrowPic.Enabled = false;
             questionsPanel.Controls.Clear();
@@ -107,7 +109,7 @@ namespace TmLms
                 }
                 else if (q.GetType() == typeof(Question.MatchingQ))
                 {
-                    TestViewUC.TakeMQ mq = new TestViewUC.TakeMQ(q);
+                    TestViewUC.TakeMQ mq = new TestViewUC.TakeMQ(q, quiz.quizCode, module.Code, index);
                     QuestionUCs.Add(mq);
                 }
                 questionsPanel.Controls.Clear();
@@ -136,19 +138,34 @@ namespace TmLms
 
             }
             questionsPanel.Controls.Clear();
+            MessageBox.Show(i.ToString());
             questionsPanel.Controls.Add(QuestionUCs.ElementAt(i));
         }
 
         private void rightArrowPic_Click(object sender, EventArgs e)
         {
-            i -= 1;
+            i += 1;
             navigateQuiz();
         }
 
         private void leftArrowPic_Click(object sender, EventArgs e)
         {
-            i += 1;
+            i = i - 1;
             navigateQuiz();
+        }
+
+        private void startExamBtn_Click(object sender, EventArgs e)
+        {
+            if (studentIndexTxtBox.Text.Length > 0)
+            {
+                studentIndexTxtBox.Enabled = false;
+                prepareQuiz();
+                takeExamLbl.Text = "Good Luck!";
+            }
+            else
+            {
+                MessageBox.Show("Please Insert Your Student Index");
+            }
         }
     }
 }

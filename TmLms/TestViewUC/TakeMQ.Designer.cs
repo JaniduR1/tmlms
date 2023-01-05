@@ -57,6 +57,7 @@
             this.submitAnsBtn.TabIndex = 16;
             this.submitAnsBtn.Text = "Submit";
             this.submitAnsBtn.UseVisualStyleBackColor = true;
+            this.submitAnsBtn.Click += new System.EventHandler(this.submitAnsBtn_Click);
             // 
             // questionLbl
             // 
@@ -86,42 +87,47 @@
             // 
             // left4ComboBox
             // 
+            this.left4ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.left4ComboBox.FormattingEnabled = true;
-            this.left4ComboBox.Location = new System.Drawing.Point(3, 261);
+            this.left4ComboBox.Location = new System.Drawing.Point(3, 255);
             this.left4ComboBox.Name = "left4ComboBox";
-            this.left4ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.left4ComboBox.Size = new System.Drawing.Size(330, 36);
             this.left4ComboBox.TabIndex = 24;
             // 
             // left3ComboBox
             // 
+            this.left3ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.left3ComboBox.FormattingEnabled = true;
-            this.left3ComboBox.Location = new System.Drawing.Point(3, 175);
+            this.left3ComboBox.Location = new System.Drawing.Point(3, 171);
             this.left3ComboBox.Name = "left3ComboBox";
-            this.left3ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.left3ComboBox.Size = new System.Drawing.Size(330, 36);
             this.left3ComboBox.TabIndex = 23;
             // 
             // left2ComboBox
             // 
+            this.left2ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.left2ComboBox.FormattingEnabled = true;
-            this.left2ComboBox.Location = new System.Drawing.Point(3, 89);
+            this.left2ComboBox.Location = new System.Drawing.Point(3, 87);
             this.left2ComboBox.Name = "left2ComboBox";
-            this.left2ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.left2ComboBox.Size = new System.Drawing.Size(330, 36);
             this.left2ComboBox.TabIndex = 22;
             // 
             // left5ComboBox
             // 
+            this.left5ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.left5ComboBox.FormattingEnabled = true;
-            this.left5ComboBox.Location = new System.Drawing.Point(3, 347);
+            this.left5ComboBox.Location = new System.Drawing.Point(3, 339);
             this.left5ComboBox.Name = "left5ComboBox";
-            this.left5ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.left5ComboBox.Size = new System.Drawing.Size(330, 36);
             this.left5ComboBox.TabIndex = 21;
             // 
             // left1ComboBox
             // 
+            this.left1ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.left1ComboBox.FormattingEnabled = true;
             this.left1ComboBox.Location = new System.Drawing.Point(3, 3);
             this.left1ComboBox.Name = "left1ComboBox";
-            this.left1ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.left1ComboBox.Size = new System.Drawing.Size(330, 36);
             this.left1ComboBox.TabIndex = 20;
             // 
             // label1
@@ -149,42 +155,47 @@
             // 
             // right4ComboBox
             // 
+            this.right4ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.right4ComboBox.FormattingEnabled = true;
-            this.right4ComboBox.Location = new System.Drawing.Point(3, 261);
+            this.right4ComboBox.Location = new System.Drawing.Point(3, 255);
             this.right4ComboBox.Name = "right4ComboBox";
-            this.right4ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.right4ComboBox.Size = new System.Drawing.Size(330, 36);
             this.right4ComboBox.TabIndex = 24;
             // 
             // right3ComboBox
             // 
+            this.right3ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.right3ComboBox.FormattingEnabled = true;
-            this.right3ComboBox.Location = new System.Drawing.Point(3, 175);
+            this.right3ComboBox.Location = new System.Drawing.Point(3, 171);
             this.right3ComboBox.Name = "right3ComboBox";
-            this.right3ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.right3ComboBox.Size = new System.Drawing.Size(330, 36);
             this.right3ComboBox.TabIndex = 23;
             // 
             // right2ComboBox
             // 
+            this.right2ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.right2ComboBox.FormattingEnabled = true;
-            this.right2ComboBox.Location = new System.Drawing.Point(3, 89);
+            this.right2ComboBox.Location = new System.Drawing.Point(3, 87);
             this.right2ComboBox.Name = "right2ComboBox";
-            this.right2ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.right2ComboBox.Size = new System.Drawing.Size(330, 36);
             this.right2ComboBox.TabIndex = 22;
             // 
             // right5ComboBox
             // 
+            this.right5ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.right5ComboBox.FormattingEnabled = true;
-            this.right5ComboBox.Location = new System.Drawing.Point(3, 347);
+            this.right5ComboBox.Location = new System.Drawing.Point(3, 339);
             this.right5ComboBox.Name = "right5ComboBox";
-            this.right5ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.right5ComboBox.Size = new System.Drawing.Size(330, 36);
             this.right5ComboBox.TabIndex = 21;
             // 
             // right1ComboBox
             // 
+            this.right1ComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.right1ComboBox.FormattingEnabled = true;
             this.right1ComboBox.Location = new System.Drawing.Point(3, 3);
             this.right1ComboBox.Name = "right1ComboBox";
-            this.right1ComboBox.Size = new System.Drawing.Size(330, 28);
+            this.right1ComboBox.Size = new System.Drawing.Size(330, 36);
             this.right1ComboBox.TabIndex = 20;
             // 
             // TakeMQ

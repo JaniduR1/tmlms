@@ -38,7 +38,7 @@
             // 
             this.trueRadioBtn.AutoSize = true;
             this.trueRadioBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.trueRadioBtn.Location = new System.Drawing.Point(425, 235);
+            this.trueRadioBtn.Location = new System.Drawing.Point(422, 166);
             this.trueRadioBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.trueRadioBtn.Name = "trueRadioBtn";
             this.trueRadioBtn.Size = new System.Drawing.Size(123, 28);
@@ -51,7 +51,7 @@
             // 
             this.falseRadioBtn.AutoSize = true;
             this.falseRadioBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.falseRadioBtn.Location = new System.Drawing.Point(425, 349);
+            this.falseRadioBtn.Location = new System.Drawing.Point(422, 280);
             this.falseRadioBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.falseRadioBtn.Name = "falseRadioBtn";
             this.falseRadioBtn.Size = new System.Drawing.Size(123, 28);
@@ -64,7 +64,7 @@
             // 
             this.questionLbl.AutoSize = true;
             this.questionLbl.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.questionLbl.Location = new System.Drawing.Point(396, 90);
+            this.questionLbl.Location = new System.Drawing.Point(365, 28);
             this.questionLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.questionLbl.MaximumSize = new System.Drawing.Size(1572, 0);
             this.questionLbl.Name = "questionLbl";
@@ -76,7 +76,7 @@
             // submitAnsBtn
             // 
             this.submitAnsBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.submitAnsBtn.Location = new System.Drawing.Point(435, 479);
+            this.submitAnsBtn.Location = new System.Drawing.Point(432, 410);
             this.submitAnsBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.submitAnsBtn.Name = "submitAnsBtn";
             this.submitAnsBtn.Size = new System.Drawing.Size(125, 59);

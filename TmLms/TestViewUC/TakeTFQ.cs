@@ -39,7 +39,9 @@ namespace TmLms.TestViewUC
         private void submitAnsBtn_Click(object sender, EventArgs e)
         {
             StudentAnswers sa = new StudentAnswers();
-            sa.AnswerId = moduleId + quizId + tfq.QuestionId + studentIndex;
+            sa.QuestionId = tfq.QuestionId;
+            sa.AnswerId = moduleId + quizId + tfq.QuestionId + "O_o" + studentIndex;
+
             foreach (RadioButton rBtn in this.Controls.OfType<RadioButton>())
             {
                 if (rBtn.Checked)

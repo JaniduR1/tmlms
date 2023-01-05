@@ -120,6 +120,7 @@ namespace TmLms
         {
             quiz.saveQuiz(quiz);
             MessageBox.Show("Quiz Created!");
+            this.Close();
         }
 
         private void moduleComboBox_SelectedIndexChanged(object sender, EventArgs e)

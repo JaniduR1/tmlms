@@ -11,6 +11,8 @@ namespace TmLms.Question
         string answerId;
         List<string> studentAnswer;
         string instructorFeedback;
+        int questionId;
+        int marks;
 
         public string AnswerId 
         { 
@@ -26,6 +28,16 @@ namespace TmLms.Question
         { 
             get => instructorFeedback; 
             set => instructorFeedback = value; 
+        }
+        public int QuestionId 
+        { 
+            get => questionId; 
+            set => questionId = value; 
+        }
+        public int Marks 
+        { 
+            get => marks; 
+            set => marks = value; 
         }
 
         public void SaveAnswer(StudentAnswers studentA)
