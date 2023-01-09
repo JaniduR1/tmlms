@@ -134,5 +134,11 @@ namespace TmLms
                 }
             }
         }
+
+        private void apiBtn_Click(object sender, EventArgs e)
+        {
+            API.AvailableAPI availableApis = new API.AvailableAPI();
+            availableApis.ShowDialog();
+        }
     }
 }

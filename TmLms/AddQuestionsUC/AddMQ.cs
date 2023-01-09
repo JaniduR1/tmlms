@@ -36,6 +36,14 @@ namespace TmLms.AddQuestionsUC
             return isValid;
         }
 
+        private void ClearText()
+        {
+            foreach (TextBox txtBox in this.Controls.OfType<TextBox>())
+            {
+                txtBox.Text = "";
+            }
+        }
+
         private void addQuestionBtn_Click(object sender, EventArgs e)
         {
             if(checkValidity())
@@ -63,6 +71,7 @@ namespace TmLms.AddQuestionsUC
                 quiz.addQuestionList(quiz, mq);
                 mq.AddQuestion(mq);
                 MessageBox.Show("Done");
+                ClearText();
             }
             else
             {

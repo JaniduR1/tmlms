@@ -37,6 +37,7 @@
             this.quizTypeLbl = new System.Windows.Forms.Label();
             this.moduleComboBox = new System.Windows.Forms.ComboBox();
             this.finishQuizBtn = new System.Windows.Forms.Button();
+            this.apiBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // questionsPanel
@@ -91,7 +92,7 @@
             // 
             this.quizTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.quizTypeComboBox.FormattingEnabled = true;
-            this.quizTypeComboBox.Location = new System.Drawing.Point(12, 330);
+            this.quizTypeComboBox.Location = new System.Drawing.Point(12, 295);
             this.quizTypeComboBox.Name = "quizTypeComboBox";
             this.quizTypeComboBox.Size = new System.Drawing.Size(196, 33);
             this.quizTypeComboBox.TabIndex = 6;
@@ -101,7 +102,7 @@
             // 
             this.quizTypeLbl.AutoSize = true;
             this.quizTypeLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.quizTypeLbl.Location = new System.Drawing.Point(69, 302);
+            this.quizTypeLbl.Location = new System.Drawing.Point(69, 267);
             this.quizTypeLbl.Name = "quizTypeLbl";
             this.quizTypeLbl.Size = new System.Drawing.Size(90, 25);
             this.quizTypeLbl.TabIndex = 7;
@@ -120,7 +121,7 @@
             // finishQuizBtn
             // 
             this.finishQuizBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.finishQuizBtn.Location = new System.Drawing.Point(12, 497);
+            this.finishQuizBtn.Location = new System.Drawing.Point(12, 460);
             this.finishQuizBtn.Name = "finishQuizBtn";
             this.finishQuizBtn.Size = new System.Drawing.Size(196, 41);
             this.finishQuizBtn.TabIndex = 9;
@@ -128,11 +129,23 @@
             this.finishQuizBtn.UseVisualStyleBackColor = true;
             this.finishQuizBtn.Click += new System.EventHandler(this.finishQuizBtn_Click);
             // 
+            // apiBtn
+            // 
+            this.apiBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.apiBtn.Location = new System.Drawing.Point(12, 518);
+            this.apiBtn.Name = "apiBtn";
+            this.apiBtn.Size = new System.Drawing.Size(196, 44);
+            this.apiBtn.TabIndex = 10;
+            this.apiBtn.Text = "Reading Material";
+            this.apiBtn.UseVisualStyleBackColor = true;
+            this.apiBtn.Click += new System.EventHandler(this.apiBtn_Click);
+            // 
             // CreateTests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 594);
+            this.Controls.Add(this.apiBtn);
             this.Controls.Add(this.finishQuizBtn);
             this.Controls.Add(this.moduleComboBox);
             this.Controls.Add(this.quizTypeLbl);
@@ -163,5 +176,6 @@
         private Label quizTypeLbl;
         private ComboBox moduleComboBox;
         private Button finishQuizBtn;
+        private Button apiBtn;
     }
 }

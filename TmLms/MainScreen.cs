@@ -23,11 +23,12 @@ namespace TmLms
             ControlUI();
             logoPictureBox.Show();
             this.splitContainer1.Panel1.BackColor = ColorTranslator.FromHtml("#40826D");
-            this.splitContainer1.Panel2.BackColor = ColorTranslator.FromHtml("#9DB3FF");
         }
 
         private void ControlUI()
         {
+            TmLms.OtherUCs.StudentView studentView = new TmLms.OtherUCs.StudentView();
+            userScreenView.Controls.Clear();
             if (currentUser.GetType() == typeof(Administrator))
             {
 
@@ -39,11 +40,13 @@ namespace TmLms
             }
             else if (currentUser.GetType() == typeof(Student))
             {
+                gradeTestBtn.Enabled = false;
                 createCourseBtn.Enabled = false;
                 createModuleBtn.Enabled = false;
                 viewCoursesBtn.Enabled = false;
                 viewModuleBtn.Enabled = false;
                 createTestBtn.Enabled = false;
+                userScreenView.Controls.Add(studentView);
             }
         }
 

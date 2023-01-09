@@ -75,7 +75,7 @@ namespace TmLms
             {
                 if (ans.AnswerId.Contains(q.quizCode) && ans.AnswerId.Contains(m.Code))
                 {
-                    idarr = ans.AnswerId.Split("#");
+                    idarr = ans.AnswerId.Split("O_o");
                     if (!stuIndexComboBox.Items.Contains(idarr[1]))
                     {
                         stuIndexComboBox.Items.Add(idarr[1]);
