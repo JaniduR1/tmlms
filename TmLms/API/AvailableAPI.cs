@@ -16,5 +16,11 @@ namespace TmLms.API
         {
             InitializeComponent();
         }
+
+        private void pokeAPILbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PokemonAPI pokemonAPI = new PokemonAPI();
+            pokemonAPI.Show();
+        }
     }
 }
