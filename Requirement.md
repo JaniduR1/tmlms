@@ -1,5 +1,7 @@
 #
+
 # Module
+
 ##	A module shall be valid when it has an administrator member and a module code. - Done
 ##	A module shall store a list of members - Done
 ###	The list of members shall be included by students, instructors, and administrators - Done
@@ -17,7 +19,9 @@
 ### Instructors can create tests according to those modules - Done
 ### Students can only take tests - Done
 #
+
 # Course
+
 ##	A course shall be valid when it has a single instructor member to act as course director - Done
 ##	A course shall only have 3 levels (years) (4,5 and 6) - Done
 ##	A course shall not exceed 120 Credits per Level - Done
@@ -26,7 +30,9 @@
 ###	Level 5: slots for 40 credits - Done
 ###	Level 6: slots for 100 credits at the Level - Done
 #
+
 # Quiz/Test
+
 ## An instructor is able to create a quiz/test - Done
 ## Instructors who are grading the tests have a method of identifying which student they are grading - Done
 ## Instructors can see correct and false answers when grading tests, and can give marks acordingly - Done
@@ -37,10 +43,11 @@
 ### Essay - Done
 ### Matching - Done
 ### True/False - Done
-## A quiz/test is shall be assigned to a member of staff that has created it when created - Done
-## The member of staff that created it should be able to attach the quiz to a module
-#
+## The member of staff that created it should be able to attach the quiz to a module - Done
+## A student is not able to proceed or take any tests without the correct requirements being fufiled - Done
+
 # API
+
 ## There are available API's showing information to instructors to help them create the tests - Done
 ## Present the data in a method easily understandalbe to any instructor - Done
 
