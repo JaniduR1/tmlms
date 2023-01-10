@@ -119,27 +119,29 @@ namespace TmLms
 
         private void navigateQuiz()
         {
+            if (QuestionUCs != null)
+            {
+                if (i == 0)
+                {
+                    leftArrowPic.Enabled = false;
+                }
+                else
+                {
+                    leftArrowPic.Enabled = true;
+                }
+                if (i == QuestionUCs.Count - 1)
+                {
+                    rightArrowPic.Enabled = false;
+                }
+                else
+                {
+                    rightArrowPic.Enabled = true;
 
-            if (i == 0)
-            {
-                leftArrowPic.Enabled = false;
+                }
+                questionsPanel.Controls.Clear();
+                MessageBox.Show(i.ToString());
+                questionsPanel.Controls.Add(QuestionUCs.ElementAt(i));
             }
-            else
-            {
-                leftArrowPic.Enabled = true;
-            }
-            if (i == QuestionUCs.Count - 1)
-            {
-                rightArrowPic.Enabled = false;
-            }
-            else
-            {
-                rightArrowPic.Enabled = true;
-
-            }
-            questionsPanel.Controls.Clear();
-            MessageBox.Show(i.ToString());
-            questionsPanel.Controls.Add(QuestionUCs.ElementAt(i));
         }
 
         private void rightArrowPic_Click(object sender, EventArgs e)

@@ -47,17 +47,17 @@
             // imageLayoutPanel
             // 
             this.imageLayoutPanel.BackColor = System.Drawing.Color.Lime;
-            this.imageLayoutPanel.Location = new System.Drawing.Point(217, 175);
+            this.imageLayoutPanel.Location = new System.Drawing.Point(111, 186);
             this.imageLayoutPanel.Name = "imageLayoutPanel";
-            this.imageLayoutPanel.Size = new System.Drawing.Size(166, 217);
+            this.imageLayoutPanel.Size = new System.Drawing.Size(106, 172);
             this.imageLayoutPanel.TabIndex = 1;
             // 
             // statsLayoutPanel
             // 
             this.statsLayoutPanel.BackColor = System.Drawing.Color.Lime;
-            this.statsLayoutPanel.Location = new System.Drawing.Point(106, 183);
+            this.statsLayoutPanel.Location = new System.Drawing.Point(217, 176);
             this.statsLayoutPanel.Name = "statsLayoutPanel";
-            this.statsLayoutPanel.Size = new System.Drawing.Size(112, 178);
+            this.statsLayoutPanel.Size = new System.Drawing.Size(164, 217);
             this.statsLayoutPanel.TabIndex = 2;
             // 
             // backBtn

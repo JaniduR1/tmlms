@@ -28,23 +28,24 @@ namespace TmLms
         private void ControlUI()
         {
             TmLms.OtherUCs.StudentView studentView = new TmLms.OtherUCs.StudentView();
+            TmLms.OtherUCs.InstructorView instructorView = new TmLms.OtherUCs.InstructorView();
+            TmLms.OtherUCs.AdminView adminView = new TmLms.OtherUCs.AdminView();
             userScreenView.Controls.Clear();
             if (currentUser.GetType() == typeof(Administrator))
             {
-
+                userScreenView.Controls.Add(adminView);
             }
             else if (currentUser.GetType() == typeof(Instructor))
             {
                 createCourseBtn.Enabled = false;
                 createModuleBtn.Enabled = false;
+                userScreenView.Controls.Add(instructorView);
             }
             else if (currentUser.GetType() == typeof(Student))
             {
                 gradeTestBtn.Enabled = false;
                 createCourseBtn.Enabled = false;
                 createModuleBtn.Enabled = false;
-                viewCoursesBtn.Enabled = false;
-                viewModuleBtn.Enabled = false;
                 createTestBtn.Enabled = false;
                 userScreenView.Controls.Add(studentView);
             }

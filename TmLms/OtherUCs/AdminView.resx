@@ -58,7 +58,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="stuTextLbl.Text" xml:space="preserve">
-    <value>Welcome, Student of the University of Sarres, to your new Virtual Learning Environment. Here you will find all the required facilities to give you the best experience possible. As a Student you are able to, take module tests which are set by your instructors. Good Luck!
-</value>
+    <value>Welcome, Administrator of the University of Sarres, to your new Virtual Learning Environment. Here you will find all the required facilities to give you the best experience possible. As an
+ Administrator you are able to, access all available areas of the application from creating and deleting modules and courses to creating tests (should you choose to do so).</value>
   </data>
 </root>

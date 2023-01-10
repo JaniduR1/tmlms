@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.createModuleBtn = new System.Windows.Forms.Button();
             this.createCourseBtn = new System.Windows.Forms.Button();
-            this.viewCoursesBtn = new System.Windows.Forms.Button();
-            this.viewModuleBtn = new System.Windows.Forms.Button();
             this.takeTestBtn = new System.Windows.Forms.Button();
             this.createTestBtn = new System.Windows.Forms.Button();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -68,40 +66,20 @@
             this.createCourseBtn.UseVisualStyleBackColor = true;
             this.createCourseBtn.Click += new System.EventHandler(this.createCourseBtn_Click);
             // 
-            // viewCoursesBtn
-            // 
-            this.viewCoursesBtn.Location = new System.Drawing.Point(83, 411);
-            this.viewCoursesBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.viewCoursesBtn.Name = "viewCoursesBtn";
-            this.viewCoursesBtn.Size = new System.Drawing.Size(133, 36);
-            this.viewCoursesBtn.TabIndex = 7;
-            this.viewCoursesBtn.Text = "View Courses";
-            this.viewCoursesBtn.UseVisualStyleBackColor = true;
-            // 
-            // viewModuleBtn
-            // 
-            this.viewModuleBtn.Location = new System.Drawing.Point(83, 453);
-            this.viewModuleBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.viewModuleBtn.Name = "viewModuleBtn";
-            this.viewModuleBtn.Size = new System.Drawing.Size(133, 33);
-            this.viewModuleBtn.TabIndex = 6;
-            this.viewModuleBtn.Text = "View Module";
-            this.viewModuleBtn.UseVisualStyleBackColor = true;
-            // 
             // takeTestBtn
             // 
-            this.takeTestBtn.Location = new System.Drawing.Point(83, 542);
+            this.takeTestBtn.Location = new System.Drawing.Point(83, 449);
             this.takeTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.takeTestBtn.Name = "takeTestBtn";
             this.takeTestBtn.Size = new System.Drawing.Size(133, 36);
             this.takeTestBtn.TabIndex = 8;
-            this.takeTestBtn.Text = "Tests";
+            this.takeTestBtn.Text = "Available Tests";
             this.takeTestBtn.UseVisualStyleBackColor = true;
             this.takeTestBtn.Click += new System.EventHandler(this.takeTestBtn_Click);
             // 
             // createTestBtn
             // 
-            this.createTestBtn.Location = new System.Drawing.Point(83, 326);
+            this.createTestBtn.Location = new System.Drawing.Point(83, 315);
             this.createTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createTestBtn.Name = "createTestBtn";
             this.createTestBtn.Size = new System.Drawing.Size(133, 36);
@@ -137,20 +115,18 @@
             this.splitContainer1.Panel1.Controls.Add(this.createCourseBtn);
             this.splitContainer1.Panel1.Controls.Add(this.takeTestBtn);
             this.splitContainer1.Panel1.Controls.Add(this.createModuleBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.viewCoursesBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.viewModuleBtn);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.splitContainer1.Panel2.Controls.Add(this.userScreenView);
-            this.splitContainer1.Size = new System.Drawing.Size(986, 601);
-            this.splitContainer1.SplitterDistance = 328;
+            this.splitContainer1.Size = new System.Drawing.Size(881, 539);
+            this.splitContainer1.SplitterDistance = 293;
             this.splitContainer1.TabIndex = 11;
             // 
             // gradeTestBtn
             // 
-            this.gradeTestBtn.Location = new System.Drawing.Point(83, 368);
+            this.gradeTestBtn.Location = new System.Drawing.Point(83, 357);
             this.gradeTestBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gradeTestBtn.Name = "gradeTestBtn";
             this.gradeTestBtn.Size = new System.Drawing.Size(133, 36);
@@ -161,20 +137,18 @@
             // 
             // userScreenView
             // 
-            this.userScreenView.Dock = System.Windows.Forms.DockStyle.Right;
-            this.userScreenView.Location = new System.Drawing.Point(-5, 0);
+            this.userScreenView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.userScreenView.Location = new System.Drawing.Point(-6, 0);
             this.userScreenView.Name = "userScreenView";
-            this.userScreenView.Size = new System.Drawing.Size(659, 601);
+            this.userScreenView.Size = new System.Drawing.Size(590, 540);
             this.userScreenView.TabIndex = 0;
             // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 601);
+            this.ClientSize = new System.Drawing.Size(881, 539);
             this.Controls.Add(this.splitContainer1);
-            this.MaximumSize = new System.Drawing.Size(1004, 648);
-            this.MinimumSize = new System.Drawing.Size(1004, 648);
             this.Name = "MainScreen";
             this.Text = "MainScreen";
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
@@ -190,8 +164,6 @@
 
         public Button createModuleBtn;
         public Button createCourseBtn;
-        public Button viewCoursesBtn;
-        public Button viewModuleBtn;
         public Button takeTestBtn;
         public Button createTestBtn;
         private PictureBox logoPictureBox;
