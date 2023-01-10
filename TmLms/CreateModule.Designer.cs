@@ -197,7 +197,7 @@
             // 
             this.deleteModulesLbl.AutoSize = true;
             this.deleteModulesLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteModulesLbl.Location = new System.Drawing.Point(690, 334);
+            this.deleteModulesLbl.Location = new System.Drawing.Point(671, 292);
             this.deleteModulesLbl.Name = "deleteModulesLbl";
             this.deleteModulesLbl.Size = new System.Drawing.Size(136, 25);
             this.deleteModulesLbl.TabIndex = 26;
@@ -205,7 +205,7 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(912, 370);
+            this.deleteBtn.Location = new System.Drawing.Point(886, 328);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(82, 31);
             this.deleteBtn.TabIndex = 27;
@@ -217,14 +217,14 @@
             // 
             this.allAvailableModules.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.allAvailableModules.FormattingEnabled = true;
-            this.allAvailableModules.Location = new System.Drawing.Point(832, 333);
+            this.allAvailableModules.Location = new System.Drawing.Point(813, 291);
             this.allAvailableModules.Name = "allAvailableModules";
             this.allAvailableModules.Size = new System.Drawing.Size(229, 31);
             this.allAvailableModules.TabIndex = 28;
             // 
             // deleteModulesBtn
             // 
-            this.deleteModulesBtn.Location = new System.Drawing.Point(885, 290);
+            this.deleteModulesBtn.Location = new System.Drawing.Point(860, 248);
             this.deleteModulesBtn.Name = "deleteModulesBtn";
             this.deleteModulesBtn.Size = new System.Drawing.Size(135, 37);
             this.deleteModulesBtn.TabIndex = 29;

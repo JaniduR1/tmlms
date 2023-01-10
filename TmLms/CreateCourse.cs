@@ -20,7 +20,19 @@ namespace TmLms
             InitializeComponent();
             admin = person as Administrator;
             addCmbModuleItems();
+
         }
+
+        //private void setCourses()
+        //{
+        //    foreach(TM.Course c in TMEngine.Instance.CourseDictionary.Values)
+        //    {
+        //        if (c != null)
+        //        {
+        //            cToDeleteComboBox.Items.Add (c.CourseCode);
+        //        }
+        //    }
+        //}
 
         private void addCmbModuleItems()
         {
@@ -130,5 +142,10 @@ namespace TmLms
                 MessageBox.Show("Please Complete ALL Fields!");
             }
         }
+
+        //private void deleteCoursesBtn_Click(object sender, EventArgs e)
+        //{
+        //    Program.tmEngine.CourseDictionary.Remove(cToDeleteComboBox.SelectedItem.ToString());
+        //}
     }
 }

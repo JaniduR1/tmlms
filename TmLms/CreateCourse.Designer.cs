@@ -50,7 +50,7 @@
             // 
             this.instructorMember.AutoSize = true;
             this.instructorMember.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.instructorMember.Location = new System.Drawing.Point(27, 279);
+            this.instructorMember.Location = new System.Drawing.Point(59, 332);
             this.instructorMember.Name = "instructorMember";
             this.instructorMember.Size = new System.Drawing.Size(161, 28);
             this.instructorMember.TabIndex = 0;
@@ -59,7 +59,7 @@
             // courseInstructorTxtbox
             // 
             this.courseInstructorTxtbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseInstructorTxtbox.Location = new System.Drawing.Point(213, 276);
+            this.courseInstructorTxtbox.Location = new System.Drawing.Point(245, 329);
             this.courseInstructorTxtbox.Name = "courseInstructorTxtbox";
             this.courseInstructorTxtbox.Size = new System.Drawing.Size(229, 34);
             this.courseInstructorTxtbox.TabIndex = 1;
@@ -97,7 +97,7 @@
             // courseNameTxtBox
             // 
             this.courseNameTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseNameTxtBox.Location = new System.Drawing.Point(213, 122);
+            this.courseNameTxtBox.Location = new System.Drawing.Point(245, 175);
             this.courseNameTxtBox.Name = "courseNameTxtBox";
             this.courseNameTxtBox.Size = new System.Drawing.Size(229, 34);
             this.courseNameTxtBox.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             this.courseNameLbl.AutoSize = true;
             this.courseNameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseNameLbl.Location = new System.Drawing.Point(27, 125);
+            this.courseNameLbl.Location = new System.Drawing.Point(59, 178);
             this.courseNameLbl.Name = "courseNameLbl";
             this.courseNameLbl.Size = new System.Drawing.Size(129, 28);
             this.courseNameLbl.TabIndex = 5;
@@ -115,7 +115,7 @@
             // courseCodeTxtBox
             // 
             this.courseCodeTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseCodeTxtBox.Location = new System.Drawing.Point(213, 193);
+            this.courseCodeTxtBox.Location = new System.Drawing.Point(245, 246);
             this.courseCodeTxtBox.Name = "courseCodeTxtBox";
             this.courseCodeTxtBox.Size = new System.Drawing.Size(229, 34);
             this.courseCodeTxtBox.TabIndex = 8;
@@ -124,7 +124,7 @@
             // 
             this.courseCodeLbl.AutoSize = true;
             this.courseCodeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.courseCodeLbl.Location = new System.Drawing.Point(27, 196);
+            this.courseCodeLbl.Location = new System.Drawing.Point(59, 249);
             this.courseCodeLbl.Name = "courseCodeLbl";
             this.courseCodeLbl.Size = new System.Drawing.Size(123, 28);
             this.courseCodeLbl.TabIndex = 7;
@@ -132,7 +132,7 @@
             // 
             // createCourseBtn
             // 
-            this.createCourseBtn.Location = new System.Drawing.Point(133, 476);
+            this.createCourseBtn.Location = new System.Drawing.Point(333, 397);
             this.createCourseBtn.Name = "createCourseBtn";
             this.createCourseBtn.Size = new System.Drawing.Size(141, 47);
             this.createCourseBtn.TabIndex = 11;
