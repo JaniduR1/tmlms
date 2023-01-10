@@ -129,7 +129,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(234, 173);
+            this.label3.Location = new System.Drawing.Point(192, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 28);
             this.label3.TabIndex = 12;
@@ -137,7 +137,7 @@
             // 
             // studentIndexTxtBox
             // 
-            this.studentIndexTxtBox.Location = new System.Drawing.Point(395, 177);
+            this.studentIndexTxtBox.Location = new System.Drawing.Point(353, 185);
             this.studentIndexTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.studentIndexTxtBox.Name = "studentIndexTxtBox";
             this.studentIndexTxtBox.Size = new System.Drawing.Size(395, 27);
@@ -146,9 +146,9 @@
             // startExamBtn
             // 
             this.startExamBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.startExamBtn.Location = new System.Drawing.Point(820, 177);
+            this.startExamBtn.Location = new System.Drawing.Point(754, 172);
             this.startExamBtn.Name = "startExamBtn";
-            this.startExamBtn.Size = new System.Drawing.Size(77, 31);
+            this.startExamBtn.Size = new System.Drawing.Size(136, 47);
             this.startExamBtn.TabIndex = 13;
             this.startExamBtn.Text = "Start Exam";
             this.startExamBtn.UseVisualStyleBackColor = true;

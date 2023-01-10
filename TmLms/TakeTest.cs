@@ -21,6 +21,9 @@ namespace TmLms
         {
             InitializeComponent();
             setModuleComboBox();
+            leftArrowPic.Enabled = false;
+            rightArrowPic.Enabled = false;
+            startExamBtn.Enabled = false;
             i = 0;
         }
 
@@ -69,78 +72,106 @@ namespace TmLms
 
         private void quizComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            moduleComboBox.Enabled = false;
-            quizComboBox.Enabled = false;
-            SetQuiz();
-            QuestionUCs = new List<UserControl>();
+            if (moduleComboBox.SelectedIndex >= 0 && quizComboBox.SelectedIndex >= 0)
+            {
+                moduleComboBox.Enabled = false;
+                quizComboBox.Enabled = false;
+                leftArrowPic.Enabled = true;
+                rightArrowPic.Enabled = true;
+                startExamBtn.Enabled = true;
+                SetQuiz();
+                QuestionUCs = new List<UserControl>();
+            }
         }
 
         private void prepareQuiz()
         {
-            if (studentIndexTxtBox.Text != "")
+            try
             {
-                index = studentIndexTxtBox.Text;
-            }
-            i = 0;
-            leftArrowPic.Enabled = false;
-            questionsPanel.Controls.Clear();
-            QuestionUCs.Clear();
-            foreach (Question.Question q in quiz.GetQuestions())
-            {
-                if (q.GetType() == typeof(Question.EssayQ))
+                if (studentIndexTxtBox.Text != "")
                 {
-                    TestViewUC.TakeEQ eq = new TestViewUC.TakeEQ(q, quiz.quizCode, module.Code, index);
-                    QuestionUCs.Add(eq);
+                    index = studentIndexTxtBox.Text;
                 }
-                else if(q.GetType() == typeof(Question.MultipleChoiceQ))
-                {
-                    TestViewUC.TakeMCQ mcq = new TestViewUC.TakeMCQ(q, quiz.quizCode, module.Code, index);
-                    QuestionUCs.Add(mcq);
-                }
-                else if(q.GetType() == typeof(Question.MultipleAnswerQ))
-                {
-                    TestViewUC.TakeMAQ maq = new TestViewUC.TakeMAQ(q, quiz.quizCode, module.Code, index);
-                    QuestionUCs.Add(maq);
-                }
-                else if (q.GetType() == typeof(Question.ShortAnswerQ))
-                {
-                    TestViewUC.TakeSAQ saq = new TestViewUC.TakeSAQ(q, quiz.quizCode, module.Code, index);
-                    QuestionUCs.Add(saq);
-                }
-                else if (q.GetType() == typeof(Question.MatchingQ))
-                {
-                    TestViewUC.TakeMQ mq = new TestViewUC.TakeMQ(q, quiz.quizCode, module.Code, index);
-                    QuestionUCs.Add(mq);
-                }
+                i = 0;
+                leftArrowPic.Enabled = false;
                 questionsPanel.Controls.Clear();
-                questionsPanel.Controls.Add(QuestionUCs.ElementAt(i));
+                QuestionUCs.Clear();
+                foreach (Question.Question q in quiz.GetQuestions())
+                {
+                    if (q.GetType() == typeof(Question.EssayQ))
+                    {
+                        TestViewUC.TakeEQ eq = new TestViewUC.TakeEQ(q, quiz.quizCode, module.Code, index);
+                        QuestionUCs.Add(eq);
+                    }
+                    else if (q.GetType() == typeof(Question.MultipleChoiceQ))
+                    {
+                        TestViewUC.TakeMCQ mcq = new TestViewUC.TakeMCQ(q, quiz.quizCode, module.Code, index);
+                        QuestionUCs.Add(mcq);
+                    }
+                    else if (q.GetType() == typeof(Question.MultipleAnswerQ))
+                    {
+                        TestViewUC.TakeMAQ maq = new TestViewUC.TakeMAQ(q, quiz.quizCode, module.Code, index);
+                        QuestionUCs.Add(maq);
+                    }
+                    else if (q.GetType() == typeof(Question.ShortAnswerQ))
+                    {
+                        TestViewUC.TakeSAQ saq = new TestViewUC.TakeSAQ(q, quiz.quizCode, module.Code, index);
+                        QuestionUCs.Add(saq);
+                    }
+                    else if (q.GetType() == typeof(Question.MatchingQ))
+                    {
+                        TestViewUC.TakeMQ mq = new TestViewUC.TakeMQ(q, quiz.quizCode, module.Code, index);
+                        QuestionUCs.Add(mq);
+                    }
+                    questionsPanel.Controls.Clear();
+                    questionsPanel.Controls.Add(QuestionUCs.ElementAt(i));
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void navigateQuiz()
         {
-            if (QuestionUCs != null)
+            if (index != null)
             {
-                if (i == 0)
+                if (QuestionUCs != null)
                 {
-                    leftArrowPic.Enabled = false;
-                }
-                else
-                {
-                    leftArrowPic.Enabled = true;
-                }
-                if (i == QuestionUCs.Count - 1)
-                {
-                    rightArrowPic.Enabled = false;
-                }
-                else
-                {
-                    rightArrowPic.Enabled = true;
+                    if (i == 0)
+                    {
+                        leftArrowPic.Enabled = false;
+                    }
+                    else
+                    {
+                        leftArrowPic.Enabled = true;
+                    }
+                    if (i == QuestionUCs.Count - 1)
+                    {
+                        rightArrowPic.Enabled = false;
+                    }
+                    else
+                    {
+                        rightArrowPic.Enabled = true;
+
+                    }
+                    questionsPanel.Controls.Clear();
+                    //MessageBox.Show(i.ToString());
+                    try
+                    {
+                        questionsPanel.Controls.Add(QuestionUCs.ElementAt(i));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("End Of The Test");
+                    }
 
                 }
-                questionsPanel.Controls.Clear();
-                MessageBox.Show(i.ToString());
-                questionsPanel.Controls.Add(QuestionUCs.ElementAt(i));
+            }
+            else
+            {
+                MessageBox.Show("Please Give a Student Index");
             }
         }
 

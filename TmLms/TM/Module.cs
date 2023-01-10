@@ -8,6 +8,11 @@ namespace TmLms.TM
 {
     public class Module
     {
+
+        public Module()
+        {
+
+        }
         public enum CreditEnum
         {
             TWENTY = 20,

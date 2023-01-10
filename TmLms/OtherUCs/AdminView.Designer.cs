@@ -63,9 +63,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(140, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 38);
+            this.label1.Size = new System.Drawing.Size(381, 38);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Welcome Student";
+            this.label1.Text = "Welcome Administrator";
             // 
             // AdminView
             // 
