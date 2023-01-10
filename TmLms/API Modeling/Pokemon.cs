@@ -9,7 +9,6 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace TmLms.API_Modeling
 {
     public class Pokemon

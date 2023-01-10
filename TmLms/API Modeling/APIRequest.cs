@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Net;
-using System.IO;
-using System;
+using System.Web;
+using System.Security.Policy;
 
 namespace TmLms.API_Modeling
 {
@@ -17,13 +18,13 @@ namespace TmLms.API_Modeling
 
         public APIRequest()
         {
-            this.url = "https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0";
+            this.url = "https://pokeapi.co/api/v2/pokemon?limit=1&offset=";
             this.url2 = "https://pokeapi.co/api/v2/pokemon/";
         }
 
-        public PokeDataMap GetData(int pokeID)
+        public PokeDataMap GetData(int pokeid)
         {
-            var consult = (HttpWebRequest)WebRequest.Create(url);
+            var consult = (HttpWebRequest)WebRequest.Create(url+pokeid.ToString());
             consult.Method = "GET";
             consult.ContentType = "application/json";
             consult.Accept = "application/json";
