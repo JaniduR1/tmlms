@@ -74,7 +74,7 @@ namespace TmLms
 
         private void addModuleBtn_Click(object sender, EventArgs e)
         {
-            TM.Course c = new TM.Course();
+                TM.Course c = new TM.Course();
             string type;
 
             foreach (TM.Module module in TMEngine.Instance.ModuleDictionary.Values)

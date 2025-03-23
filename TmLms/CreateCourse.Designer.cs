@@ -147,7 +147,7 @@
             this.moduleName,
             this.moduleCredits,
             this.moduleIsCore});
-            this.chosenModules.Location = new System.Drawing.Point(586, 178);
+            this.chosenModules.Location = new System.Drawing.Point(591, 178);
             this.chosenModules.Name = "chosenModules";
             this.chosenModules.Size = new System.Drawing.Size(575, 366);
             this.chosenModules.TabIndex = 12;
